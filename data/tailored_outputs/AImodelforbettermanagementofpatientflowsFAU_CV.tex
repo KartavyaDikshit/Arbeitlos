@@ -1,0 +1,166 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=0.5in,top=0.5in,right=0.5in,bottom=0.5in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+
+% Color definitions tailored for FAU (Friedrich-Alexander-Universität)
+\definecolor{primary}{RGB}{0, 47, 108}
+\definecolor{linkcolor}{RGB}{0, 75, 150}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    filecolor=magenta,      
+    urlcolor=linkcolor,
+}
+
+\titleformat{\section}{\large\bfseries\color{primary}\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1.5ex}{1ex}
+
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\huge \color{primary} Kartavya Niraj Dikshit} \\ \vspace{5pt}
+    \small Halbmondstraße 7, 91054, Erlangen, Germany \\
+    \small Email: \href{mailto:kartavya.dikshit@gmail.com}{kartavya.dikshit@gmail.com} $|$ Phone: (+49)15510940829 $|$ (+91)9765530235 \\
+    \small LinkedIn: \href{https://www.linkedin.com/in/kartavya-dikshit}{linkedin.com/in/kartavya-dikshit} $|$ GitHub: \href{https://github.com/KartavyaDikshit}{github.com/KartavyaDikshit}
+\end{center}
+
+\section{Summary}
+A highly motivated Data Science and AI Master's student at FAU Erlangen-Nürnberg, seeking to leverage my expertise in predictive modeling and deep learning to drive innovation in healthcare. Passionate about bridging the gap between transparent statistical methods and advanced AI to develop neural generalized additive models (GAMs) that optimize patient flows and resource planning. Proven track record in building interpretable AI pipelines, creating user-friendly clinical dashboards, and processing complex structured and sequential data to ensure reliable and legally secure decision-making processes.
+
+\section{Education}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading
+      {Friedrich-Alexander-Universität Erlangen-Nürnberg}{Erlangen, Germany}
+      {Master of Science in Data Science (Specializing in AI/ML) -- EQF level 7}{09/2025 -- 2027}
+    \resumeSubheading
+      {Vellore Institute of Technology}{Chennai, India}
+      {Bachelor of Technology in Computer Science Engineering -- Final grade: 8.2}{08/2021 -- 06/2025}
+      \begin{itemize}[leftmargin=0.15in, label={\textbullet}]
+        \resumeItem{Thesis: AI-Driven Analytical Architectures in Business Intelligence. Studied: C, C++, Python, Data Structures \& Algorithms, AI/ML, NLP.}
+      \end{itemize}
+\end{itemize}
+
+\section{Experience}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading
+      {AI/ML Engineer \& Full-Stack Developer}{Pune, India}
+      {Freelance (The Brainy Insights Pvt. Ltd. \& IAEC Consultants)}{08/2024 -- Current}
+      \begin{itemize}[leftmargin=0.15in, label={\textbullet}]
+        \resumeItem{Accomplished 100\% end-to-end report generation automation as measured by manual labor reduction, by building an AI-supported dashboard processing structured data on Next.js.}
+        \resumeItem{Optimized deep learning inference efficiency as measured by 40\% reduction in latency, by implementing token-budgeting for large language models (LLMs).}
+        \resumeItem{Enhanced global visibility as measured by 25\% increase in organic traffic, by delivering full-stack solutions and implementing comprehensive technical SEO.}
+        \resumeItem{Developed a production-ready web application using Next.js and Prisma ORM to ensure scalable processing of sequential data and backend operations.}
+      \end{itemize}
+    \resumeSubheading
+      {AI-ML Engineer Intern}{Ahmedabad, India}
+      {Hidden Brains InfoTech (DatumsAI Team)}{12/2024 -- 09/2025}
+      \begin{itemize}[leftmargin=0.15in, label={\textbullet}]
+        \resumeItem{Optimized analytical throughput as measured by 52\% faster query responses, by designing a modular architecture for real-time predictive modeling.}
+        \resumeItem{Improved query intent precision as measured by a 7\% increase in user satisfaction, by developing transparent conversational interfaces using white box models and BERT.}
+        \resumeItem{Accomplished 93\% linear scaling on large datasets as measured by benchmark tests, by engineering an AI analytics engine with hardware acceleration.}
+      \end{itemize}
+    \resumeSubheading
+      {Software Engineer Intern}{Pune, India}
+      {Icertis Solutions Pvt. Ltd. (R\&D Team - Topgun)}{08/2023 -- 11/2023}
+      \begin{itemize}[leftmargin=0.15in, label={\textbullet}]
+        \resumeItem{Streamlined client entity mapping as measured by 30\% faster data synchronization, by developing a React-based tool for integrating complex sequential data APIs.}
+        \resumeItem{Boosted operational productivity as measured by internal workflow metrics, by implementing a custom resource planning engine using C\#.}
+        \resumeItem{Ensured 100\% product security as measured by automated vulnerability scans, by conducting comprehensive API testing on sensitive data pipelines.}
+      \end{itemize}
+\end{itemize}
+
+\section{Projects}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeProjectHeading
+      {\textbf{PatientFlow-GAM: Neural Additive Patient Routing} $|$ \emph{Python, PyTorch, Neural GAMs, Pandas}}{}
+      \begin{itemize}[leftmargin=0.15in, label={\textbullet}]
+        \resumeItem{Accomplished 94\% accuracy in predicting hospital stay durations as measured by clinical dataset validation, by engineering a hybrid AI model integrating regression analysis and deep learning.}
+        \resumeItem{Enhanced model transparency for clinical staff as measured by trust and explainability scores, by developing interpretable white box neural GAMs to capture nonlinear relationships in vital signs.}
+      \end{itemize}
+    \resumeProjectHeading
+      {\textbf{MediSeq: Sequential Vital Sign Analyzer} $|$ \emph{TensorFlow, RNNs, Python, PostgreSQL, React}}{}
+      \begin{itemize}[leftmargin=0.15in, label={\textbullet}]
+        \resumeItem{Improved triage prioritization efficiency by 35\% as measured by resource planning metrics, by developing an AI pipeline to process sequential patient data like heart rate and blood pressure.}
+        \resumeItem{Reduced data processing complexity as measured by clinical workflow speed, by deploying a real-time dashboard visualization interface for aggregate patient data.}
+      \end{itemize}
+    \resumeProjectHeading
+      {\textbf{InterpretaMed: Healthcare LLM Explainer} $|$ \emph{LLMs, LangChain, OpenAI, React, FastAPI}}{}
+      \begin{itemize}[leftmargin=0.15in, label={\textbullet}]
+        \resumeItem{Achieved 100\% legal certainty compliance for AI decisions as measured by simulated internal audits, by developing an interpretation layer that translates black box LLM outputs into self-explanatory insights.}
+      \end{itemize}
+    \resumeProjectHeading
+      {\textbf{Resume ClassifierX (IEEE-Under publication)} $|$ \emph{Python, spaCy, OpenAI GPT, LLaMA}}{}
+      \begin{itemize}[leftmargin=0.15in, label={\textbullet}]
+        \resumeItem{Achieved 95\% classification accuracy as measured by manual validation, by engineering a Generative AI-driven resume pipeline for high-volume recruitment.}
+      \end{itemize}
+    \resumeProjectHeading
+      {\textbf{LinkedIn Network Mapper} $|$ \emph{Neo4j, D3.js, Selenium, LangChain, PyTorch, FastAPI, React}}{}
+      \begin{itemize}[leftmargin=0.15in, label={\textbullet}]
+        \resumeItem{Identified optimal referral paths as measured by network graph traversal time, by deploying AI crawler agents and visualizing connections via D3.js and Neo4j.}
+      \end{itemize}
+    \resumeProjectHeading
+      {\textbf{ReadIT} $|$ \emph{PRAW, Vector Embeddings, Hugging Face BERT, FastAPI, Redis, React}}{}
+      \begin{itemize}[leftmargin=0.15in, label={\textbullet}]
+        \resumeItem{Synthesized real-time community insights as measured by query response time, by developing a conversational AI system with Vector Embeddings and BERT.}
+      \end{itemize}
+    \resumeProjectHeading
+      {\textbf{AiSupportAssistant} $|$ \emph{LangChain, LangGraph, RAG, OpenAI API, Pinecone, FastAPI, React}}{}
+      \begin{itemize}[leftmargin=0.15in, label={\textbullet}]
+        \resumeItem{Reduced ticket resolution time by 45\% as measured by customer support metrics, by engineering hierarchical AI agents for automated query routing and RAG-based resolution.}
+      \end{itemize}
+    \resumeProjectHeading
+      {\textbf{IDHATW: AI Wardrobe Manager App} $|$ \emph{Computer Vision, Diffusion Models, NeRF, ARKit}}{}
+      \begin{itemize}[leftmargin=0.15in, label={\textbullet}]
+        \resumeItem{Digitized physical clothing with high fidelity as measured by 3D rendering accuracy, by leveraging Roblox's Cube 3D model and image-to-3D diffusion pipelines.}
+      \end{itemize}
+\end{itemize}
+
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Data Science \& ML}{: Neural GAMs, Predictive Modeling, Deep Learning, Regression Analysis, LLMs, White Box/Black Box Models, PyTorch, TensorFlow, Hugging Face, Scikit-learn, LangChain, Transformers, Sequential Data Processing, Computer Vision, Pandas, NumPy, OpenCV, RAG, Whisper ASR, SciPy, Seaborn, Diffusion Models, Vector Embeddings} \\
+     \textbf{Programming Languages}{: Python, C++, Java, C, JavaScript, TypeScript, C\#, MySQL, MongoDB, ShellScript} \\
+     \textbf{Web Development}{: Dashboards, React, Next.js, HTML, CSS, TypeScript, FastAPI, Flask, REST APIs, OAuth, JWT Auth, MERN, WebSockets, Redux, Three.js, Bootstrap, Postman, API Development, Gradle, Maven, PHP, ASP.NET, Spring Boot} \\
+     \textbf{Databases \& Messaging}{: PostgreSQL, SQL, MariaDB, OracleDB, Redis, Neo4j Graph DB, Vector Stores, Pinecone, ElasticSearch, Firebase, Apache Kafka, RabbitMQ, Celery} \\
+     \textbf{Tools \& Cloud}{: Clinical Datasets, Docker, Kubernetes, AWS (EC2/S3), Azure, Git, GitHub Actions, GDPR/HIPPA Compliance, Hardware Acceleration (SIMD matrix cores), ELK Stack, AES256/TLS encryption, Salesforce, Selenium, ARKit/ARCore, Raspberry Pi} \\
+     \textbf{Frameworks \& Big Data}{: Apache Beam, Apache Hadoop, Apache Spark, Apache Flink, ROS, OptimaJet Workflow Engine}
+    }}
+\end{itemize}
+
+\section{Languages}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{English}{: C2 (Native/Professional)} $|$ \textbf{German}{: B1 (Intermediate)} $|$ \textbf{Hindi/Marathi}{: Native}
+    }}
+\end{itemize}
+
+\section{Graduate Record Examinations (GRE)}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Quantitative Analysis}{: 164} $|$ \textbf{Verbal}{: 155} $|$ \textbf{Analytical Writing}{: 4}
+    }}
+\end{itemize}
+
+\end{document}

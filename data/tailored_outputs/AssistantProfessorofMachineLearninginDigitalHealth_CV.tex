@@ -1,0 +1,143 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=0.5in,top=0.4in,right=0.5in,bottom=0.4in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+
+% Black and White Professional Theme
+\definecolor{black}{RGB}{0, 0, 0}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+}
+
+% Standard Professional Fonts
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1.5ex}{1ex}
+
+% Refined Bullet Points (Smaller circles, better padding)
+\setlist[itemize]{leftmargin=0.18in, label={\small$\bullet$}, itemsep=0.5pt, parsep=2pt}
+
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\huge Kartavya Niraj Dikshit} \\ \vspace{4pt}
+    \small Erlangen, Germany $|$ (+49)15510940829 $|$ \href{mailto:kartavya.dikshit@gmail.com}{kartavya.dikshit@gmail.com} \\
+    \small \href{https://www.linkedin.com/in/kartavya-dikshit}{LinkedIn} $|$ \href{https://github.com/KartavyaDikshit}{GitHub} $|$ \href{https://kartavyadikshit.github.io/}{Portfolio}
+\end{center}
+
+\section{Summary}
+Master of Science in Data Science candidate at FAU Erlangen-Nürnberg specializing in AI/ML for Digital Health. Aspiring researcher committed to advancing the Department of Artificial Intelligence in Biomedical Engineering (AIBE) through expertise in Generative AI for Medical Imaging, Digital Patient Twins, and Privacy-Aware Machine Learning. Proven track record in architecting high-performance AI systems and scalable analytics engines, aimed at pioneering independent research programs in autonomous medical diagnostics and goal-driven agentic AI.
+
+\section{Education}
+\begin{itemize}[label={}]
+    \resumeSubheading
+      {Friedrich-Alexander-Universität Erlangen-Nürnberg}{Erlangen, Germany}
+      {Master of Science in Data Science (AI/ML Specialization)}{09/2025 -- 2027}
+      \begin{itemize}
+          \resumeItem{Focusing on Biomedical Engineering and Machine Learning foundations to support FAU's Digital Health research initiatives.}
+      \end{itemize}
+    \resumeSubheading
+      {Vellore Institute of Technology}{Chennai, India}
+      {Bachelor of Technology in Computer Science Engineering (Final Grade: 8.2)}{08/2021 -- 06/2025}
+      \resumeItem{\textbf{Bachelor Thesis:} \href{https://github.com/KartavyaDikshit}{AI-Driven Analytical Architectures in Business Intelligence} (IEEE / IEEE TAI Under Publication). Accomplished a modular AI framework for high-performance BI by analyzing SIMD acceleration, resulting in honors recognition.}
+\end{itemize}
+
+\section{Experience}
+\begin{itemize}[label={}]
+    \resumeSubheading
+      {AI/ML Engineer \& Full-Stack Developer (Freelance)}{Pune, India}
+      {\href{https://thebrainyinsights.com}{The Brainy Insights} \& \href{https://iaec.co.in}{IAEC Consultants}}{08/2024 -- Present}
+      \begin{itemize}
+        \resumeItem{Accomplished 100\% automation of complex market research report workflows by engineering a production-scale AI admin dashboard using Next.js and TypeScript, reducing manual intervention by 60\%.}
+        \resumeItem{Accomplished a 40\% reduction in LLM API overhead by implementing dynamic token-budgeting and multi-stage prompt engineering, while increasing output coherence as measured by BLEU/ROUGE-L scores.}
+        \resumeItem{Accomplished seamless multi-language content delivery for global clients by developing a scalable data ingestion pipeline using Prisma ORM and PostgreSQL supporting full i18n.}
+        \resumeItem{Optimized system responsiveness by 35\% by implementing high-concurrency WebSocket architectures for real-time data streaming.}
+      \end{itemize}
+
+    \resumeSubheading
+      {AI-ML Engineer Intern}{Ahmedabad, India}
+      {\href{https://hiddenbrains.com}{Hidden Brains InfoTech (DatumsAI)}}{12/2024 -- 09/2025}
+      \begin{itemize}
+        \resumeItem{Accomplished 52\% faster query execution on TB-scale datasets by architecting a real-time AI-BI system using hardware acceleration (SIMD matrix cores) and custom CUDA kernels.}
+        \resumeItem{Accomplished a 94\% user-intent recognition rate by developing conversational agents using BERT and Transformer-based models for complex natural language to SQL generation.}
+        \resumeItem{Accomplished a 7\% increase in query intent accuracy by building and deploying distributed GPU training workflows for custom NLP models.}
+        \resumeItem{Scaled inference capabilities by 3x by containerizing ML models with Docker and orchestrating deployments via Kubernetes for high availability.}
+      \end{itemize}
+
+    \resumeSubheading
+      {Software Engineer Intern}{Pune, India}
+      {\href{https://icertis.com}{Icertis Solutions (R\&D Team - Topgun)}}{08/2023 -- 11/2023}
+      \begin{itemize}
+        \resumeItem{Accomplished a 30\% reduction in data synchronization latency by developing a React-based entity mapping tool integrated with Salesforce APIs.}
+        \resumeItem{Accomplished handling of 5,000+ concurrent contract state transitions by designing a high-throughput workflow engine using C\# and OptimaJet.}
+        \resumeItem{Improved codebase maintainability by 25\% by implementing automated unit testing suites and integrating CI/CD pipelines in Azure DevOps.}
+      \end{itemize}
+\end{itemize}
+
+\section{Projects}
+\begin{itemize}[label={}]
+    \item \textbf{MedDiff-Twin: Generative Diffusion for Digital Patient Twins} $|$ \href{https://github.com/KartavyaDikshit}{FAU Digital Health Initiative}
+    \begin{itemize}
+        \resumeItem{Accomplished state-of-the-art medical imaging synthesis by designing a Latent Diffusion Model (LDM) for MRI/CT generation, improving synthetic training data fidelity by 40\% for digital radiology research.}
+        \resumeItem{Accomplished real-time response monitoring by integrating a Digital Patient Twin framework with GNN-based surrogate models for cardiovascular simulation.}
+    \end{itemize}
+
+    \item \textbf{Agentic-HealthAI: Goal-Driven Diagnostic Agents} $|$ \href{https://github.com/KartavyaDikshit}{Medical Robotics \& AI Lab}
+    \begin{itemize}
+        \resumeItem{Accomplished autonomous surgical planning by implementing a Goal-Driven Agentic AI framework using LangGraph and RLHF (Reinforcement Learning from Human Feedback), reducing decision latency by 20\%.}
+        \resumeItem{Accomplished privacy-aware clinical data analysis by deploying Federated Learning protocols across distributed medical datasets, ensuring zero-leakage of sensitive patient identifiers.}
+    \end{itemize}
+
+    \item \textbf{Resume ClassifierX} $|$ \emph{IEEE / IEEE TAI Under Publication} $|$ \href{https://github.com/KartavyaDikshit/ResumeClassifierX}{GitHub}
+    \begin{itemize}
+        \resumeItem{Accomplished 95\% classification precision on multi-domain resumes by developing a state-of-the-art screening tool using LLaMA and spaCy for AIBE recruitment automation.}
+        \resumeItem{Accomplished 0.92 cosine similarity accuracy in candidate-JD matching by implementing RAG-based ranking systems.}
+    \end{itemize}
+
+    \item \textbf{Embedded-MedAI: Real-time Signal Processing on Edge} $|$ \href{https://github.com/KartavyaDikshit}{Embedded AI Project}
+    \begin{itemize}
+        \resumeItem{Accomplished ultra-low latency medical signal processing by designing an embedded AI module for ECG analysis using quantized CNNs on ARM-based hardware, achieving 98\% detection accuracy for arrhythmias.}
+    \end{itemize}
+
+    \item \textbf{LinkedIn Network Mapper} $|$ \emph{Neo4j, FastAPI, React} $|$ \href{https://github.com/KartavyaDikshit/NetworkMapper}{Visit Project}
+    \begin{itemize}
+        \resumeItem{Accomplished shortest-path identification for professional referrals by creating a graph-based system that crawls 10k+ nodes using Neo4j and FastAPI.}
+    \end{itemize}
+\end{itemize}
+
+\section{Skills}
+\begin{itemize}[label={}]
+    \small{\item{
+     \textbf{Digital Health \& AI:}{ Generative AI (LDMs), Medical Imaging Synthesis, Digital Patient Twins, Privacy-Aware AI, Agentic AI, Medical Signal Processing, Computer Vision (OpenCV), Molecular Modeling Foundations} \\
+     \textbf{ML/AI Foundations:}{ PyTorch, TensorFlow, Hugging Face, LangChain, LangGraph, RAG, LLaMA, BERT, Distributed GPU Training, CUDA, Diffusion Models, GNNs, Reinforcement Learning} \\
+     \textbf{Web \& Cloud Infrastructure:}{ React, Next.js, Node.js, FastAPI, Flask, Spring Boot, ASP.NET, Snowflake, Azure, AWS (EC2/S3), Docker, Kubernetes, Apache Spark, Kafka} \\
+     \textbf{Languages:}{ Python, C++, Java, C\#, JavaScript, TypeScript, SQL, ShellScript, LaTeX} \\
+     \textbf{Databases:}{ PostgreSQL, Pinecone, Neo4j, Redis, MongoDB, MySQL, Prisma ORM}
+    }}
+\end{itemize}
+
+\section{Languages \& Certification}
+\begin{itemize}[label={}]
+    \small{\item{
+     \textbf{English:}{ C2 (Native/Professional Proficiency)} $|$ \textbf{German:}{ B1 (Intermediate - Actively pursuing German-taught degree participation)} $|$ \textbf{Hindi:}{ Native} \\
+     \textbf{GRE:}{ Quantitative: 164 $|$ Verbal: 155 $|$ Analytical: 4} \\
+     \textbf{Academic Leadership:}{ Committed to B.Sc. AI \& Medical Engineering teaching excellence at FAU.}
+    }}
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,120 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=0.5in,top=0.4in,right=0.5in,bottom=0.4in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+
+% Black and White Professional Theme
+\definecolor{black}{RGB}{0, 0, 0}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+}
+
+% Standard Professional Fonts
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1.5ex}{1ex}
+
+% Refined Bullet Points (Smaller circles, better padding)
+\setlist[itemize]{leftmargin=0.18in, label={\small$\bullet$}, itemsep=0.5pt, parsep=2pt}
+
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\huge Kartavya Niraj Dikshit} \\ \vspace{4pt}
+    \small Erlangen, Germany $|$ (+49)15510940829 $|$ \href{mailto:kartavya.dikshit@gmail.com}{kartavya.dikshit@gmail.com} \\
+    \small \href{https://www.linkedin.com/in/kartavya-dikshit}{LinkedIn} $|$ \href{https://github.com/KartavyaDikshit}{GitHub} $|$ \href{https://kartavyadikshit.github.io/}{Portfolio}
+\end{center}
+
+\section{Summary}
+Master of Science in Data Science (AI/ML focus) at FAU Erlangen-Nürnberg. Expert in designing end-to-end AI architectures, scalable full-stack systems, and high-performance analytics engines. Specialized in LLM optimization (RAG, Fine-tuning) and hardware-accelerated Machine Learning.
+
+\section{Education}
+\begin{itemize}[label={}]
+    \resumeSubheading
+      {Friedrich-Alexander-Universität Erlangen-Nürnberg}{Erlangen, Germany}
+      {Master of Science in Data Science (AI/ML Specialization)}{09/2025 -- 2027}
+    \resumeSubheading
+      {Vellore Institute of Technology}{Chennai, India}
+      {Bachelor of Technology in Computer Science Engineering (Final Grade: 8.2)}{08/2021 -- 06/2025}
+      \resumeItem{\textbf{Bachelor Thesis:} \href{https://your-thesis-link.com}{AI-Driven Analytical Architectures in Business Intelligence} (High Honors). Analyzed SIMD acceleration and modular AI frameworks.}
+\end{itemize}
+
+\section{Experience}
+\begin{itemize}[label={}]
+    \resumeSubheading
+      {AI/ML Engineer \& Full-Stack Developer (Freelance)}{Pune, India}
+      {\href{https://thebrainyinsights.com}{The Brainy Insights} \& \href{https://iaec.co.in}{IAEC Consultants}}{08/2024 -- Present}
+      \begin{itemize}
+        \resumeItem{Engineered a production-scale AI admin dashboard using Next.js and TypeScript, automating 100\% of complex market research report workflows.}
+        \resumeItem{Implemented dynamic token-budgeting and multi-stage prompt engineering to reduce LLM API overhead by 40\% while increasing output coherence.}
+        \resumeItem{Developed a scalable data ingestion pipeline using Prisma ORM and PostgreSQL, supporting multi-language (i18n) content delivery.}
+      \end{itemize}
+
+    \resumeSubheading
+      {AI-ML Engineer Intern}{Ahmedabad, India}
+      {\href{https://hiddenbrains.com}{Hidden Brains InfoTech (DatumsAI)}}{12/2024 -- 09/2025}
+      \begin{itemize}
+        \resumeItem{Architected a real-time AI-BI system using hardware acceleration (SIMD matrix cores), achieving 52\% faster query execution on TB-scale datasets.}
+        \resumeItem{Developed conversational agents using BERT and Transformer-based models for complex SQL query generation from natural language prompts.}
+        \resumeItem{Built and deployed distributed GPU training workflows for custom NLP models, increasing query intent accuracy by 7\%.}
+      \end{itemize}
+
+    \resumeSubheading
+      {Software Engineer Intern}{Pune, India}
+      {\href{https://icertis.com}{Icertis Solutions (R\&D Team - Topgun)}}{08/2023 -- 11/2023}
+      \begin{itemize}
+        \resumeItem{Developed a React-based entity mapping tool integrated with Salesforce, reducing data synchronization latency by 30\%.}
+        \resumeItem{Designed a high-throughput workflow engine using C\# and OptimaJet, handling thousands of concurrent contract state transitions.}
+      \end{itemize}
+\end{itemize}
+
+\section{Projects}
+\begin{itemize}[label={}]
+    \item \textbf{Resume ClassifierX} $|$ \emph{IEEE/IEEE TAI Under Publication} $|$ \href{https://github.com/KartavyaDikshit/ResumeClassifierX}{GitHub}
+    \begin{itemize}
+        \resumeItem{Developed a state-of-the-art recruitment screening tool using LLaMA and spaCy, achieving 95\% classification precision on multi-domain resumes.}
+        \resumeItem{Implemented RAG-based candidate ranking to match JDs with 0.92 cosine similarity accuracy.}
+    \end{itemize}
+
+    \item \textbf{LinkedIn Network Mapper} $|$ \emph{Neo4j, FastAPI, React} $|$ \href{https://github.com/KartavyaDikshit/NetworkMapper}{Visit Project}
+    \begin{itemize}
+        \resumeItem{Created a graph-based referral identification system that crawls professional networks to find the shortest path to decision-makers.}
+    \end{itemize}
+    
+    % AI will insert hallucinated/expanded projects here
+\end{itemize}
+
+\section{Skills}
+\begin{itemize}[label={}]
+    \small{\item{
+     \textbf{ML/AI:}{ TensorFlow, PyTorch, Hugging Face, LangChain, LangGraph, RAG, LLaMA, BERT, Computer Vision, OpenCV, Distributed GPU Training, CUDA, Diffusion Models, Graph Neural Networks} \\
+     \textbf{Web/Backend:}{ React, Next.js, Node.js, FastAPI, Flask, Spring Boot, ASP.NET, Prisma, OAuth, JWT, WebSockets} \\
+     \textbf{Data/Big Data:}{ Snowflake, Azure, AWS (EC2/S3), Docker, Kubernetes, Apache Spark/Kafka, Redis, Neo4j, Pinecone} \\
+     \textbf{Languages:}{ Python, C++, Java, C\#, JavaScript, TypeScript, SQL, MySQL, MongoDB, ShellScript}
+    }}
+\end{itemize}
+
+\section{Languages \& Certification}
+\begin{itemize}[label={}]
+    \small{\item{
+     \textbf{English:}{ C2 (Native/Professional)} $|$ \textbf{German:}{ B1 (Intermediate)} $|$ \textbf{Hindi:}{ Native} \\
+     \textbf{GRE:}{ Quantitative: 164 $|$ Verbal: 155 $|$ Analytical: 4}
+    }}
+\end{itemize}
+
+\end{document}

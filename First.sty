@@ -1,0 +1,137 @@
+\documentclass[10pt,a4paper]{article}
+
+% Packages for formatting and styling
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+% Custom Colors
+\definecolor{primarycolor}{RGB}{0, 51, 102}
+
+% Hyperlink Setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primarycolor,
+    filecolor=primarycolor,      
+    urlcolor=primarycolor,
+}
+
+% Section Formatting
+\titleformat{\section}{\Large\bfseries\color{primarycolor}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{8pt}
+
+% Custom Commands
+\newcommand{\resumeheading}[4]{
+    \noindent\textbf{#1} \hfill #2 \\
+    \noindent\textit{#3} \hfill \textit{#4} \vspace{3pt}
+}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {\Huge \textbf{Kartavya Niraj Dikshit [cite: 1]}} \\ \vspace{5pt}
+    Halbmondstraße 7, 91054, Erlangen, Germany [cite: 2] \\
+    kartavya.dikshit@gmail.com [cite: 3] $|$ (+91)9765530235, (+49)15510940829 [cite: 4] \\
+    \href{www.linkedin.com/in/kartavya-dikshit}{LinkedIn [cite: 4]} $|$ \href{https://github.com/Kartavya Dikshit}{GitHub [cite: 5]}
+\end{center}
+
+% --- EDUCATION ---
+\section*{Education and Training [cite: 8]}
+
+\resumeheading{Friedrich-Alexander-Universität Erlangen-Nürnberg [cite: 11]}{Erlangen, Germany [cite: 13]}{Master of Science in Data Science [cite: 10]}{09/2025--2027 [cite: 9]}
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item Specializing in Artificial Intelligence/Machine Learning [cite: 11]
+\end{itemize}
+
+\vspace{5pt}
+\resumeheading{Vellore Institute of Technology [cite: 14]}{Chennai, India [cite: 16]}{Bachelor of Technology in Computer Science Engineering [cite: 14]}{08/2021--06/2025 [cite: 14]}
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item Final grade: 8.2 [cite: 16]
+    \item Thesis: Al-Driven Analytical Architectures in Business Intelligence: Computational Architectures, Limitations, and Scalability [cite: 18]
+    \item Coursework: C, C++, Python, Java, Data Structures \& Algorithms, ML, NLP, and Al [cite: 20]
+    \item Leadership: IEEE Open-Source-Projects Technical Lead, Technical Team MOVIS r\&d [cite: 21]
+\end{itemize}
+
+\vspace{5pt}
+\resumeheading{Arihant College of Science [cite: 23]}{Pune, India [cite: 25]}{Higher Secondary School Certificate [cite: 22]}{03/2019--03/2021 [cite: 22]}
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item Final grade: 94\% [cite: 26]
+\end{itemize}
+
+\vspace{5pt}
+\resumeheading{City International School [cite: 29]}{Pune, India [cite: 30]}{Secondary School Certificate, CBSE [cite: 28]}{03/2009--03/2019 [cite: 28]}
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item Final grade: 91\% [cite: 31]
+    \item Awards: Certification of Academic Excellence:2016,'17,'18, Math, Science, Cyber Olympiad: 3 gold, 4 silver, and 2 bronze medal winner [cite: 35]
+\end{itemize}
+
+% --- WORK EXPERIENCE ---
+\section*{Work Experience [cite: 36]}
+
+\resumeheading{The Brainy Insights Pvt. Ltd. (Freelance) [cite: 38, 40]}{Pune, India [cite: 39]}{AI/ML Engineer \& Full-Stack Developer [cite: 38]}{08/2024 -- Current [cite: 37]}
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item Built an Al-powered admin dashboard and automation pipeline on Next.js, enabling end-to-end report generation workflows [cite: 41]
+    \item Optimized LLM usage via token-budgeting and prompt/output tuning to reduce cost and latency [cite: 42]
+    \item Implemented comprehensive technical SEO across the full site using Next.js App Router metadata patterns [cite: 43]
+    \item Delivered full-stack internationalization with automatic website + report/content translation (i18n) using an Al translation workflow [cite: 44]
+\end{itemize}
+
+\vspace{5pt}
+\resumeheading{IAEC Consultants [cite: 48]}{}{Full-Stack Developer [cite: 49]}{[cite: 49]}
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item Developed a modern web application using Next.js (App Router) bootstrapped with create-next-app [cite: 49]
+    \item Standardized page-level SEO via App Router metadata conventions to ensure consistent titles/descriptions [cite: 52]
+    \item Prepared the application for straightforward cloud deployment workflows aligned with common Next.js hosting patterns (Vercel-ready) [cite: 54]
+\end{itemize}
+
+\vspace{5pt}
+\resumeheading{Hidden Brains InfoTech [cite: 55]}{Ahmedabad, India [cite: 58]}{AI-ML Engineer Intern (DatumsAl Team) [cite: 55]}{12/2024--09/2025 [cite: 55]}
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item Designed and implemented a modular and scalable architecture for real-time analytics and Al-driven business intelligence systems, resulting in 52\% faster query response times [cite: 60]
+    \item Developed a conversational interface layer using NLP and Large Language Models (BERT/GPT) that improved query intent recognition accuracy by 7\% [cite: 61]
+    \item Engineered a real-time analytics engine with hardware acceleration techniques (SIMD matrix cores) that achieved 93\% linear scaling efficiency [cite: 62]
+\end{itemize}
+
+\vspace{5pt}
+\resumeheading{Icertis Solutions Pvt. Ltd. [cite: 65]}{Pune, India [cite: 66]}{Software Engineer Intern (R\&D Team) [cite: 64]}{08/2023--11/2023 [cite: 64]}
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item Developed a web application using React for client entity mapping, integrated with Salesforce [cite: 68]
+    \item Implemented a custom workflow engine using C\# and Optimajet Workflow Engine [cite: 69]
+    \item Conducted comprehensive API testing using Postman, ensuring product reliability and robustness [cite: 72]
+\end{itemize}
+
+% --- SKILLS ---
+\section*{Skills [cite: 133]}
+
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Programming Languages:} MongoDB, C\#, MySQL, C++, JavaScript, C, Java, Python, ShellScript [cite: 134, 135]
+    \item \textbf{Web Development:} HTML, D3.js, Flask, React, REST, TypeScript, Bootstrap, MERN, Spring Boot, WebSockets [cite: 136, 137, 138, 139]
+    \item \textbf{Data Science \& ML:} TensorFlow, Numpy, Pandas, Whisper ASR, PyTorch, CUDA, BERT, Scikit-learn, Hugging Face, Transformers, GPT, OpenCV, Diffusion Models, LangChain, LangGraph [cite: 140, 141, 142, 143, 144, 145]
+    \item \textbf{Databases:} PostgreSQL, SQL, Firebase, Redis, Neo4j Graph DB, Vector Stores, Pinecone, ElasticSearch [cite: 147, 148, 149]
+    \item \textbf{Tools \& Technologies:} Docker, Selenium, Kubernetes, Git, GitHub Actions, AWS, Azure, Salesforce [cite: 150, 151, 152, 153]
+\end{itemize}
+
+% --- PROJECTS ---
+\section*{Projects [cite: 76]}
+
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Resume ClassifierX:} Enhancing Recruitment Efficiency through Generative Al-Driven Resume Classification (Python, spaCy, OpenAI GPT) [cite: 84, 86, 87]
+    \item \textbf{LinkedIn Network Mapper:} Engineered an interactive professional network visualization platform that maps connections through a dynamic graph interface (Neo4j, LangChain, React) [cite: 92, 93, 95]
+    \item \textbf{ReadIT:} Developed a conversational Al system that dynamically queries and synthesizes information from Reddit's ecosystem (PRAW, LangChain, Vector Embeddings, FastAPI) [cite: 94, 96, 97]
+    \item \textbf{AiSupportAssistant:} Engineered an advanced customer support system utilizing hierarchical Al agents for complex query resolution (LangChain, LangGraph, RAG) [cite: 101, 102, 103]
+\end{itemize}
+
+% --- LANGUAGES & EXAMS ---
+\section*{Languages \& Certifications [cite: 75, 157]}
+
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Languages:} Hindi, Gujrati, Marathi (Mother tongues) [cite: 77] | English (C2) [cite: 79, 81] | German (A2) [cite: 80, 82]
+    \item \textbf{Exams:} GRE: 164 Quantitative Analysis, 155 Verbal, 4 Analytical Writing [cite: 157, 158]
+\end{itemize}
+
+\end{document}

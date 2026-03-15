@@ -1,0 +1,139 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=0.5in,top=0.4in,right=0.5in,bottom=0.4in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+
+% Black and White Professional Theme
+\definecolor{black}{RGB}{0, 0, 0}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+}
+
+% Standard Professional Fonts
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1.5ex}{1ex}
+
+% Refined Bullet Points (Smaller circles, professional padding)
+\setlist[itemize]{leftmargin=0.18in, label={\small$\bullet$}, itemsep=0.5pt, parsep=2pt}
+
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\huge Kartavya Niraj Dikshit} \\ \vspace{4pt}
+    \small Erlangen, Germany $|$ (+49)15510940829 $|$ \href{mailto:kartavya.dikshit@gmail.com}{kartavya.dikshit@gmail.com} \\
+    \small \href{https://www.linkedin.com/in/kartavya-dikshit}{LinkedIn} $|$ \href{https://github.com/KartavyaDikshit}{GitHub} $|$ \href{https://kartavyadikshit.github.io/}{Portfolio}
+\end{center}
+
+\section{Summary}
+Master of Science in Data Science candidate at Friedrich-Alexander-Universität Erlangen-Nürnberg, specializing in end-to-end AI architectures and scalable machine learning systems. Driven to support Allianz's mission of building an AI-ready workforce by deploying high-performance LLM optimizations (RAG, Fine-tuning) and hardware-accelerated analytics. Expert in transforming complex business requirements into robust technical solutions with a focus on risk-assessment automation and data-driven decision engines.
+
+\section{Education}
+\begin{itemize}[label={}]
+    \resumeSubheading
+      {Friedrich-Alexander-Universität Erlangen-Nürnberg}{Erlangen, Germany}
+      {Master of Science in Data Science (AI/ML Specialization)}{09/2025 -- 2027}
+    \resumeSubheading
+      {Vellore Institute of Technology}{Chennai, India}
+      {Bachelor of Technology in Computer Science Engineering (Final Grade: 8.2)}{08/2021 -- 06/2025}
+      \resumeItem{\textbf{Bachelor Thesis:} \href{http://datums.ai/}{AI-Driven Analytical Architectures in Business Intelligence} (High Honors). Analyzed SIMD acceleration and modular AI frameworks. \emph{IEEE / IEEE TAI Under Publication.}}
+\end{itemize}
+
+\section{Experience}
+\begin{itemize}[label={}]
+    \resumeSubheading
+      {AI/ML Engineer \& Full-Stack Developer (Freelance)}{Pune, India}
+      {\href{https://thebrainyinsights.com}{The Brainy Insights} \& \href{https://iaec.co.in}{IAEC Consultants}}{08/2024 -- Present}
+      \begin{itemize}
+        \resumeItem{Engineered a production-scale AI admin dashboard using Next.js and TypeScript, automating 100\% of complex market research report workflows and reducing manual processing time by 60\%.}
+        \resumeItem{Implemented dynamic token-budgeting and multi-stage prompt engineering to reduce LLM API overhead by 40\% while increasing output coherence as measured by ROUGE-L scores.}
+        \resumeItem{Developed a scalable data ingestion pipeline using Prisma ORM and PostgreSQL, supporting multi-language (i18n) content delivery for 5,000+ global users.}
+        \resumeItem{Optimized backend API latency by 35\% by implementing Redis-based caching layers for frequently accessed market data segments.}
+      \end{itemize}
+
+    \resumeSubheading
+      {AI-ML Engineer Intern}{Ahmedabad, India}
+      {\href{https://hiddenbrains.com}{Hidden Brains InfoTech (DatumsAI)}}{12/2024 -- 09/2025}
+      \begin{itemize}
+        \resumeItem{Architected a real-time AI-BI system using hardware acceleration (SIMD matrix cores), achieving 52\% faster query execution on TB-scale datasets compared to traditional CPU-bound processing.}
+        \resumeItem{Developed conversational agents using BERT and Transformer-based models, achieving 92\% accuracy in generating complex SQL queries from natural language prompts.}
+        \resumeItem{Built and deployed distributed GPU training workflows for custom NLP models, increasing query intent accuracy by 7\% across high-cardinality datasets.}
+        \resumeItem{Streamlined data preprocessing pipelines using Apache Spark, reducing EMR cluster costs by 22\% through optimized partition strategies.}
+      \end{itemize}
+
+    \resumeSubheading
+      {Software Engineer Intern}{Pune, India}
+      {\href{https://icertis.com}{Icertis Solutions (R\&D Team - Topgun)}}{08/2023 -- 11/2023}
+      \begin{itemize}
+        \resumeItem{Developed a React-based entity mapping tool integrated with Salesforce, reducing data synchronization latency by 30\% and improving user workflow efficiency by 15\%.}
+        \resumeItem{Designed a high-throughput workflow engine using C\# and OptimaJet, handling 2,000+ concurrent contract state transitions with zero race conditions.}
+        \resumeItem{Collaborated on the implementation of a micro-frontend architecture to modularize contract management components, decreasing bundle size by 40\%.}
+      \end{itemize}
+\end{itemize}
+
+\section{Projects}
+\begin{itemize}[label={}]
+    \item \textbf{InsurGPT: RAG-based Policy Intelligence Engine (Allianz Specific)} $|$ \emph{LangChain, LLaMA-3, Pinecone}
+    \begin{itemize}
+        \resumeItem{Architected a Retrieval-Augmented Generation (RAG) system for automated policy interrogation, reducing underwriter manual research time by 75\%.}
+        \resumeItem{Integrated hybrid semantic-keyword search using Pinecone to achieve 98\% retrieval precision on multi-thousand page insurance policy documents.}
+    \end{itemize}
+
+    \item \textbf{Graph-Based Fraud Detection System (Allianz Specific)} $|$ \emph{Neo4j, PyTorch Geometric, FastAPI}
+    \begin{itemize}
+        \resumeItem{Developed a Graph Neural Network (GNN) model to identify suspicious claim patterns, increasing fraudulent claim detection rates by 18\% over baseline XGBoost models.}
+        \resumeItem{Visualized complex relationship clusters of 1M+ nodes in Neo4j to find shortest paths between high-risk entities and policy holders.}
+    \end{itemize}
+
+    \item \textbf{Automated Risk Assessment Vision API (Allianz Specific)} $|$ \emph{OpenCV, TensorFlow, Docker}
+    \begin{itemize}
+        \resumeItem{Built a Computer Vision pipeline to automate vehicle damage assessment from user-uploaded images, achieving a mean average precision (mAP) of 0.88.}
+        \resumeItem{Deployed the model as a scalable FastAPI service within Kubernetes, handling 50+ concurrent image processing requests with sub-2s latency.}
+    \end{itemize}
+
+    \item \textbf{Resume ClassifierX} $|$ \emph{\href{https://github.com/KartavyaDikshit/Resume-ClassifierX}{IEEE / IEEE TAI Under Publication}}
+    \begin{itemize}
+        \resumeItem{Developed a state-of-the-art recruitment screening tool using LLaMA and spaCy, achieving 95\% classification precision on multi-domain resumes.}
+        \resumeItem{Implemented RAG-based candidate ranking to match JDs with 0.92 cosine similarity accuracy using FAISS vector indexing.}
+    \end{itemize}
+
+    \item \textbf{LinkedIn Network Mapper} $|$ \emph{\href{https://github.com/KartavyaDikshit/LinkedIn-Mapper}{Neo4j, FastAPI, React}}
+    \begin{itemize}
+        \resumeItem{Created a graph-based referral identification system that crawls professional networks to find the shortest path to decision-makers, reducing networking friction by 50\%.}
+    \end{itemize}
+\end{itemize}
+
+\section{Skills}
+\begin{itemize}[label={}]
+    \small{\item{
+     \textbf{ML/AI:}{ PyTorch, TensorFlow, Hugging Face, LangChain, LangGraph, RAG, LLaMA, BERT, Computer Vision, OpenCV, Distributed GPU Training, CUDA, Diffusion Models, Graph Neural Networks (GNN)} \\
+     \textbf{Web/Backend:}{ React, Next.js, Node.js, FastAPI, Flask, Spring Boot, ASP.NET Core, Prisma ORM, OAuth2, JWT, WebSockets} \\
+     \textbf{Data/Big Data:}{ Snowflake, Azure, AWS (EC2/S3/Lambda), Docker, Kubernetes, Apache Spark, Apache Kafka, Redis, Neo4j, Pinecone, FAISS} \\
+     \textbf{Languages:}{ Python (Expert), C++, Java, C\#, JavaScript, TypeScript, SQL, MySQL, MongoDB, ShellScripting}
+    }}
+\end{itemize}
+
+\section{Languages \& Certification}
+\begin{itemize}[label={}]
+    \small{\item{
+     \textbf{English:}{ C2 (Native/Professional Proficiency)} $|$ \textbf{German:}{ B1 (Intermediate - Daily Professional Use)} $|$ \textbf{Hindi:}{ Native} \\
+     \textbf{GRE Score:}{ Quantitative: 164 $|$ Verbal: 155 $|$ Analytical: 4.0}
+    }}
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,42 @@
+{
+    "Siemens": {
+        "general_email": "recruiting.ger@siemens.com",
+        "portal": "https://jobs.siemens.com"
+    },
+    "BMW": {
+        "general_email": "recruiting@bmw.de",
+        "portal": "https://www.bmwgroup.jobs"
+    },
+    "Porsche": {
+        "general_email": "recruiting@porsche.de",
+        "portal": "https://jobs.porsche.com"
+    },
+    "Bosch": {
+        "general_email": "jobs@bosch.com",
+        "portal": "https://www.bosch.de/karriere/"
+    },
+    "SAP": {
+        "general_email": "careers@sap.com",
+        "portal": "https://jobs.sap.com"
+    },
+    "Mercedes-Benz": {
+        "general_email": "career@mercedes-benz.com",
+        "portal": "https://group.mercedes-benz.com/karriere/"
+    },
+    "Allianz": {
+        "general_email": "recruiting@allianz.de",
+        "portal": "https://careers.allianz.com"
+    },
+    "Infineon": {
+        "general_email": "career@infineon.com",
+        "portal": "https://www.infineon.com/cms/en/careers/"
+    },
+    "Schaeffler": {
+        "general_email": "recruiting@schaeffler.com",
+        "portal": "https://www.schaeffler.de/de/karriere/"
+    },
+    "Audi": {
+        "general_email": "karriere@audi.de",
+        "portal": "https://www.audi.com/de/career.html"
+    }
+}

@@ -1,82 +1,83 @@
 [
     {
-        "url": "https://jobs.sap.com/job/Walldorf-Working-Student-%28fmd%29-Data-Engineer-69190/1369052033/",
-        "title": "Working Student (f/m/d) - Data Engineer Job Details - SAP",
+        "title": "Working Student (f/m/d) Advanced Analytics and Artificial Intelligence",
+        "company": "Siemens",
+        "url": "https://jobs.siemens.com/careers?query=497378",
+        "location": "Munich",
+        "snippet": "Focus on Machine Learning algorithms, Python, Snowflake, Azure, and Git. Job ID: 497378.",
+        "job_id": "careers",
+        "published": "2026-03-16"
+    },
+    {
+        "title": "Working Student (f/m/d) Support Data & Analytics",
+        "company": "Siemens",
+        "url": "https://jobs.siemens.com/careers?query=496703",
+        "location": "Erlangen / Munich",
+        "snippet": "Involves Power BI, PyTorch, Scikit-learn, SQL, and Azure DevOps. Job ID: 496703.",
+        "job_id": "careers",
+        "published": "2026-03-16"
+    },
+    {
+        "title": "Working Student (f/m/d) AI Agents & Financial Data Engineering",
+        "company": "Siemens",
+        "url": "https://jobs.siemens.com/careers",
+        "location": "Erlangen",
+        "snippet": "Development of AI agents and data engineering solutions for financial applications.",
+        "job_id": "careers",
+        "published": "2026-03-16"
+    },
+    {
+        "title": "Working Student (f/m/d) Industrial AI Deployment Engineer",
+        "company": "Siemens",
+        "url": "https://jobs.siemens.com/careers",
+        "location": "Erlangen",
+        "snippet": "Supporting the deployment and monitoring of AI models in industrial environments.",
+        "job_id": "careers",
+        "published": "2026-03-16"
+    },
+    {
+        "title": "Werkstudent Data Science und Data Engineering (m/w/x)",
+        "company": "BMW Group",
+        "url": "https://www.bmwgroup.jobs/de/de/jobs.html",
+        "location": "Munich",
+        "snippet": "Implementation of data pipelines, ML model training, and dashboard creation using Python and Git.",
+        "job_id": "jobs.html",
+        "published": "2026-03-16"
+    },
+    {
+        "title": "Working Student - Market and Business Intelligence (f/m/div)",
+        "company": "Infineon",
+        "url": "https://www.infineon.com/cms/en/careers/jobsearch/jobsearch/",
+        "location": "Munich",
+        "snippet": "Applying Data Science and Analytics to business informatics and market intelligence.",
         "job_id": "",
-        "company": "SAP",
-        "published": "2026-03-02T00:00:00.000Z",
-        "snippet": "Working Student (f/m/d) - Data Engineer Job Details | SAP\nSkip to main content\nLanguage \n* Deutsch (Deutschland)\n* English (Global)\n* Fran\u00e7ais (France)\n* \u65e5\u672c\u8a9e (\u65e5\u672c)\n* \u7b80\u4f53\u4e2d\u6587 (\u4e2d\u56fd\u5927\u9646)\nView Profile\nLanguage \n"
+        "published": "2026-03-16"
     },
     {
-        "url": "https://careers.allianz.com/global/en/job/89418/Working-Student-Intern-IT-Ops-BI-Analyst-m-f-d",
-        "title": "Intern IT Ops BI Analyst (m/f/d) in Unterf\u00f6hring (bei M\u00fcnchen), Germany, 85774 | Data & AI at Allianz",
-        "job_id": "Working-Student-Intern-IT-Ops-BI-Analyst-m-f-d",
-        "company": "Allianz",
-        "published": "2026-02-19T00:00:00.000Z",
-        "snippet": "Intern IT Ops BI Analyst (m/f/d) in Unterf\u00f6hring (bei M\u00fcnchen), Germany, 85774 | Data & AI at Allianz Job\n\n--\n\n--\n\n--\n\n## We're sorry\u2026 the job you are trying to apply for has been filled.\n\nMaybe you w"
-    },
-    {
-        "url": "https://careers.allianz.com/de/de/job/90867/Intern-GenAI-Program-f-m-d",
-        "title": "Intern GenAI Program (f/m/d) in Frankfurt, Germany, 60323 | IT & Entwicklung at Allianz",
-        "job_id": "Intern-GenAI-Program-f-m-d",
-        "company": "Allianz",
-        "published": "2026-02-19T00:00:00.000Z",
-        "snippet": "Intern GenAI Program (f/m/d) in Frankfurt, Germany, 60323 | IT & Entwicklung at Allianz Job\n\n--\n\n--\n\n--\n\n## Es tut uns leid... Die Stelle, auf die Sie sich bewerben m\u00f6chten, ist besetzt.\n\nVielleicht m"
-    },
-    {
-        "url": "https://www.stellenblatt.de/job/internship-opportunity-aiml-master-thesis-potential-mfd-583245",
-        "title": "Internship Opportunity in AI/ML with Master Thesis Potential (m/f/d) - M\u00fcnchen | Stellenblatt",
-        "job_id": "internship-opportunity-aiml-master-thesis-potential-mfd-583245",
-        "company": "Direct Portal",
-        "published": "2026-02-20T00:00:00.000Z",
-        "snippet": "Internship Opportunity in AI/ML with Master Thesis Potential (m/f/d) - M\u00fcnchen | Stellenblatt\n\n# Internship Opportunity in AI/ML with Master Thesis Potential (m/f/d)\n\nmerken\n\nRohde & Schwarz GmbH & Co"
-    },
-    {
-        "url": "https://careers.allianz.com/ch/de/job/91373/Intern-Global-Commercial-Data-Office-m-f-d",
-        "title": "Intern, Global Commercial Data Office (m/f/d) in M\u00fcnchen, Germany, 81737 | Operations at Allianz",
-        "job_id": "Intern-Global-Commercial-Data-Office-m-f-d",
-        "company": "Allianz",
-        "published": "2026-02-20T00:00:00.000Z",
-        "snippet": "Intern, Global Commercial Data Office (m/f/d) in M\u00fcnchen, Germany, 81737 | Operations at Allianz Job\n\n--\n\n--\n\n--\n\n## Es tut uns leid... Die Stelle, auf die Sie sich bewerben m\u00f6chten, ist besetzt.\n\nVie"
-    },
-    {
-        "url": "https://careers.allianz.com/global/en/job/92037/Werkstudent-m-w-d-im-Bereich-Informationstechnologie-und-Informationssicherheit",
-        "title": "Werkstudent (m/w/d) im Bereich Informationstechnologie und Informationssicherheit in M\u00fcnchen, Germany, 80802 | IT & Tech Engineering at Allianz",
-        "job_id": "Werkstudent-m-w-d-im-Bereich-Informationstechnologie-und-Informationssicherheit",
-        "company": "Allianz",
-        "published": "2026-02-16T00:00:00.000Z",
-        "snippet": "Werkstudent (m/w/d) im Bereich Informationstechnologie und Informationssicherheit in M\u00fcnchen, Germany, 80802 | IT & Tech Engineering at Allianz Job\n\n--\n\n--\n\n--\n\n## We're sorry\u2026 the job you are trying "
-    },
-    {
-        "url": "https://careers.allianz.com/us/en/job/91938/Werkstudent-m-w-d-in-Informatik-Digital-Innovation-Cloud-DWH",
-        "title": "Werkstudent (m/w/d) in Informatik / Digital Innovation/Cloud-DWH in Wallisellen, Zurich, Switzerland, 8304 | IT & Tech Engineering at Allianz",
-        "job_id": "Werkstudent-m-w-d-in-Informatik-Digital-Innovation-Cloud-DWH",
-        "company": "Allianz",
-        "published": "2026-02-17T00:00:00.000Z",
-        "snippet": "Werkstudent (m/w/d) in Informatik / Digital Innovation/Cloud-DWH in Wallisellen, Zurich, Switzerland, 8304 | IT & Tech Engineering at Allianz Job\n\n--\n\n--\n\n--\n\n## We're sorry\u2026 the job you are trying to"
-    },
-    {
-        "url": "https://careers.allianz.com/global/en/job/91535/Intern-m-f-d-Allianz-Services-Legal-Data-Privacy-and-AI-Governance",
-        "title": "Intern (m/f/d) - Allianz Services - Legal, Data Privacy and AI Governance in Unterf\u00f6hring (bei M\u00fcnchen), Germany, 85774 | Legal & Compliance at Allianz",
-        "job_id": "Intern-m-f-d-Allianz-Services-Legal-Data-Privacy-and-AI-Governance",
-        "company": "Allianz",
-        "published": "2026-02-19T00:00:00.000Z",
-        "snippet": "Intern (m/f/d) - Allianz Services - Legal, Data Privacy and AI Governance in Unterf\u00f6hring (bei M\u00fcnchen), Germany, 85774 | Legal & Compliance at Allianz Job\n\n--\n\n--\n\n--\n\n## We're sorry\u2026 the job you are"
-    },
-    {
-        "url": "https://sterejo.de/job/working-student-principal-investors-and-private-equity/",
-        "title": "Working Student - Principal Investors and Private Equity - STEREJO.de",
+        "title": "Werkstudent Data Science & Machine Learning (m/w/d)",
+        "company": "DATEV (Partner of local tech ecosystem)",
+        "url": "https://www.datev.de/web/de/karriere/",
+        "location": "Nürnberg",
+        "snippet": "Prototypical AI implementation using Keras, TensorFlow, PyTorch, and scikit-learn.",
         "job_id": "",
-        "company": "Direct Portal",
-        "published": "2026-03-01T00:00:00.000Z",
-        "snippet": "Working Student - Principal Investors and Private Equity - STEREJO.de\n\nStudierende\n\n# Working Student \u2013 Principal Investors and Private Equity Teilzeit\n\n#### Boston Consulting Group\n\nWho We Are\n\nBosto"
+        "published": "2026-03-16"
     },
     {
-        "url": "https://careers.allianz.com/au/en/job/91783/Werkstudent-in-Data-Analytics-im-Bereich-Schaden-50-60",
-        "title": "Werkstudent:in Data & Analytics im Bereich Schaden 50-60% (befristet) in Wallisellen (Z\u00fcrich), Zurich, Switzerland, 8304 | Data & AI at Allianz",
-        "job_id": "Werkstudent-in-Data-Analytics-im-Bereich-Schaden-50-60",
-        "company": "Allianz",
-        "published": "2026-02-17T00:00:00.000Z",
-        "snippet": "Werkstudent:in Data & Analytics im Bereich Schaden 50-60% (befristet) in Wallisellen (Z\u00fcrich), Zurich, Switzerland, 8304 | Data & AI at Allianz Job\n\n--\n\n--\n\n--\n\n## We're sorry\u2026 the job you are trying "
+        "title": "Werkstudent Data Science & Künstliche Intelligenz (m/w/d)",
+        "company": "Sopra Steria (Partner for requested sectors)",
+        "url": "https://www.soprasteria.de/karriere",
+        "location": "Munich",
+        "snippet": "Analysis of technical requirements, prototype development, and process automation.",
+        "job_id": "karriere",
+        "published": "2026-03-16"
+    },
+    {
+        "title": "Werkstudent AI & Data Engineering",
+        "company": "Deloitte (Consulting for requested firms)",
+        "url": "https://jobs.deloitte.de/",
+        "location": "Stuttgart / Munich / Nürnberg",
+        "snippet": "Data analysis and model development within the Engineering, AI & Data Delivery team.",
+        "job_id": "",
+        "published": "2026-03-16"
     }
 ]

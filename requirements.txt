@@ -2,5 +2,6 @@ requests
 exa_py
 python-dotenv
 pandas
-streamlit
+google-genai
 openpyxl
+streamlit

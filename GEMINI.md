@@ -1,56 +1,50 @@
-# Project Overview: Resume Tailoring & Job Search Pipeline
+# Arbeitlos 2.0: Gemini-Powered Job Pipeline
 
-This project is an automated job application pipeline designed for a Master's student (Kartavya Niraj Dikshit) specializing in Data Science/AI at FAU Erlangen-Nürnberg. It automates the discovery of job opportunities, scraping of job descriptions (JDs), and the generation of highly tailored resumes and outreach messages using the Gemini CLI and external APIs.
+## Overview
+Arbeitlos 2.0 is an end-to-end automated job search and application pipeline optimized for the German tech market. It leverages the **Gemini API with Search Grounding** to discover roles, scrape JDs, and generate highly tailored, ATS-compliant application suites.
 
-## Tech Stack
-- **Language:** Python 3.x, PowerShell
-- **APIs:** 
-  - [Exa AI](https://exa.ai/) (for semantic job search)
-  - [Jina Reader](https://r.jina.ai/) (for scraping JDs into Markdown)
-  - [Hunter.io](https://hunter.io/) (for identifying company email patterns)
-- **AI Integration:** Gemini CLI (for resume tailoring and message drafting)
+## Project Roadmap
 
-## Directory Structure
-- `scripts/`: Contains Python scripts for search, scraping, tailoring, and networking.
-- `data/`: 
-  - `master_cv.md`: The base resume with complete history.
-  - `raw_jds/`: Markdown files of scraped job descriptions.
-  - `tailored_outputs/`: Tailored resumes, outreach messages, and JSON deltas.
-- `requirements.txt`: Python dependencies (`requests`, `exa_py`, `python-dotenv`, `pandas`).
-- `run_pipeline.ps1`: The primary orchestrator script.
-- `tailor_prompt.txt`: The system prompt defining the AI's "Hallucination Protocol" and tailoring rules.
+### Phase 1: AI-Driven Discovery
+- **Tooling:** `scripts/search_jobs_gemini.py`
+- **Method:** Uses Gemini 1.5 Pro with **Search Grounding** to find active "Werkstudent" roles.
+- **Targets:** Siemens, BMW, Porsche, Schaeffler, Bosch, SAP, Mercedes-Benz, Allianz, Infineon, Audi.
+- **Output:** `data/jobs_found.json` containing direct career portal links.
 
-## Building and Running
+### Phase 2: Precision Tailoring
+- **Tooling:** `scripts/tailor_resume_lossless.py` + `tailor_prompt.txt`
+- **Goal:** Transform `master_cv.md` into a 2-3 page technical powerhouse.
+- **Constraints:**
+    - **Google XYZ Format:** Every bullet point follows the "Accomplished [X] as measured by [Y], by doing [Z]" pattern.
+    - **No Portfolio:** Portfolio links are removed to prioritize depth of text.
+    - **Hallucination Protocol:** Fabricates 3-4 company-specific projects (e.g., Siemens Industrial AI).
+    - **Language:** Optimized for English/German roles.
+- **Output:** Tailored LaTeX resume and a professional German-style Cover Letter (`Anschreiben`).
 
-### Prerequisites
-1. Install dependencies: `pip install -r requirements.txt`
-2. Create a `.env` file with the following keys:
-   - `EXA_API_KEY`: Required for job search.
-   - `HUNTER_API_KEY`: Optional for networking.
-3. Ensure the `gemini` CLI tool is installed and authenticated in your environment.
+### Phase 3: Networking Discovery
+- **Tooling:** `scripts/find_contacts_gemini.py`
+- **Discovery:** Identifies hiring managers, team leads, or HR contacts via LinkedIn/Grounded Search.
+- **Outreach:** Generates:
+    - **Cold Email Draft:** Professional follow-up message.
+    - **LinkedIn Invite:** Personalized 200-character invitation message.
+- **Output:** `data/tailored_outputs/[JobTitle]_Outreach.json`.
 
-### Execution
-The entire pipeline can be run via the PowerShell script:
-```powershell
-./run_pipeline.ps1
+## Quick Start Commands
+
+### 1. Discovery
+```bash
+python scripts/search_jobs_gemini.py
 ```
 
-Alternatively, scripts can be run individually:
-- **Search:** `python scripts/search_jobs.py` (Outputs to `data/jobs_found.json`)
-- **Scrape:** `python scripts/scrape_jd.py <url> <filename>` (Outputs to `data/raw_jds/`)
-- **Tailor:** `python scripts/tailor_resume_lossless.py <master_cv> <jd> <output_path>`
-- **Network:** `python scripts/networker.py <domain> <job_title> <tailored_resume_path>`
+### 2. Tailoring (Manual Trigger)
+```bash
+python scripts/tailor_resume_lossless.py <master_cv> <jd_file> <output_path>
+```
 
-## Development Conventions & Logic
+### 3. Full Orchestration
+The Streamlit app (`app.py`) provides a single-click interface to run the entire pipeline for a selected role.
 
-### AI Strategy: The "Hallucination Protocol"
-As defined in `tailor_prompt.txt`, the AI is instructed to:
-1. **Preserve Integrity:** Keep all existing education and experience from the Master CV.
-2. **Fabricate Projects:** Generate 3-4 high-impact, company-specific projects (e.g., for BMW or Siemens) to show immediate relevance.
-3. **Google XYZ Format:** Rewrite all bullet points (both existing and fabricated) to follow the "Accomplished [X] as measured by [Y], by doing [Z]" pattern.
-4. **Keyword Injection:** Seamlessly integrate technical keywords (e.g., "Hugging Face", "PyTorch", "RL") from the JD into the resume.
-
-### Output Flow
-- All scraped JDs are stored as `.md` files to ensure formatting is preserved for the AI.
-- Tailored outputs are saved with the job title in the filename (e.g., `BMW_CV.md`).
-- Networking scripts draft both a cold email and a LinkedIn connection request tailored to the specific company's tech stack.
+## Architecture Decisions
+- **Gemini Search Grounding vs Exa:** Exa is great for broad searches, but Gemini's Search Grounding is superior for traversing protected corporate portals and identifying specific hiring personas.
+- **LaTeX for Resumes:** LaTeX ensures consistent, ATS-friendly formatting that doesn't break during parsing.
+- **JSON-First Storage:** All data (leads, contacts, outreach) is stored in structured JSON to ensure easy review and scalability.

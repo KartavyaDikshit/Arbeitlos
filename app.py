@@ -5,24 +5,25 @@ import json
 import subprocess
 from datetime import datetime
 import scripts.find_contacts as fc
+from scripts.find_contacts_gemini import find_hiring_manager
 from scripts.scrape_jd import scrape_to_markdown
 from scripts.generate_cover_letter import generate_cl
 import urllib.parse
 import time
 
-st.set_page_config(layout="wide", page_title="Arbeitlos - Job Pipeline")
+st.set_page_config(layout="wide", page_title="Arbeitlos - Professional Job Pipeline")
 
-# Strict Professional UI UX Implementation
+# Professional UI UX Implementation (Minimalist, No Emojis)
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
     
     :root {
-        --primary: #2563eb;
-        --primary-hover: #1d4ed8;
-        --dark: #1e293b;
+        --primary: #0f172a;
+        --primary-hover: #1e293b;
+        --dark: #0f172a;
         --secondary: #64748b;
-        --bg: #f8fafc;
+        --bg: #ffffff;
         --border: #e2e8f0;
     }
 
@@ -31,30 +32,10 @@ st.markdown("""
         background-color: var(--bg);
     }
 
-    /* Standardized Text Colors */
     h1, h2, h3, .stMarkdown p, .stMarkdown span, label {
         color: var(--dark) !important;
     }
 
-    /* Tab Refinement */
-    .stTabs [data-baseweb="tab-list"] {
-        gap: 24px;
-        background-color: transparent;
-        border-bottom: 1px solid var(--border);
-    }
-    .stTabs [data-baseweb="tab"] {
-        color: var(--secondary) !important;
-        font-weight: 500;
-        background-color: transparent;
-        border: none;
-        padding-bottom: 10px;
-    }
-    .stTabs [aria-selected="true"] {
-        color: var(--primary) !important;
-        border-bottom: 2px solid var(--primary) !important;
-    }
-
-    /* Standardized Buttons */
     .stButton > button {
         background-color: var(--primary) !important;
         color: white !important;
@@ -63,227 +44,173 @@ st.markdown("""
         padding: 8px 20px !important;
         font-size: 14px !important;
         font-weight: 500 !important;
-        transition: background-color 0.2s !important;
+        transition: all 0.2s !important;
     }
     .stButton > button:hover {
         background-color: var(--primary-hover) !important;
         border-color: var(--primary-hover) !important;
     }
 
-    /* Link Buttons */
-    [data-testid="stLinkButton"] a {
-        background-color: white !important;
-        color: var(--primary) !important;
-        border: 1px solid var(--primary) !important;
-        border-radius: 4px !important;
-        text-decoration: none !important;
-        font-weight: 500 !important;
-        display: inline-flex !important;
-        padding: 8px 20px !important;
-    }
-
-    /* Job Card Styling */
-    .job-card { 
-        background-color: white; 
-        padding: 24px; 
-        border-radius: 8px; 
-        border: 1px solid var(--border);
-        margin-bottom: 16px;
-    }
-    .job-card h3 {
-        margin-top: 0;
-        color: var(--dark) !important;
-        font-size: 1.1rem;
-    }
-    .job-info {
-        color: var(--secondary) !important;
-        font-size: 0.85rem;
-        margin-bottom: 12px;
-    }
-    .job-snippet {
-        color: var(--dark) !important;
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
-
-    /* Sidebar Refinement */
     [data-testid="stSidebar"] {
-        background-color: white !important;
+        background-color: #f8fafc !important;
         border-right: 1px solid var(--border);
     }
-    [data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] p, [data-testid="stSidebar"] .stMarkdown {
-        color: var(--dark) !important;
-    }
     
-    /* Error and Warning Overrides */
-    .stAlert {
-        background-color: white !important;
-        border: 1px solid var(--border) !important;
-        color: var(--dark) !important;
+    .result-card {
+        padding: 20px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        margin-top: 20px;
+        background-color: #f8fafc;
     }
     </style>
 """, unsafe_allow_html=True)
 
-TRACKING_FILE = "data/tracking.xlsx"
-
-def load_tracker():
-    cols = ["Date", "Company", "Title", "Contact Person", "Email", "LinkedIn", "Resume", "Cover Letter", "Gmail Link", "Status"]
-    if os.path.exists(TRACKING_FILE):
-        try:
-            return pd.read_excel(TRACKING_FILE)
-        except:
-            return pd.DataFrame(columns=cols)
-    return pd.DataFrame(columns=cols)
-
-def save_to_tracker(data_dict):
-    df = load_tracker()
-    new_row = pd.DataFrame([data_dict])
-    df = pd.concat([df, new_row], ignore_index=True)
+def extract_job_info(jd_text):
+    """Extracts company name and job title from JD text using Gemini."""
+    prompt = (
+        f"Extract the Company Name and Job Title from the following job description:\n\n"
+        f"{jd_text}\n\n"
+        f"Return ONLY a JSON object with keys: 'company', 'title'. "
+        f"Example: {{\"company\": \"Siemens\", \"title\": \"Working Student AI\"}}"
+    )
     try:
-        df.to_excel(TRACKING_FILE, index=False)
-    except PermissionError:
-        st.error("Action Required: Close tracking.xlsx in Excel to allow file update.")
+        process = subprocess.Popen(
+            ["gemini", "-e", "", "--model", "flash-lite", "--prompt", "-"],
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding="utf-8",
+            shell=True
+        )
+        stdout, stderr = process.communicate(input=prompt, timeout=120)
+        if process.returncode == 0:
+            text = stdout.strip()
+            if "```json" in text:
+                text = text.split("```json")[1].split("```")[0]
+            elif "```" in text:
+                text = text.split("```")[1].split("```")[0]
+            return json.loads(text.strip())
+    except Exception as e:
+        st.error(f"Extraction error: {e}")
+    return {"company": "Unknown", "title": "Unknown_Job"}
 
-def generate_gmail_link(recipient, subject, body):
-    params = {
-        "to": recipient,
-        "subject": subject,
-        "body": body
-    }
-    return f"https://mail.google.com/mail/?view=cm&fs=1&{urllib.parse.urlencode(params)}"
+def main():
+    st.title("Arbeitlos: Pipeline")
+    st.markdown("Enter the job description to generate a professional application suite.")
 
-st.title("Arbeitlos: Job Application Pipeline")
+    # Initialize session state
+    if "pipeline_results" not in st.session_state:
+        st.session_state.pipeline_results = None
+    if "contact_results" not in st.session_state:
+        st.session_state.contact_results = None
 
-# Sidebar
-with st.sidebar:
-    st.header("Control Panel")
-    if st.button("Search Werkstudent Roles"):
-        with st.spinner("Scanning job boards..."):
-            subprocess.run(["python", "scripts/search_jobs.py"], shell=True)
-        st.success("Search complete.")
-        st.rerun()
-    st.divider()
-    st.markdown("Targets: Siemens, BMW, SAP, Bosch, Zalando, Infineon, Adidas, Allianz, Google DE.")
-
-# Main Content
-tabs = st.tabs(["Job Discovery", "Application History"])
-
-with tabs[0]:
-    jobs = []
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    json_path = os.path.join(base_dir, "data", "jobs_found.json")
 
-    if os.path.exists(json_path):
-        with open(json_path, "r") as f:
-            jobs = json.load(f)
+    # Input Area
+    man_jd_text = st.text_area("Job Description Content", height=400, placeholder="Paste the full job description text here...")
+    
+    col_run, col_clear = st.columns([1, 5])
+    with col_run:
+        run_btn = st.button("Generate Suite")
+    with col_clear:
+        if st.button("Clear Pipeline"):
+            st.session_state.pipeline_results = None
+            st.session_state.contact_results = None
+            st.rerun()
 
-
-    if not jobs:
-        st.info("No leads available. Initiate search from the sidebar.")
-    else:
-        for idx, job in enumerate(jobs):
-            with st.container():
-                st.markdown(f"""
-                <div class="job-card">
-                    <h3>{job.get('title')}</h3>
-                    <div class="job-info">
-                        Company: {job.get('company')} | <b>Job Reference ID: {job.get('job_id')}</b>
-                    </div>
-                    <div class="job-info">Date: {job.get('published')}</div>
-                    <div class="job-snippet">{job.get('snippet')}</div>
-                </div>
-                """, unsafe_allow_html=True)
+    if run_btn:
+        if not man_jd_text:
+            st.warning("Job description text is required.")
+        else:
+            with st.status("Processing Application...", expanded=True) as status:
+                st.write("Extracting job metadata...")
+                job_info = extract_job_info(man_jd_text)
+                company = job_info.get("company", "Unknown")
+                title = job_info.get("title", "Job")
                 
-                col1, col2 = st.columns([1, 1])
-                with col1:
-                    st.link_button("Apply via Official Portal", job.get('url'))
-                with col2:
-                    if st.button("Initialize Application Suite", key=f"gen_{idx}"):
-                        raw_title = job.get('title')
-                        safe_title = "".join(x for x in raw_title if x.isalnum())
-                        company = job.get('company')
-                        domain = fc.get_domain_from_url(job.get('url'))
-                        
-                        with st.status("Generating Application Suite...", expanded=True) as status:
-                            st.write("Phase 1: Identifying hiring contacts...")
-                            contacts = fc.find_contacts(job.get('url'), raw_title, company)
-                            best_contact = contacts[0] if contacts else None
-                            
-                            st.write("Phase 2: Tailoring professional resume...")
-                            jd_path = f"data/raw_jds/{safe_title}.md"
-                            subprocess.run(["python", "scripts/scrape_jd.py", job.get('url'), safe_title], shell=True)
-                            
-                            tex_out = f"data/tailored_outputs/{safe_title}_CV.tex"
-                            subprocess.run(["python", "scripts/tailor_resume_lossless.py", "data/master_cv.tex", jd_path, tex_out], shell=True)
-                            pdf_out = os.path.abspath(tex_out.replace(".tex", ".pdf"))
-                            
-                            st.write("Phase 3: Drafting formal cover letter...")
-                            cl_out = os.path.abspath(f"data/tailored_outputs/{safe_title}_CL.md")
-                            generate_cl("data/master_cv.tex", jd_path, cl_out)
-                            
-                            outreach_link = None
-                            contact_info = "N/A"
-                            contact_name = "Hiring Team"
-                            contact_linkedin = "N/A"
-                            
-                            if best_contact:
-                                contact_name = best_contact.get('name')
-                                contact_linkedin = best_contact.get('linkedin')
-                                st.write(f"Contact Persona Found: {contact_name}")
-                                
-                                st.write("Phase 4: Drafting personalized outreach...")
-                                outreach_path = f"data/tailored_outputs/{safe_title}_Outreach.md"
-                                subprocess.run(["python", "scripts/networker.py", domain, safe_title, tex_out, outreach_path], shell=True)
-                                
-                                if os.path.exists(outreach_path):
-                                    with open(outreach_path, "r", encoding="utf-8") as f:
-                                        outreach_body = f.read()
-                                    
-                                    email_addr = best_contact.get('email') if best_contact.get('email') else ""
-                                    contact_info = f"{email_addr} | {contact_linkedin}"
-                                    
-                                    outreach_link = generate_gmail_link(
-                                        email_addr,
-                                        f"Application for {raw_title} - Kartavya Niraj Dikshit",
-                                        outreach_body
-                                    )
-                            else:
-                                st.warning("Notice: No specific persona identified. Outreach generation skipped.")
+                safe_title = "".join(x for x in title if x.isalnum())
+                job_dir = os.path.join(base_dir, "data", "tailored_outputs", safe_title)
+                os.makedirs(job_dir, exist_ok=True)
+                
+                jd_path = os.path.join(base_dir, "data", "raw_jds", f"{safe_title}.md")
+                with open(jd_path, "w", encoding="utf-8") as f:
+                    f.write(man_jd_text)
+                
+                st.write(f"Tailoring for {company} - {title}...")
+                tex_out = os.path.join(job_dir, "CV.tex")
+                subprocess.run(["python", "scripts/tailor_resume_lossless.py", "data/master_cv.md", jd_path, tex_out], shell=True)
+                
+                pdf_out = os.path.join(job_dir, "Tailored_CV.pdf")
+                cl_out = os.path.join(job_dir, "Cover_Letter.pdf")
+                
+                st.session_state.pipeline_results = {
+                    "company": company,
+                    "title": title,
+                    "pdf_out": pdf_out,
+                    "cl_out": cl_out,
+                    "job_dir": job_dir,
+                    "safe_title": safe_title
+                }
+                status.update(label="Application Suite Ready", state="complete")
 
-                            tracking_data = {
-                                "Date": datetime.now().strftime("%Y-%m-%d"),
-                                "Company": company,
-                                "Title": raw_title,
-                                "Contact Person": contact_name,
-                                "Email": best_contact.get('email', 'N/A') if best_contact else 'N/A',
-                                "LinkedIn": contact_linkedin,
-                                "Resume": f'=HYPERLINK("{pdf_out}", "PDF")',
-                                "Cover Letter": f'=HYPERLINK("{cl_out}", "Letter")',
-                                "Gmail Link": f'=HYPERLINK("{outreach_link}", "Draft Gmail")' if outreach_link else "N/A",
-                                "Status": "Ready"
-                            }
-                            save_to_tracker(tracking_data)
-                            status.update(label="Application Suite Generated Successfully", state="complete")
-                            
-                            st.divider()
-                            st.write("Action Required: Review Materials")
-                            action_col1, action_col2 = st.columns(2)
-                            with action_col1:
-                                if st.button("Open Tailored Resume", key=f"open_res_{idx}"):
-                                    os.startfile(pdf_out)
-                            with action_col2:
-                                if st.button("Open Cover Letter", key=f"open_cl_{idx}"):
-                                    os.startfile(cl_out)
-                            
-                            if outreach_link:
-                                st.link_button("Review Gmail Draft", outreach_link)
-                            if contact_linkedin != "N/A":
-                                st.link_button("View LinkedIn Profile", contact_linkedin)
-                st.write("")
+    # Display Results
+    if st.session_state.pipeline_results:
+        res = st.session_state.pipeline_results
+        st.markdown(f"### Application Materials: {res['company']}")
+        
+        c1, c2 = st.columns(2)
+        with c1:
+            if st.button("View Optimized Resume"):
+                path = os.path.abspath(res["pdf_out"])
+                if os.path.exists(path):
+                    os.startfile(path)
+                else:
+                    st.error("Resume file not found.")
+        with c2:
+            if st.button("View Cover Letter"):
+                path = os.path.abspath(res["cl_out"])
+                if os.path.exists(path):
+                    os.startfile(path)
+                else:
+                    st.error("Cover letter file not found.")
 
-with tabs[1]:
-    st.subheader("Application Tracking History")
-    df = load_tracker()
-    st.dataframe(df, width="stretch")
-    if st.button("Open Spreadsheet File"):
-        os.startfile(os.path.abspath(TRACKING_FILE))
+        st.divider()
+        
+        # Optional: Discovery
+        st.markdown("### Optional: Intelligence Discovery")
+        st.markdown("Identify the hiring manager and contact information based on the job details.")
+        
+        if st.button("Find Hiring Contact"):
+            with st.spinner("Searching for contacts..."):
+                contact = find_hiring_manager("Manual_Input", res['company'], res['title'], res['job_dir'])
+                st.session_state.contact_results = contact
+        
+        if st.session_state.contact_results:
+            con = st.session_state.contact_results
+            st.markdown(f"""
+            <div class="result-card">
+                <strong>Contact:</strong> {con.get('name')}<br>
+                <strong>Role:</strong> {con.get('title')}<br>
+                <strong>LinkedIn:</strong> <a href="{con.get('linkedin_url')}">{con.get('linkedin_url')}</a><br>
+                <strong>Email Guess:</strong> {con.get('email_guess')}
+            </div>
+            """, unsafe_allow_html=True)
+            
+            if con.get('cold_email'):
+                with st.expander("Draft Outreach Email"):
+                    st.text_area("Email Content", value=con['cold_email'], height=200)
+            
+            if con.get('linkedin_invite'):
+                with st.expander("LinkedIn Invitation"):
+                    st.text_area("Message", value=con['linkedin_invite'], height=100)
+
+    # Sidebar
+    with st.sidebar:
+        st.markdown("## Configuration")
+        st.markdown("System initialized for professional application tailoring.")
+        st.divider()
+        st.markdown("Target Sectors: Technology, Engineering, Data Science.")
+
+if __name__ == "__main__":
+    main()

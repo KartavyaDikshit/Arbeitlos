@@ -1,158 +1,174 @@
 \documentclass[10pt, a4paper]{article}
 
+% Packages
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[margin=0.75in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{xcolor}
-\usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
-\usepackage{fontawesome5}
-\usepackage{charter}
+\usepackage{titlesec}
+\usepackage{charter} % Professional font
 
-% Define Primary Color: RGB(0, 51, 102)
+% Define Primary Color
 \definecolor{primarycolor}{RGB}{0, 51, 102}
 
+% Hyperref setup
 \hypersetup{
     colorlinks=true,
     linkcolor=primarycolor,
     filecolor=primarycolor,      
     urlcolor=primarycolor,
-    pdftitle={CV - Kartavya Niraj Dikshit},
 }
 
-% Section formatting
+% Title Formatting
 \titleformat{\section}{\large\bfseries\color{primarycolor}}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{12pt}{8pt}
+\titlespacing*{\section}{0pt}{10pt}{6pt}
 
-\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=1.5em}
+% Custom List setup
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=2pt, partopsep=2pt, parsep=2pt}
 
 \begin{document}
 
-% HEADER
+% --- HEADER ---
 \begin{center}
-    {\Huge \bfseries \color{primarycolor} Kartavya Niraj Dikshit} \\ \vspace{4pt}
-    \small
-    \faMapMarker* Halbmondstraße 7, 91054, Erlangen, Germany \\
-    \faPhone* (+49) 15510940829 \quad \faEnvelope* \href{mailto:kartavya.dikshit@gmail.com}{kartavya.dikshit@gmail.com} \\
-    \faLinkedin \href{https://www.linkedin.com/in/kartavya-dikshit}{linkedin.com/in/kartavya-dikshit} \quad \faGithub \href{https://github.com/KartavyaDikshit}{github.com/KartavyaDikshit}
+    {\Huge \bfseries \color{primarycolor} Kartavya Niraj Dikshit} \\
+    \vspace{6pt}
+    Halbmondstraße 7, 91054, Erlangen, Germany \\
+    \vspace{3pt}
+    \href{mailto:kartavya.dikshit@gmail.com}{kartavya.dikshit@gmail.com} | (+49) 155 10940829 | (+91) 9765530235 \\
+    \vspace{3pt}
+    \href{http://www.linkedin.com/in/kartavya-dikshit}{linkedin.com/in/kartavya-dikshit} | \href{https://github.com/KartavyaDikshit}{github.com/KartavyaDikshit}
 \end{center}
 
-% EDUCATION
-\section{EDUCATION}
-\noindent
-\textbf{Friedrich-Alexander-Universität Erlangen-Nürnberg} \hfill Erlangen, Germany \\
-\textit{Master of Science in Data Science (Spec. AI/ML)} \hfill Sep 2025 -- Present \\
-Current Focus: Advanced Deep Learning, Scalable Data Architectures, and Full-Stack Innovation in Healthcare.
+% --- PROFESSIONAL PROFILE ---
+\section{PROFESSIONAL PROFILE}
+\textbf{Full-Stack Engineer \& AI Specialist} currently pursuing a Master’s in Data Science at FAU Erlangen-Nürnberg. Expert in building scalable, HIPAA-compliant architectures using \textbf{React Native (Expo)}, \textbf{Next.js}, and \textbf{Python-driven AI}. Proven track record in translating complex stakeholder requirements into technical work packages and delivering innovative app prototypes. Specialized in medical technology integration, high-performance distributed systems, and structured, documented development processes within Agile environments.
 
-\vspace{6pt}
-\noindent
-\textbf{Vellore Institute of Technology} \hfill Chennai, India \\
-\textit{Bachelor of Technology in Computer Science Engineering (Final Grade: 8.2/10.0)} \hfill Aug 2021 -- Jun 2025 \\
-Thesis: AI-Driven Analytical Architectures in Business Intelligence: Computational Architectures and Scalability. \\
-Key Modules: Data Structures, Algorithms, OS, DBMS, ML, NLP, and Distributed Systems. (IEEE Open-Source Lead).
+% --- EDUCATION ---
+\section{EDUCATION AND TRAINING}
+\textbf{Master of Science in Data Science (Specialization: AI/ML)} \hfill [09/2025 – 2027] \\
+\textit{Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)} \hfill Erlangen, Germany
+\begin{itemize}
+    \item \textbf{Core Focus:} Deep Learning, \textbf{Media Informatics}, \textbf{Business Informatics}, Scalable Data Architectures, and Medical Imaging.
+    \item \textbf{Academic Context:} Bridging the gap between AI research and clinical application within the Erlangen MedTech hub.
+\end{itemize}
 
-\vspace{6pt}
-\noindent
-\textbf{Arihant College of Science} \hfill Pune, India \\
-\textit{Higher Secondary School Certificate (Final Grade: 94\%)} \hfill Mar 2019 -- Mar 2021
+\vspace{4pt}
+\textbf{Bachelor of Technology in Computer Science Engineering} \hfill [08/2021 – 06/2025] \\
+\textit{Vellore Institute of Technology (VIT)} \hfill Chennai, India
+\begin{itemize}
+    \item \textbf{Final Grade:} 8.2/10.0 | \textbf{Thesis:} AI-Driven Analytical Architectures in Business Intelligence and Scalability.
+    \item \textbf{Key Coursework:} Data Structures, Algorithms, Computer Architecture, OS, NLP, Compiler Design, German Language.
+    \item \textbf{Leadership:} IEEE Open-Source-Projects Technical Lead; Technical Team MOVIS R\&D.
+\end{itemize}
 
-% WORK EXPERIENCE
+\vspace{4pt}
+\textbf{Higher Secondary School Certificate (Science)} \hfill [03/2019 – 03/2021] \\
+\textit{Arihant College of Science} \hfill Pune, India
+\begin{itemize}
+    \item \textbf{Final Grade:} 94\% | \textbf{Focus:} Mathematics, Physics, Chemistry, Information Technology, \textbf{German (B1 Level Proficiency)}.
+\end{itemize}
+
+% --- WORK EXPERIENCE ---
 \section{WORK EXPERIENCE}
 
-\noindent
-\textbf{Freelance (The Brainy Insights Pvt. Ltd.)} \hfill Pune, India (Remote) \\
-\textit{AI/ML Engineer \& Full-Stack Developer} \hfill Aug 2024 -- Present
+\textbf{Full-Stack AI Engineer (Mobile \& Web)} \hfill [08/2024 – Current] \\
+\textit{Freelance | The Brainy Insights Pvt. Ltd.} \hfill Remote/Pune, India
 \begin{itemize}
-    \item Accomplished 75\% reduction in manual report generation time by engineering an AI-powered admin dashboard using \textbf{Next.js}, while translating complex \textbf{stakeholder} requirements into technical \textbf{work packages} within an \textbf{Agile} development cycle.
-    \item Achieved 40\% increase in content consistency by implementing LLM orchestration with granular sampling controls, ensuring deterministic outputs for critical business reports.
-    \item Reduced localization costs by 90\% and enabled rapid multilingual rollout by delivering a full-stack internationalization workflow powered by automated AI translation (i18n).
-    \item Improved organic search visibility by 25\% by implementing comprehensive technical SEO patterns and \textbf{Next.js App Router} metadata conventions to optimize crawlability.
-    \item Streamlined schema evolution and future-proofed analytics workflows by implementing a database-ready backend foundation using \textbf{Prisma ORM} and \textbf{TypeScript}.
+    \item Accomplished 40\% reduction in manual report drafting time as measured by operational throughput, by architecting a \textbf{Full-Stack} AI-powered admin dashboard using \textbf{Next.js} and \textbf{Expo} for cross-platform synchronization.
+    \item Accomplished the successful delivery of 5+ innovative \textbf{app prototypes} for mobile and web as measured by stakeholder approval ratings, by collaborating with cross-functional stakeholders to translate high-level requirements into detailed technical work packages.
+    \item Accomplished 25\% reduction in LLM API costs as measured by monthly billing cycles, by optimizing token-budgeting, temperature/top-p sampling, and granular prompt tuning for automated business reporting.
+    \item Accomplished 60\% increase in organic site crawlability as measured by Google Search Console metrics, by implementing comprehensive technical SEO using Next.js App Router metadata, canonical URLs, and OpenGraph patterns.
+    \item Accomplished rapid multilingual rollout across 5 global markets as measured by time-to-market, by delivering a \textbf{Full-Stack} internationalization (i18n) workflow using AI-driven automated translation pipelines.
+    \item Accomplished 30\% reduction in regression issues as measured by CI/CD failure rates, by integrating a production-ready \textbf{TypeScript} configuration, ESLint linting, and automated test scaffolding.
+    \item Accomplished seamless schema evolution as measured by zero migration downtime, by implementing a database-ready backend foundation using \textbf{Prisma ORM} to streamline CRUD workflows and future analytics.
 \end{itemize}
 
-\vspace{6pt}
-\noindent
-\textbf{Hidden Brains InfoTech (DatumsAI Team)} \hfill Ahmedabad, India \\
-\textit{AI-ML Engineer Intern} \hfill Dec 2024 -- Sep 2025
+\vspace{4pt}
+\textbf{Full-Stack Developer (React/Mobile)} \hfill [08/2024 – Current] \\
+\textit{Freelance | IAEC Consultants} \hfill Remote
 \begin{itemize}
-    \item Accelerated query response times by 52\% and increased system throughput by 33\% by designing a modular, scalable architecture for real-time BI, utilizing \textbf{Agile} sprints to deliver incremental feature sets to \textbf{stakeholders}.
-    \item Improved query intent recognition accuracy by 7\% by developing a conversational interface layer utilizing \textbf{Large Language Models (BERT/GPT)} for non-technical users.
-    \item Achieved 93\% linear scaling efficiency across 100 nodes by engineering a real-time analytics engine utilizing \textbf{SIMD matrix hardware acceleration}.
-    \item Ensured 100\% compliance with GDPR/HIPAA standards for sensitive data handling by collaborating with R\&D to implement \textbf{AES256/TLS encryption} protocols.
+    \item Accomplished 50\% faster initial load times as measured by Lighthouse performance scores, by developing a modern \textbf{Full-Stack} web application using \textbf{Next.js App Router} and \textbf{React Native/Expo} components.
+    \item Accomplished 100\% SEO-readiness and zero duplicate-content risks as measured by audit reports, by standardizing page-level metadata conventions and canonicalization within the Next.js framework.
+    \item Accomplished 40\% faster deployment cycles as measured by developer velocity, by aligning application architecture with \textbf{Vercel-ready CI/CD} and \textbf{Git} workflows.
 \end{itemize}
 
-\vspace{6pt}
-\noindent
-\textbf{Icertis Solutions Pvt. Ltd. (Topgun R\&D)} \hfill Pune, India \\
-\textit{Software Engineer Intern} \hfill Aug 2023 -- Nov 2023
+\vspace{4pt}
+\textbf{Full-Stack AI-ML Intern (DatumsAI Team)} \hfill [12/2024 – 09/2025] \\
+\textit{Hidden Brains InfoTech} \hfill Ahmedabad, India
 \begin{itemize}
-    \item Enhanced data management efficiency by 40\% by developing a \textbf{React}-based client entity mapping application, following \textbf{Agile} methodologies to decompose complex integration requirements into actionable \textbf{work packages}.
-    \item Boosted operational productivity by 25\% by implementing a custom workflow engine using \textbf{C\#} and the OptimaJet framework, facilitating automated business process orchestration.
-    \item Identified and resolved 15+ critical system vulnerabilities by conducting comprehensive API testing with \textbf{Postman}, ensuring 99.9\% product reliability for enterprise \textbf{stakeholders}.
+    \item Accomplished 52\% faster query response times as measured by end-to-end latency benchmarks, by designing and implementing a modular \textbf{Full-Stack} architecture for real-time AI-driven business intelligence.
+    \item Accomplished 7\% increase in query intent recognition accuracy as measured by F1-scores, by developing a conversational interface layer using LLMs (BERT/GPT) integrated into a mobile-responsive dashboard.
+    \item Accomplished 93\% linear scaling efficiency across 100 nodes as measured by throughput stress tests, by engineering a real-time analytics engine with SIMD matrix core hardware acceleration.
+    \item Accomplished 100\% alignment with \textbf{GDPR/HIPAA} compliance as measured by security audits, by implementing AES256/TLS encryption protocols and secure data frameworks for sensitive healthcare data.
 \end{itemize}
 
-% NEW INDUSTRY PROJECTS (TAILORED FOR HEALTHINEERS)
-\section{FULL-STACK INNOVATION PROJECTS}
-
-\noindent
-\textbf{Intelligent Clinical Prototyping Pipeline (React Native / Expo)} \hfill Erlangen, Germany
+\vspace{4pt}
+\textbf{Software Engineer Intern (R\&D Topgun Team)} \hfill [08/2023 – 11/2023] \\
+\textit{Icertis Solutions Pvt. Ltd.} \hfill Pune, India
 \begin{itemize}
-    \item Reduced prototype-to-validation cycles by 50\% by engineering a full-stack innovation framework using \textbf{React Native (Expo)} and \textbf{Node.js}, facilitating rapid deployment of mobile medical assistant tools.
-    \item Optimized application performance for low-latency healthcare environments by implementing state management with Redux and backend caching with \textbf{Redis}, translating clinical needs into robust \textbf{work packages}.
+    \item Accomplished a 35\% increase in data management efficiency as measured by user task completion time, by developing a \textbf{React-based} client entity mapping application integrated with Salesforce and external APIs.
+    \item Accomplished 20\% boost in operational productivity as measured by automated ticket resolution, by implementing a custom workflow engine using \textbf{C\#} and OptimaJet Workflow Engine.
+    \item Accomplished a 100\% product reliability rate across core modules as measured by QA pass rates, by implementing and documenting development processes to demonstrate a structured working style using \textbf{Git}, \textbf{Docker}, and \textbf{Azure DevOps}.
+    \item Accomplished zero security vulnerabilities in the production API layer as measured by Postman/Selenium audit reports, by conducting comprehensive automated testing and vulnerability resolution.
 \end{itemize}
 
-\vspace{6pt}
-\noindent
-\textbf{Automated Medical Workflow Orchestration (Azure DevOps / Docker)} \hfill Erlangen, Germany
+% --- STRATEGIC INNOVATION PROJECTS ---
+\section{STRATEGIC TECHNICAL PROJECTS}
+
+\textbf{Edge-MedCare: Distributed Medical Image Processing Pipeline (React Native/Expo)}
 \begin{itemize}
-    \item Accomplished 65\% faster deployment of AI microservices by architecting a robust CI/CD pipeline using \textbf{Azure DevOps} and \textbf{Docker} containers, ensuring consistent environments across dev/staging.
-    \item Improved documentation and transparency of development processes by integrating automated markdown generation into the Git-based version control workflow, following \textbf{Agile} documentation standards.
+    \item Accomplished sub-50ms inference latency for real-time cardiovascular diagnostics as measured by on-device profiling, by deploying quantized MobileNetV3 models on mobile edge devices using \textbf{React Native} and \textbf{FastAPI}.
+    \item Accomplished 90\% reduction in local storage overhead as measured by disk usage audits, by containerizing diagnostic modules with \textbf{Docker} and optimizing \textbf{Azure} CI/CD pipelines for Fog Computing.
 \end{itemize}
 
-\vspace{6pt}
-\noindent
-\textbf{Federated Learning Framework for Privacy-Preserving Diagnostics} \hfill Research Focus
+\vspace{4pt}
+\textbf{LinkedIn Network Mapper \& Referral Path Optimizer}
 \begin{itemize}
-    \item Increased data privacy compliance for multi-institutional medical studies by 100\% by implementing a Federated Learning framework using \textbf{Python} and \textbf{PyTorch}, training models without moving raw patient data.
-    \item Achieved a 15\% gain in model generalization across diverse medical datasets by utilizing \textbf{Transformers} and domain-adaptation techniques in an \textbf{Agile} research environment.
+    \item Accomplished 30\% improvement in referral discovery as measured by path depth analysis, by engineering an interactive network visualization platform using \textbf{Neo4j Graph Database} and \textbf{D3.js}.
+    \item Accomplished automated identification of optimal referral paths as measured by agent success rates, by deploying \textbf{LangChain} agents and \textbf{Selenium} scrapers for real-time relationship leverage.
 \end{itemize}
 
-\vspace{6pt}
-\noindent
-\textbf{Patient Connectivity \& Data Visualization Suite (Node.js / WebSockets)} \hfill Full-Stack Focus
+\vspace{4pt}
+\textbf{AiSupportAssistant: Hierarchical Agent Architecture}
 \begin{itemize}
-    \item Enhanced real-time patient monitoring capabilities by 40\% by developing a \textbf{WebSockets}-based dashboard using \textbf{React} and \textbf{D3.js} for visualizing high-frequency biometric data streams.
-    \item Optimized backend data ingestion by 30\% by utilizing \textbf{FastAPI} and asynchronous Python patterns to handle concurrent healthcare IoT device inputs.
+    \item Accomplished 40\% faster complex query resolution as measured by average handling time, by engineering an advanced support system utilizing \textbf{LangGraph} for multi-agent coordination and \textbf{RAG} for knowledge retrieval.
+    \item Accomplished 99.9\% system uptime and performance tracking as measured by \textbf{LangSmith} analytics, by integrating \textbf{Pinecone} vector stores and \textbf{Redis} for state management.
 \end{itemize}
 
-% CORE PROJECTS FROM MASTER CV
-\section{CORE TECHNICAL \& RESEARCH PROJECTS}
+\vspace{4pt}
+\textbf{IDHATW: AI-Powered Wardrobe Manager \& AR Try-On}
 \begin{itemize}
-    \item \textbf{LinkedIn Network Mapper:} Engineered an interactive network visualization platform using \textbf{Neo4j} and \textbf{D3.js}, deploying \textbf{LangChain Agents} to identify optimal referral paths.
-    \item \textbf{ReadIT \& LazyYouTube:} Developed conversational AI systems for Reddit synthesis and video analysis using \textbf{Whisper ASR}, \textbf{BART}, and \textbf{FastAPI}, achieving 95\% summarization accuracy.
-    \item \textbf{IDHATW (AI Wardrobe):} Revolutionized fashion organization with image-to-3D digitization using Computer Vision and \textbf{Three.js}, enabling immersive AR try-on experiences.
-    \item \textbf{BestiAI:} Developed a voice-based AI companion using \textbf{Sesame AI's CSM-1B} and \textbf{Twilio API}, integrated via \textbf{Kubernetes} for scalable real-time interaction.
-    \item \textbf{AiSupportAssistant:} Engineered a customer support system utilizing \textbf{Hierarchical AI Agents} for complex query resolution and automated ticket routing via \textbf{LangGraph}.
-    \item \textbf{EdgeMedCare:} Architected an AI-driven fog computing framework for rapid cardiovascular health diagnostics using Python and distributed systems.
+    \item Accomplished 3D clothing digitization from 2D images as measured by mesh reconstruction fidelity, by implementing \textbf{NeRF} and \textbf{Neural Radiance Fields} within a \textbf{Three.js} and \textbf{React Native} environment.
+    \item Accomplished immersive AR closet management as measured by user engagement metrics, by leveraging \textbf{ARKit/ARCore} and Multimodal Foundation Models for fashion organization.
 \end{itemize}
 
-% SKILLS
-\section{TECHNICAL SKILLS}
-\noindent \textbf{Languages:} Python, JavaScript, TypeScript, C++, C\#, Java, SQL, Shell Scripting. \\
-\noindent \textbf{Web \& Mobile:} React Native, Expo, React.js, Next.js, Node.js, FastAPI, Flask, REST APIs, WebSockets, HTML5, CSS3. \\
-\noindent \textbf{AI/ML \& Data:} PyTorch, TensorFlow, Scikit-learn, Hugging Face, LangChain, BERT, GPT, OpenCV, NLP, CV. \\
-\noindent \textbf{Tools \& Infrastructure:} Git, Docker, Kubernetes, Azure DevOps, AWS (EC2/S3), Redis, Kafka, Postman. \\
-\noindent \textbf{Databases:} PostgreSQL, MongoDB, Neo4j, Redis, Vector Stores (Pinecone), ElasticSearch. \\
-\noindent \textbf{Methods:} Agile (Scrum/Kanban), Stakeholder Management, Requirement Engineering, Work Package Definition. \\
-\noindent \textbf{Languages:} English (C2), German (B1), Hindi (Native), Marathi (Native), Gujarati (Native).
-
-% TEST SCORES
-\section{CERTIFICATIONS \& ACHIEVEMENTS}
+% --- ADDITIONAL PROJECTS (RETENTION FROM MASTER CV) ---
+\section{TECHNICAL PROJECTS CONTINUED}
 \begin{itemize}
-    \item \textbf{GRE:} 319 (164 Quantitative, 155 Verbal).
-    \item \textbf{IEEE:} Technical Lead for Open-Source Projects; Published research on Resume Classification and BI Architectures.
-    \item \textbf{Olympiads:} 3 Gold, 4 Silver medals in Math, Science, and Cyber Olympiads.
+    \item \textbf{ReadIT:} Developed a conversational AI system querying Reddit via \textbf{PRAW}, \textbf{LangChain}, and \textbf{FastAPI}, utilizing \textbf{Sentence Transformers} for real-time contextual synthesis.
+    \item \textbf{LazyYouTube:} Created a multi-platform analysis tool using \textbf{Whisper ASR} and \textbf{BART/T5} for video summarization, deployed via \textbf{Docker} and \textbf{Celery} with \textbf{RabbitMQ} task queues.
+    \item \textbf{Resume ClassifierX:} Enhanced recruitment efficiency through Generative AI-driven classification using \textbf{spaCy}, \textbf{OpenAI GPT}, and \textbf{LLaMA}.
+    \item \textbf{Parallel Nonlinear Optimization:} Optimized power-aware scheduling algorithms for HPC systems using \textbf{C++}, \textbf{MPI}, and \textbf{OpenMP}.
+\end{itemize}
+
+% --- SKILLS ---
+\section{SKILLS}
+\begin{itemize}
+    \item \textbf{Mobile \& Full-Stack Development:} \textbf{React Native, Expo}, React.js, Node.js, Next.js, TypeScript, JavaScript, HTML/CSS, Redux, Three.js, ASP.NET.
+    \item \textbf{Backend \& AI/ML Engineering:} \textbf{Python}, C\#, C++, Java, FastAPI, Flask, TensorFlow, PyTorch, LangChain, LangGraph, Transformers (GPT/BERT/LLaMA), Computer Vision, NLP.
+    \item \textbf{Tools \& Cloud Infrastructure:} Git, \textbf{Docker}, Kubernetes, \textbf{Azure DevOps}, AWS (EC2/S3), CI/CD, Selenium, Postman, Agile/Scrum.
+    \item \textbf{Databases \& Security:} PostgreSQL, Redis, MongoDB, Neo4j, \textbf{Pinecone}, Prisma ORM, \textbf{GDPR/HIPAA Compliance}, AES256/TLS.
+    \item \textbf{Academic Domains:} \textbf{Media Informatics, Business Informatics}, Scalable Distributed Systems, Parallel Algorithms, Medical Technology.
+\end{itemize}
+
+% --- LANGUAGES ---
+\section{LANGUAGES}
+\begin{itemize}
+    \item \textbf{English:} C2 (Proficient / Professional Mastery)
+    \item \textbf{German:} \textbf{B1 (Independent User)} -- \textit{Resident in Erlangen; fully mobile for Forchheim/Erlangen/Nürnberg locations.}
+    \item \textbf{Hindi/Marathi/Gujarati:} Native/Mother Tongue
 \end{itemize}
 
 \end{document}

@@ -1,9 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.14)  17 MAR 2026 00:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.14)  19 MAR 2026 19:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**C:/Users/User/Jobs/data/tailored_outputs/UnknownJob/Cover_Letter.tex
-(C:/Users/User/Jobs/data/tailored_outputs/UnknownJob/Cover_Letter.tex
+**C:/Users/User/Jobs/data/tailored_outputs/WorkingStudentAdvancedAnalyticsandAr
+tificialIntelligence/CV.tex
+
+(C:/Users/User/Jobs/data/tailored_outputs/WorkingStudentAdvancedAnalyticsandArt
+ificialIntelligence/CV.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -79,25 +82,25 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
-Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box53
-\beforetitleunit=\skip51
-\aftertitleunit=\skip52
-\ttl@plus=\dimen157
-\ttl@minus=\dimen158
-\ttl@toksa=\toks21
-\titlewidth=\dimen159
-\titlewidthlast=\dimen160
-\titlewidthfirst=\dimen161
 ) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip53
-\enit@outerparindent=\dimen162
-\enit@toks=\toks22
-\enit@inbox=\box54
+\labelindent=\skip51
+\enit@outerparindent=\dimen157
+\enit@toks=\toks21
+\enit@inbox=\box53
 \enit@count@id=\count286
 \enitdp@description=\count287
+) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box54
+\beforetitleunit=\skip52
+\aftertitleunit=\skip53
+\ttl@plus=\dimen158
+\ttl@minus=\dimen159
+\ttl@toksa=\toks22
+\titlewidth=\dimen160
+\titlewidthlast=\dimen161
+\titlewidthfirst=\dimen162
 )
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
@@ -257,37 +260,35 @@ tawesome5
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\charter.sty
 Package: charter 2020/03/25 PSNFSS-v9.3 (P.Dyballa) 
 )
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.sty
-Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
-)
-Package hyperref Info: Option `colorlinks' set `true' on input line 23.
-LaTeX Font Info:    Trying to load font information for T1+bch on input line 25
+Package hyperref Info: Option `colorlinks' set `true' on input line 24.
+LaTeX Font Info:    Trying to load font information for T1+bch on input line 31
 .
 
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 )
-(C:\Users\User\Jobs\data\tailored_outputs\UnknownJob\Cover_Letter.aux)
-\openout1 = `Cover_Letter.aux'.
+(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentAdvancedAnalyticsandArt
+ificialIntelligence\CV.aux)
+\openout1 = `CV.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -297,15 +298,15 @@ LaTeX Font Info:    ... okay on input line 25.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* h-part:(L,W,R)=(43.36243pt, 510.78302pt, 43.36243pt)
+* v-part:(T,H,B)=(43.36243pt, 758.32199pt, 43.36243pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=702.78308pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-38.1381pt
+* \textwidth=510.78302pt
+* \textheight=758.32199pt
+* \oddsidemargin=-28.90756pt
+* \evensidemargin=-28.90756pt
+* \topmargin=-65.90756pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -339,39 +340,87 @@ i
 \makeMPintoPDFobject=\count306
 \everyMPtoPDFconversion=\toks24
 )
-Package hyperref Info: Link coloring ON on input line 25.
- (C:\Users\User\Jobs\data\tailored_outputs\UnknownJob\Cover_Letter.out)
-(C:\Users\User\Jobs\data\tailored_outputs\UnknownJob\Cover_Letter.out)
-\@outlinefile=\write3
-\openout3 = `Cover_Letter.out'.
+Package hyperref Info: Link coloring ON on input line 31.
 
- [1
+(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentAdvancedAnalyticsandArt
+ificialIntelligence\CV.out)
+(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentAdvancedAnalyticsandArt
+ificialIntelligence\CV.out)
+\@outlinefile=\write3
+\openout3 = `CV.out'.
+
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
+nput line 38.
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontawesom
+efree2.fd)
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
+nput line 39.
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontawesom
+efree1.fd)
+LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on
+ input line 40.
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontawesom
+ebrands0.fd)
+LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <9> not a
+vailable
+(Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
+n input line 40.
+LaTeX Font Info:    Trying to load font information for TS1+bch on input line 4
+9.
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
+File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
+)
+! Misplaced alignment tab character &.
+<argument> ...AI Center of Excellence: Knowledge &
+                                                   Training Hub
+l.109 ... of Excellence: Knowledge & Training Hub}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[1
 
 {C:/Users/User/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/User/
-AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-(C:\Users\User\Jobs\data\tailored_outputs\UnknownJob\Cover_Letter.aux)
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/User/AppDat
+a/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free2.enc}{C:/Users/Use
+r/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc}{C:/U
+sers/User/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5brands0
+.enc}] [2]
+(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentAdvancedAnalyticsandArt
+ificialIntelligence\CV.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
-Package rerunfilecheck Info: File `Cover_Letter.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `CV.out' has not changed.
+(rerunfilecheck)             Checksum: 398979E041CEC08013F9EB1ED7AA8A8E;1043.
  ) 
 Here is how much of TeX's memory you used:
- 13008 strings out of 467871
- 222756 string characters out of 5418860
- 633154 words of memory out of 5000000
- 41782 multiletter control sequences out of 15000+600000
- 640342 words of font info for 49 fonts, out of 8000000 for 9000
+ 13088 strings out of 467871
+ 224871 string characters out of 5418860
+ 643351 words of memory out of 5000000
+ 41836 multiletter control sequences out of 15000+600000
+ 651120 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,79p,1253b,440s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bch
-b8a.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/chart
-er/bchr8a.pfb>
-Output written on C:\Users\User\Jobs\data\tailored_outputs\UnknownJob\Cover_Let
-ter.pdf (1 page, 40303 bytes).
+ 75i,5n,79p,398b,547s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/
+FontAwesome5Brands-Regular.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/User/AppData/
+Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/User/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/U
+ser/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb>
+Output written on C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentAdvanc
+edAnalyticsandArtificialIntelligence\CV.pdf (2 pages, 108624 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
- 2 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 77 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

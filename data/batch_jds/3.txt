@@ -1,0 +1,60 @@
+Job details
+Werkstudent (d/w/m) im Bereich Data Science / Machine Learning
+Job ID 
+493832
+Posted since 
+30-Jan-2026
+Organization 
+Mobility
+Field of work 
+Internal Services
+Company 
+HaCon Ingenieurgesellschaft mbH
+Experience level 
+Student (Not Yet Graduated)
+Job type 
+Part-time
+Work mode 
+Hybrid (Remote/Office)
+Employment type 
+Fixed Term
+Location(s) 
+Hannover - - Germany
+Willkommen bei Hacon, einem führenden IT-Unternehmen im Bereich der digitalen Mobilitätslösungen. Als eigenständig geführtes Unternehmen sind wir Teil der Siemens Mobility. Wann immer du in Europa mit den öffentlichen Verkehrsmitteln unterwegs bist, hast du uns und unsere Arbeit schon kennengelernt. In unserem Headquarter in Hannover, in Berlin und an weiteren Standorten entwickeln wir mit über 500 Mitarbeitenden Software, die Verkehrsbetriebe weltweit dabei unterstützt, ihren Passagieren das Reisen so einfach wie möglich zu gestalten. Wir lieben die Vorstellung, dass unsere Lösungen dabei helfen, den öffentlichen Verkehr als echte und umweltfreundliche Alternative zum eigenen Auto zu etablieren.   
+Weltweit fahren Züge, deren Fahrtzeiten mit unserer Software geplant werden. Wir unterstützen Bahnbetreiber mit unserer B2B-Softwarelösung Train Planning System (TPS) beim Fahrplan, Trassen- und Infrastruktur-Management für ihre Eisenbahnnetze. Wir bringen die Züge auf die Schiene: Mit hochflexiblen und konfigurierbaren Lösungen für den Personen- und Güterverkehr. Deine Arbeit macht das Reisen mit der Bahn für Millionen von Menschen erst möglich und leistet einen Beitrag zur Schaffung einer umweltfreundlichen, effizienten und vernetzten Mobilität.
+
+Join us and shape the future of mobility with us! 
+
+Wir suchen einen Werkstudenten (d/w/m) im Bereich Data Science / Machine Learning zur Verstärkung unseres TPS Sales Logistics Teams!
+
+Deine Aufgaben
+
+Du entwickelst und trainierst Machine-Learning-Modelle zur präzisen Verspätungsprognose im Bahnverkehr
+Du analysierst und verarbeitest Zuglaufdaten sowie Verspätungsmeldungen
+Du unterstützt bei der Entwicklung unserer Softwarelösungen
+Du arbeitest eng mit deinem agilen Entwicklungsteam zusammen
+Du dokumentierst deine entwickelten Lösungen, um eine nachhaltige Wissensbasis zu schaffen
+
+Dein Profil
+
+Du bist immatrikulierter Student (d/w/m) der Informatik, Data Science, Mathematik oder eines vergleichbaren Studiengangs
+Du bringst gute Kenntnisse im Bereich Machine Learning und Data Science mit
+Du hast Erfahrung in Python und bist vertraut mit relevanten ML-Bibliotheken wie TensorFlow, PyTorch oder scikit-learn
+Grundkenntnisse in der Softwareentwicklung sind vorhanden
+Du denkst analytisch, arbeitest eigenständig und strukturiert
+Du verfügst über gute Deutsch- und Englischkenntnisse
+
+Was wir bieten
+An unserem Standort in Hannover bieten wir dir unter anderem:
+
+Moderne Unternehmenskultur: Hybrides Arbeiten, flexible Arbeitszeitgestaltung, 30 Tage Urlaub, Duz-Kultur & Open Doors
+Upskilling & Weiterbildung: Internes Knowledge Sharing & Siemens My Learning World
+Gemeinsam Feiern & Teambuilding: Sommerpartys und Weihnachtsfeiern, Teamevents wie Hacon on Top
+Gesund & lecker durch den Arbeitstag: Bahlsen Kantine & Snackraum
+Arbeiten im Office: Zentrale Lage an der Lister Meile & Dachterrasse mit Grill
+
+Interessiert? Wenn du vor deiner Bewerbung mehr über Hacon erfahren möchtest: https://www.hacon.de/ Du möchtest mehr Informationen über unsere Leistungen für unsere Mitarbeitenden erfahren? Dann nennen wir dir noch die Top-Gründe, weshalb du bei uns arbeiten solltest! Wir freuen uns auf deine vollständigen Bewerbungsunterlagen mit Angabe deiner Gehaltsvorstellung. Die Hacon Ingenieurgesellschaft mbH legt Wert auf Chancengleichheit. Wir freuen uns über Bewerbungen von Menschen mit Behinderung.
+#haconjobs
+
+
+

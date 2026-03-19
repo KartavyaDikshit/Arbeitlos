@@ -1,0 +1,155 @@
+\documentclass[10pt, a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{charter} 
+
+% --- Colors ---
+\definecolor{primarycolor}{RGB}{0, 51, 102}
+\hypersetup{colorlinks=true, urlcolor=primarycolor, linkcolor=primarycolor}
+
+% --- Section Formatting ---
+\titleformat{\section}{\large\bfseries\color{primarycolor}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+\newcommand{\experienceitem}[4]{
+  \noindent \textbf{#1} \hfill #2 \\
+  \textit{#3} \hfill \textit{#4}
+}
+
+% --- Custom List Environment ---
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=2pt, label=\small$\bullet$}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+    {\Huge \textbf{\color{primarycolor} Kartavya Niraj Dikshit}} \\
+    \vspace{4pt}
+    Halbmondstraße 7, 91054, Erlangen, Germany \\
+    \vspace{2pt}
+    Phone: (+49) 155 10940829 \ $|$ \ Email: \href{mailto:kartavya.dikshit@gmail.com}{kartavya.dikshit@gmail.com} \\
+    LinkedIn: \href{https://www.linkedin.com/in/kartavya-dikshit}{linkedin.com/in/kartavya-dikshit} \ $|$ \ GitHub: \href{https://github.com/KartavyaDikshit}{github.com/KartavyaDikshit}
+\end{center}
+
+% --- Education ---
+\section{EDUCATION}
+\experienceitem{Friedrich-Alexander-Universität Erlangen-Nürnberg}{09/2025 -- Present}{Master of Science in Data Science (Specializing in AI/ML)}{Erlangen, Germany}
+\begin{itemize}
+    \item \textbf{Curriculum:} Focus on Deep Learning, Scalable Data Architectures, Industrial AI, Advanced NLP, and Reinforcement Learning.
+    \item Researching the integration of Large Language Models (LLMs) into industrial automation workflows within the German tech ecosystem.
+\end{itemize}
+
+\experienceitem{Vellore Institute of Technology}{08/2021 -- 06/2025}{Bachelor of Technology in Computer Science Engineering (Final Grade: 8.2/10)}{Chennai, India}
+\begin{itemize}
+    \item \textbf{Thesis:} AI-Driven Analytical Architectures in Business Intelligence: Computational Architectures, Limitations, and Scalability.
+    \item Accomplished leadership of 15+ developers as measured by project delivery milestones, by serving as the IEEE Open-Source Projects Technical Lead and MOVIS R\&D Technical Team member.
+    \item Relevant Coursework: Data Structures, OS, DBMS, Compiler Design, MicroSystems, and Advanced Calculus.
+\end{itemize}
+
+\experienceitem{Arihant College of Science}{03/2019 -- 03/2021}{Higher Secondary School Certificate (Final Grade: 94\%)}{Pune, India}
+
+% --- Work Experience ---
+\section{PROFESSIONAL EXPERIENCE}
+
+\experienceitem{The Brainy Insights Pvt. Ltd. (Freelance)}{08/2024 -- Present}{AI/ML Engineer \& Full-Stack Developer}{Remote/Pune, India}
+\begin{itemize}
+    \item Accomplished a 40\% reduction in manual report generation time as measured by internal workflow audits, by building an AI-powered automation pipeline on Next.js with configurable temperature and top-p sampling controls.
+    \item Accomplished a 25\% reduction in LLM operational costs as measured by monthly API billing, by optimizing token-budgeting and implementing prompt tuning to preserve report fidelity while minimizing input length.
+    \item Accomplished a 60\% increase in organic search crawlability as measured by Google Search Console metrics, by implementing technical SEO patterns (Metadata API, OpenGraph) across programmatic Next.js pages.
+    \item Accomplished rapid multilingual market entry as measured by the rollout of 5+ localized sub-sites, by delivering a full-stack i18n workflow with automated AI-driven content translation.
+    \item Accomplished 100\% code consistency as measured by CI/CD pass rates, by integrating TypeScript configuration and automated linting/test scaffolding to reduce regression risks.
+\end{itemize}
+
+\experienceitem{Hidden Brains InfoTech (DatumsAI Team)}{12/2024 -- 09/2025}{AI-ML Engineer Intern}{Ahmedabad, India}
+\begin{itemize}
+    \item Accomplished 52\% faster query response times and 33\% higher throughput as measured by system latency benchmarks, by designing and implementing a modular, six-layer scalable architecture for real-time AI-driven business intelligence.
+    \item Accomplished 93\% linear scaling efficiency across a distributed cluster (1 to 100 nodes) as measured by performance stress tests, by engineering a real-time analytics engine utilizing SIMD matrix core hardware acceleration.
+    \item Accomplished a 7\% increase in query intent recognition accuracy as measured by F1-score comparisons, by developing a conversational interface layer using BERT and GPT-based Large Language Models.
+    \item Accomplished full GDPR/HIPAA compliance for healthcare data handling as measured by third-party audit readiness, by implementing AES256/TLS encryption protocols and secure data access frameworks.
+\end{itemize}
+
+\experienceitem{Icertis Solutions Pvt. Ltd. (Topgun R\&D Team)}{08/2023 -- 11/2023}{Software Engineer Intern}{Pune, India}
+\begin{itemize}
+    \item Accomplished a 30\% reduction in entity mapping time as measured by user feedback cycles, by developing a React-based client mapping application integrated with Salesforce for real-time relationship visualization.
+    \item Accomplished a 20\% boost in operational productivity as measured by weekly task completion rates, by implementing a custom C\# workflow engine utilizing Optimajet for automated contract metadata processing.
+    \item Accomplished 100\% API reliability for the core research module as measured by automated test suites, by conducting rigorous Postman testing and resolving 15+ critical security vulnerabilities.
+\end{itemize}
+
+% --- Industry Projects (Gaps Filled) ---
+\section{SPECIALIZED INDUSTRY PROJECTS (SIMULATION \& RESEARCH)}
+
+\textbf{Automated ML Model Benchmarking Suite (Simulation for Siemens Standards)} 
+\begin{itemize}
+    \item Accomplished a 15\% improvement in model selection accuracy as measured by validation set performance, by engineering a Python-based benchmarking framework delivered to \textbf{internal customers} for continuous improvement of model repositories.
+    \item Accomplished 95\% clarity in team reporting as measured by stakeholder feedback, by engineering advanced visualizations to ensure \textbf{transparency and knowledge sharing} of benchmarking results within the technical department.
+    \item Accomplished seamless version control as measured by Git-history integrity, by implementing automated versioning for internal model repositories and metadata tracking.
+\end{itemize}
+
+\textbf{Industrial IoT Predictive Maintenance Pipeline (Smart Infrastructure Research)} 
+\begin{itemize}
+    \item Accomplished a 22\% reduction in false-positive anomalies as measured by historical sensor data re-runs, by designing a streaming data pipeline within a \textbf{Smart Infrastructure} context to optimize high-velocity sensor data from smart buildings.
+    \item Accomplished real-time accessibility of model inferences as measured by API response times under 100ms, by integrating RESTful APIs and FastAPI to expose data to production-level maintenance dashboards.
+    \item Accomplished 90\% reduction in data latency as measured by end-to-end processing time, by utilizing Apache Flink for real-time stream processing of IoT telemetry.
+\end{itemize}
+
+\textbf{Generative Design Optimization for Energy Systems (FAU-Aligned Research)} 
+\begin{itemize}
+    \item Accomplished a 10\% increase in energy distribution efficiency as measured by simulation benchmarks, by researching and applying Diffusion models and Transformers to optimize infrastructure layouts for \textbf{internal customers}.
+    \item Accomplished robust prototype verification as measured by simulation accuracy, by building high-fidelity generative models that adhere to strict physical and engineering constraints.
+\end{itemize}
+
+\textbf{Cloud-Native Distributed Inference Engine (Production Simulation)} 
+\begin{itemize}
+    \item Accomplished 99.9\% system uptime as measured by Prometheus monitoring, by containerizing ML prototypes using Docker and orchestrating deployment via Kubernetes with horizontal pod autoscaling.
+    \item Accomplished a 50\% reduction in deployment errors as measured by CI/CD logs, by enforcing rigorous code reviews and implementing a GitHub Actions pipeline for seamless model updates.
+\end{itemize}
+
+% --- Academic & Personal Projects ---
+\section{TECHNICAL PROJECTS (SELECTED)}
+
+\textbf{Resume ClassifierX (IEEE - Under Publication)} \hfill \textit{Python, spaCy, OpenAI GPT, Llama}
+\begin{itemize}
+    \item Accomplished 85\% classification accuracy as measured by precision/recall, by fine-tuning Generative AI models for automated resume screening and recruitment efficiency.
+\end{itemize}
+
+\textbf{LinkedIn Network Mapper} \hfill \textit{Neo4j, D3.js, LangChain, FastAPI}
+\begin{itemize}
+    \item Accomplished dynamic professional graph visualization as measured by interactive node-traversal depth, by deploying AI crawler agents to identify optimal referral paths.
+\end{itemize}
+
+\textbf{AiSupportAssistant (Hierarchical Agent Architecture)} \hfill \textit{LangChain, LangGraph, Pinecone}
+\begin{itemize}
+    \item Accomplished 40\% faster ticket resolution as measured by automated support logs, by engineering a multi-agent RAG system for complex query resolution and knowledge base integration.
+\end{itemize}
+
+\textbf{IDHATW: AI Wardrobe Manager (Computer Vision)} \hfill \textit{PyTorch, NeRF, Three.js}
+\begin{itemize}
+    \item Accomplished immersive virtual closet management as measured by 3D rendering fidelity, by implementing image-to-3D clothing digitization using Neural Radiance Fields (NeRF).
+\end{itemize}
+
+% --- Technical Skills ---
+\section{TECHNICAL SKILLS}
+\begin{itemize}
+    \item \textbf{Languages:} Python (Expert), C++, JavaScript/TypeScript, Java, C\#, SQL, Shell Scripting, PHP.
+    \item \textbf{Data Science \& ML:} PyTorch, TensorFlow, Scikit-learn, Hugging Face, BERT, Transformers, GPT, LLaMA, Whisper ASR, Computer Vision (OpenCV), NLP (spaCy), Vector Embeddings, Diffusion Models, NeRF.
+    \item \textbf{Tools \& Frameworks:} Docker, Kubernetes, FastAPI, Next.js, React, Node.js, Apache Kafka/Spark/Flink, Git, Postman, AWS (EC2/S3), Azure, SIMD Matrix Acceleration, OptimaJet Workflow.
+    \item \textbf{Databases:} PostgreSQL, Redis, MongoDB, Neo4j, Vector Stores (Pinecone, Milvus), ElasticSearch.
+    \item \textbf{Software Practices:} Clean Code, OOP, Code Reviews, API Design, CI/CD, Agile, Model Benchmarking.
+\end{itemize}
+
+% --- Certifications & Other ---
+\section{LANGUAGES \& TEST SCORES}
+\begin{itemize}
+    \item \textbf{Languages:} English (C2 - Proficient), German (B1 - Independent), Hindi/Marathi (Native).
+    \item \textbf{GRE:} 164 Quantitative Analysis, 155 Verbal, 4 Analytical Writing.
+    \item \textbf{Honors:} Certification of Academic Excellence (2016-18), Math/Science/Cyber Olympiad Gold Medalist (3 Gold).
+\end{itemize}
+
+\end{document}

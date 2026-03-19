@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.14)  19 MAR 2026 18:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.14)  19 MAR 2026 19:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**C:/Users/User/Jobs/data/tailored_outputs/WorkingStudentfmdFullStackSoftwareDe
-velopmentforInnovationProjects/Cover_Letter.tex
+**C:/Users/User/Jobs/data/tailored_outputs/WorkingStudentAdvancedAnalyticsandAr
+tificialIntelligence/Cover_Letter.tex
 
-(C:/Users/User/Jobs/data/tailored_outputs/WorkingStudentfmdFullStackSoftwareDev
-elopmentforInnovationProjects/Cover_Letter.tex
+(C:/Users/User/Jobs/data/tailored_outputs/WorkingStudentAdvancedAnalyticsandArt
+ificialIntelligence/Cover_Letter.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -211,120 +211,67 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip51
 )
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
-Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box53
-\beforetitleunit=\skip52
-\aftertitleunit=\skip53
-\ttl@plus=\dimen161
-\ttl@minus=\dimen162
-\ttl@toksa=\toks21
-\titlewidth=\dimen163
-\titlewidthlast=\dimen164
-\titlewidthfirst=\dimen165
-)
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\charter.sty
-Package: charter 2020/03/25 PSNFSS-v9.3 (P.Dyballa) 
-)
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/datetime\datetime.sty
-Package: datetime 2015/03/20 v2.60 Date Time Package
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesome
+5.sty (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2025-12-24 L3 programming layer (loader) 
 
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fmtcount.sty
-Package: fmtcount 2025/12/02 v3.12 Displaying the values of LaTeX counters (NT,
-VB,NE)
-
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-)
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
-Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
-
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks22
-\XKV@tempa@toks=\toks23
-)
-\XKV@depth=\count298
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fcprefix.sty
-Package: fcprefix 2012/09/28
-
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fcnumparser.sty
-Package: fcnumparser 2017/06/15
-\fc@digit@counter=\count299
-)) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks24
-\ex@=\dimen166
-)
-\c@padzeroesN=\count300
-\fc@tmpcatcode=\count301
-\@DT@modctr=\count302
-\@ordinalctr=\count303
-\@orgargctr=\count304
-\@strctr=\count305
-\@tmpstrctr=\count306
-\@DT@loopN=\count307
-\@DT@X=\count308
-)
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/datetime\datetime-defaul
-ts.sty
-Package: datetime-defaults 2013/09/10
-)
-\@day=\count309
-\@month=\count310
-\@year=\count311
-\c@HOUR=\count312
-\c@HOURXII=\count313
-\c@MINUTE=\count314
-\c@TOHOUR=\count315
-\c@TOMINUTE=\count316
-\c@SECOND=\count317
-\currenthour=\count318
-\currentminute=\count319
-\currentsecond=\count320
-Package datetime Info: No datetime.cfg file found, using default settings on in
-put line 308.
-\@dtctr=\count321
-\dayofyear=\count322
-\dayofweek=\count323
-LaTeX Info: Redefining \today on input line 736.
-\dt@a=\toks25
-\dt@b=\toks26
-)
-Package hyperref Info: Option `colorlinks' set `true' on input line 20.
-LaTeX Font Info:    Trying to load font information for T1+bch on input line 22
-.
- (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1bch.fd
-File: t1bch.fd 2004/10/18 font definitions for T1/bch.
-)
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
 ex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count324
+\l__color_backend_stack_int=\count298
+))
+Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3ke
+ys2e.sty
+Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 )
-(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentfmdFullStackSoftwareDev
-elopmentforInnovationProjects\Cover_Letter.aux)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse
+.sty
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesome
+5-generic-helper.sty
+Package: fontawesome5-generic-helper 2022/05/02 v5.15.4 non-uTeX helper for fon
+tawesome5
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesome
+5-mapping.def)))
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\charter.sty
+Package: charter 2020/03/25 PSNFSS-v9.3 (P.Dyballa) 
+)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 21.
+LaTeX Font Info:    Trying to load font information for T1+bch on input line 23
+.
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1bch.fd
+File: t1bch.fd 2004/10/18 font definitions for T1/bch.
+)
+(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentAdvancedAnalyticsandArt
+ificialIntelligence\Cover_Letter.aux)
 \openout1 = `Cover_Letter.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -364,41 +311,33 @@ LaTeX Font Info:    ... okay on input line 22.
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count325
-\scratchdimen=\dimen167
-\scratchbox=\box54
-\nofMPsegments=\count326
-\nofMParguments=\count327
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count328
-\MPscratchDim=\dimen168
-\MPnumerator=\count329
-\makeMPintoPDFobject=\count330
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count299
+\scratchdimen=\dimen161
+\scratchbox=\box53
+\nofMPsegments=\count300
+\nofMParguments=\count301
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count302
+\MPscratchDim=\dimen162
+\MPnumerator=\count303
+\makeMPintoPDFobject=\count304
+\everyMPtoPDFconversion=\toks22
 )
-Package hyperref Info: Link coloring ON on input line 22.
+Package hyperref Info: Link coloring ON on input line 23.
 
-(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentfmdFullStackSoftwareDev
-elopmentforInnovationProjects\Cover_Letter.out)
-(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentfmdFullStackSoftwareDev
-elopmentforInnovationProjects\Cover_Letter.out)
+(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentAdvancedAnalyticsandArt
+ificialIntelligence\Cover_Letter.out)
+(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentAdvancedAnalyticsandArt
+ificialIntelligence\Cover_Letter.out)
 \@outlinefile=\write3
 \openout3 = `Cover_Letter.out'.
 
-
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fc-english.def
-File: fc-english.def 2016/01/12
-)
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 32.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 32.
-[1
+ [1
 
 {C:/Users/User/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/User/
 AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentfmdFullStackSoftwareDev
-elopmentforInnovationProjects\Cover_Letter.aux)
+(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentAdvancedAnalyticsandArt
+ificialIntelligence\Cover_Letter.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -407,19 +346,18 @@ Package rerunfilecheck Info: File `Cover_Letter.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 10543 strings out of 467871
- 164474 string characters out of 5418860
- 605950 words of memory out of 5000000
- 39306 multiletter control sequences out of 15000+600000
- 644849 words of font info for 52 fonts, out of 8000000 for 9000
+ 12395 strings out of 467871
+ 213981 string characters out of 5418860
+ 619347 words of memory out of 5000000
+ 41177 multiletter control sequences out of 15000+600000
+ 640342 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,79p,1102b,443s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,79p,840b,440s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bch
 b8a.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/chart
 er/bchr8a.pfb>
-Output written on C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentfmdFul
-lStackSoftwareDevelopmentforInnovationProjects\Cover_Letter.pdf (1 page, 41560 
-bytes).
+Output written on C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentAdvanc
+edAnalyticsandArtificialIntelligence\Cover_Letter.pdf (1 page, 40152 bytes).
 PDF statistics:
  25 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)

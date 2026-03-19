@@ -1,3 +1,4 @@
+Job details
 Working Student (f/m/d) Full-Stack Software Development for Innovation Projects
 Job ID 
 498493

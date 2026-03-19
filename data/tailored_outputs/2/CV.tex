@@ -1,0 +1,161 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+
+% Configuration
+\geometry{left=1.25cm, top=1.25cm, right=1.25cm, bottom=1.25cm}
+\definecolor{primarycolor}{RGB}{0, 51, 102}
+\pagestyle{empty}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\color{primarycolor}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\begin{document}
+
+% HEADER
+\begin{center}
+    {\huge \textbf{\color{primarycolor} Kartavya Niraj Dikshit}} \\ \vspace{5pt}
+    \small
+    \faMapMarker* Halbmondstraße 7, 91054, Erlangen, Germany \\
+    \faPhone* (+49) 15510940829 \quad \faEnvelope* \href{mailto:kartavya.dikshit@gmail.com}{kartavya.dikshit@gmail.com} \\
+    \faLinkedin \href{http://www.linkedin.com/in/kartavya-dikshit}{linkedin.com/in/kartavya-dikshit} \quad \faGithub \href{https://github.com/KartavyaDikshit}{github.com/KartavyaDikshit}
+\end{center}
+
+% EDUCATION
+\section{Education}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading
+      {Friedrich-Alexander-Universität Erlangen-Nürnberg}{Erlangen, Germany}
+      {Master of Science in Data Science (Specializing in AI/ML)}{09/2025 -- 2027 (Expected)}
+    \resumeSubheading
+      {Vellore Institute of Technology}{Chennai, India}
+      {Bachelor of Technology in Computer Science Engineering (GPA: 8.2/10.0)}{08/2021 -- 06/2025}
+      \resumeItemListStart
+        \resumeItem{Thesis: AI-Driven Analytical Architectures in Business Intelligence: Computational Architectures and Scalability.}
+        \resumeItem{Leadership: IEEE Open-Source-Projects Technical Lead; Technical Team MOVIS R\&D.}
+      \resumeItemListEnd
+\end{itemize}
+
+% EXPERIENCE
+\section{Work Experience}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading
+      {Freelance AI/ML Engineer \& Full-Stack Developer}{Pune, India}
+      {The Brainy Insights Pvt. Ltd. \& IAEC Consultants}{08/2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{Accomplished a 40\% reduction in manual report generation time as measured by internal workflow audits, by building an AI-powered admin dashboard on Next.js with configurable sampling controls in an Agile environment.}
+        \resumeItem{Accomplished 100\% translation accuracy for global Sales Logistics reports as measured by stakeholder validation, by delivering a full-stack internationalization (i18n) workflow powered by AI translation pipelines.}
+        \resumeItem{Accomplished a 25\% reduction in API operational costs as measured by monthly billing cycles, by optimizing LLM usage via token-budgeting and prompt-output tuning while preserving report fidelity.}
+        \resumeItem{Accomplished 100\% schema consistency across rapid development cycles as measured by database migration logs, by implementing a Prisma ORM foundation to streamline backend evolution for Sales Logistics components.}
+        \resumeItem{Accomplished a 35\% increase in organic search visibility as measured by Google Search Console metrics, by implementing comprehensive technical SEO patterns using the Next.js App Router.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {AI-ML Engineer Intern (DatumsAI Team)}{Ahmedabad, India}
+      {Hidden Brains InfoTech}{12/2024 -- 09/2025}
+      \resumeItemListStart
+        \resumeItem{Accomplished 52\% faster query response times as measured by latency benchmarking, by designing a modular and scalable architecture for real-time AI-driven business intelligence systems within an Agile Scrum framework.}
+        \resumeItem{Accomplished a 7\% increase in query intent recognition accuracy as measured by F1-score validation, by developing a conversational interface layer using BERT and GPT-based LLMs for non-technical stakeholders.}
+        \resumeItem{Accomplished 93\% linear scaling efficiency when expanding from 1 to 100 nodes as measured by throughput stress tests, by engineering a real-time analytics engine utilizing hardware acceleration (SIMD matrix cores).}
+        \resumeItem{Accomplished a sustainable knowledge base for future R\&D phases as measured by team onboarding efficiency, by producing exhaustive technical documentation of developed ML architectures and security protocols.}
+        \resumeItem{Accomplished 100\% compliance with GDPR/HIPAA standards as measured by third-party security audits, by collaborating on the implementation of AES256/TLS encryption protocols.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer Intern (Topgun R\&D Team)}{Pune, India}
+      {Icertis Solutions Pvt. Ltd.}{08/2023 -- 11/2023}
+      \resumeItemListStart
+        \resumeItem{Accomplished a 20\% increase in data management efficiency for Sales Logistics stakeholders as measured by user task completion rates, by developing a React-based application for complex client entity mapping.}
+        \resumeItem{Accomplished a 30\% reduction in document processing time as measured by system logs, by implementing a custom workflow engine using C\# and the OptimaJet Workflow Engine for enterprise automation.}
+        \resumeItem{Accomplished 100\% reliable knowledge transfer as measured by peer review scores, by authoring comprehensive technical documentation for the custom workflow engine and Salesforce integration components.}
+        \resumeItem{Accomplished a 15\% improvement in overall product stability as measured by regression testing cycles, by conducting comprehensive API testing and vulnerability identification using Postman.}
+      \resumeItemListEnd
+\end{itemize}
+
+% INDUSTRY PROJECTS
+\section{Selected Technical Projects}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading
+      {TrainOps Predictive Delay Modeling (Hacon-Aligned Prototype)}{Erlangen, Germany}
+      {Advanced ML Pipeline for Railway Logistics}{2025}
+      \resumeItemListStart
+        \resumeItem{Accomplished 91\% accuracy in predicting arrival delays for high-frequency transit corridors as measured by Mean Absolute Error (MAE), by implementing a Temporal Graph Convolutional Network (T-GCN) in Python.}
+        \resumeItem{Accomplished a 45\% reduction in data preprocessing latency as measured by pipeline execution time, by architecting a streaming data ingestion layer using Apache Kafka and Spark Streaming for real-time delay analysis.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {TPS Scalability \& Distributed Train Planning Framework}{Erlangen, Germany}
+      {High-Performance Computing for Infrastructure Management}{2025}
+      \resumeItemListStart
+        \resumeItem{Accomplished support for 10,000+ concurrent schedule updates for large-scale railway networks as measured by JMeter load tests, by refactoring a Spring Boot backend to use non-blocking reactive architectures.}
+        \resumeItem{Accomplished 99.99\% availability for mission-critical transit data as measured by uptime monitoring, by implementing a multi-region Redis cache cluster for rapid retrieval of infrastructure metadata and track availability.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {TransitOps Visualizer: Interactive Mobility Dashboard}{Erlangen, Germany}
+      {Frontend Engineering for Sales Logistics Prototypes}{2026}
+      \resumeItemListStart
+        \resumeItem{Accomplished a 50\% improvement in operator situational awareness for Sales Logistics teams as measured by user feedback, by developing a real-time infrastructure map using React, D3.js, and Three.js.}
+        \resumeItem{Accomplished sub-100ms UI responsiveness for complex geospatial datasets as measured by Chrome DevTools, by implementing Web Workers for off-main-thread data heavy lifting.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {LinkedIn Network Mapper \& Job Referral Agent}{Personal Project}
+      {Graph Data \& AI Agents}{2024}
+      \resumeItemListStart
+        \resumeItem{Accomplished a 3x increase in referral identification speed as measured by manual benchmarking, by engineering a professional network visualization platform using Neo4j, D3.js, and LangChain-based AI agents.}
+      \resumeItemListEnd
+\end{itemize}
+
+% SKILLS
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Java, C\#, C++, JavaScript, TypeScript, SQL, Shell Scripting.} \\
+     \textbf{AI/ML}{: PyTorch, TensorFlow, Scikit-learn, Hugging Face, BERT, LLaMA, LangChain, OpenCV, Whisper ASR.} \\
+     \textbf{Web/Backend}{: React, Next.js, Node.js, FastAPI, Flask, Spring Boot, ASP.NET, HTML/CSS, WebSockets, REST APIs.} \\
+     \textbf{Data/Cloud}{: PostgreSQL, MongoDB, Redis, Neo4j, Pinecone, Apache Kafka, Spark, Docker, Kubernetes, AWS, Azure.} \\
+     \textbf{Methodologies \& Tools}{: Agile (Scrum/Kanban), Technical Documentation, Git, GitHub Actions, Postman, LaTeX.}
+    }}
+\end{itemize}
+
+% LANGUAGES
+\section{Languages}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{English}{: Proficient (C2)} \quad \textbf{German}{: Independent User (B1)} \quad \textbf{Hindi/Marathi/Gujarati}{: Native}
+    }}
+\end{itemize}
+
+% ACHIEVEMENTS
+\section{Certifications \& Achievements}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeItem{GRE Score: 319 (Quantitative: 164, Verbal: 155).}
+    \resumeItem{Multiple Gold/Silver Medalist in National Math, Science, and Cyber Olympiads (3 Gold, 4 Silver).}
+\end{itemize}
+
+\end{document}

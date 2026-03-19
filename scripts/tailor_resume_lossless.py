@@ -236,7 +236,7 @@ def tailor_lossless(master_cv_path, jd_path, output_tex_path, system_prompt_path
     # Compile Resume PDF
     if compile_latex(output_tex_path, job_dir):
         gen_pdf = output_tex_path.replace(".tex", ".pdf")
-        final_pdf = os.path.join(job_dir, "Tailored_CV.pdf")
+        final_pdf = os.path.join(job_dir, "Kartavya Dikshit CV.pdf")
         if os.path.abspath(gen_pdf).lower() != os.path.abspath(final_pdf).lower():
             try:
                 if os.path.exists(final_pdf): os.remove(final_pdf)

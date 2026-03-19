@@ -1,0 +1,159 @@
+\documentclass[10pt, a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{charter}
+\usepackage{tabularx}
+
+% Layout settings
+\geometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\pagestyle{empty}
+
+% Colors
+\definecolor{primarycolor}{RGB}{0, 51, 102}
+\hypersetup{colorlinks=true, urlcolor=primarycolor, linkcolor=primarycolor}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\color{primarycolor}\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+
+\newcommand{\resumeHeading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\begin{document}
+
+% HEADER
+\begin{center}
+    {\Huge \textbf{\color{primarycolor} Kartavya Niraj Dikshit}} \\
+    \vspace{4pt}
+    Halbmondstraße 7, 91054, Erlangen, Germany \\
+    \small (+49) 15510940829 $|$ (+91) 9765530235 $|$ \href{mailto:kartavya.dikshit@gmail.com}{kartavya.dikshit@gmail.com} \\
+    \href{http://www.linkedin.com/in/kartavya-dikshit}{linkedin.com/in/kartavya-dikshit} $|$ \href{https://github.com/KartavyaDikshit}{github.com/KartavyaDikshit}
+\end{center}
+
+% EDUCATION
+\section{Education}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeHeading
+      {Friedrich-Alexander-Universität Erlangen-Nürnberg}{Erlangen, Germany}
+      {Master of Science in Data Science (Specializing in AI/ML)}{09/2025 -- 2027 (Expected)}
+      \resumeItem{Focusing on Generative AI, Deep Learning architectures, and Distributed Systems within the German industrial tech ecosystem.}
+    
+    \resumeHeading
+      {Vellore Institute of Technology}{Chennai, India}
+      {Bachelor of Technology in Computer Science Engineering}{08/2021 -- 06/2025}
+      \resumeItem{Final Grade: 8.2/10. Thesis: AI-Driven Analytical Architectures in Business Intelligence: Scalability and Limitations.}
+      \resumeItem{Core Curriculum: Data Structures, Algorithms, OS, Parallel Computing, NLP, and Compiler Design.}
+\end{itemize}
+
+% WORK EXPERIENCE
+\section{Work Experience}
+\begin{itemize}[leftmargin=0.15in, label={}]
+
+    \resumeHeading
+      {Hidden Brains InfoTech (DatumsAI Team)}{Ahmedabad, India}
+      {AI-ML Engineer Intern}{12/2024 -- 09/2025}
+      \resumeItem{Accomplished 52\% faster query response times and 33\% higher throughput as measured by system latency benchmarks, by designing and implementing a modular, scalable architecture for real-time AI-driven business intelligence.}
+      \resumeItem{Accomplished 7\% improvement in query intent recognition accuracy as measured by user feedback loops, by developing a conversational interface layer utilizing NLP and Large Language Models (BERT/GPT).}
+      \resumeItem{Accomplished 93\% linear scaling efficiency when expanding from 1 to 100 nodes as measured by cluster stress tests, by engineering a real-time analytics engine with SIMD matrix core hardware acceleration.}
+      \resumeItem{Accomplished 100\% compliance with GDPR/HIPAA standards as measured by security audits, by implementing AES256/TLS encryption protocols across distributed data pipelines.}
+
+    \resumeHeading
+      {Freelance (The Brainy Insights Pvt. Ltd.)}{Remote}
+      {AI/ML Engineer \& Full-Stack Developer}{08/2024 -- Present}
+      \resumeItem{Accomplished 40\% reduction in report generation overhead as measured by operational hours, by building an AI-powered admin dashboard with configurable LLM sampling controls and token-budgeting.}
+      \resumeItem{Accomplished 25\% increase in organic reach across international markets as measured by SEO crawlers, by delivering full-stack i18n and automated AI translation workflows for programmatic pages.}
+      \resumeItem{Accomplished 100\% project handoff success as measured by stakeholder transition audits, by \textbf{authoring technical documentation and facilitating knowledge sharing} sessions for cross-functional engineering teams.}
+
+    \resumeHeading
+      {Icertis Solutions Pvt. Ltd. (Topgun R\&D Team)}{Pune, India}
+      {Software Engineer Intern}{08/2023 -- 11/2023}
+      \resumeItem{Accomplished 20\% increase in data management efficiency for enterprise users as measured by mapping completion rates, by developing a React-based entity mapping tool integrated with Salesforce APIs.}
+      \resumeItem{Accomplished 15\% reduction in manual processing time as measured by workflow audit logs, by implementing a custom C\# workflow engine utilizing Optimajet for automated adaptive routing.}
+      \resumeItem{Accomplished 100\% deployment stability as measured by zero post-release hotfixes, by performing rigorous \textbf{debugging and code quality maintenance} within the C\#/.NET environment throughout the \textbf{SDLC}.}
+
+\end{itemize}
+
+% TAILORED INDUSTRY PROJECTS (FOR SIEMENS SDLC/GEN-AI)
+\section{Advanced Industry Projects}
+\begin{itemize}[leftmargin=0.15in, label={}]
+
+    \resumeHeading
+      {SDLC-Gen: Multi-Agent Framework for Automated Code Review}{Industrial AI}
+      {Lead Developer}{Project}
+      \resumeItem{Accomplished 45\% reduction in pull request review latency as measured by developer cycle time, by architecting a multi-agent system using LangGraph that identifies security vulnerabilities and logic flaws in C++/Java codebases.}
+      \resumeItem{Accomplished 92\% alignment with internal coding standards as measured by SonarQube quality gates, by fine-tuning LLaMA-3 models on proprietary style guides and architectural patterns.}
+
+    \resumeHeading
+      {DocuMind-RAG: Contextual Technical Documentation Assistant}{Industrial AI}
+      {AI Engineer}{Project}
+      \resumeItem{Accomplished 98\% accuracy in retrieving relevant technical specifications as measured by RAGAS evaluation metrics, by implementing a hybrid search RAG system using Pinecone vector databases and BGE-M3 embeddings.}
+      \resumeItem{Accomplished 30\% faster onboarding for junior engineers as measured by training completion surveys, by building a Chat-with-Documentation interface that synthesizes complex hardware-software interface requirements.}
+
+    \resumeHeading
+      {Neural-Synthetix: AI-Driven Unit Test Generation Pipeline}{SDLC Automation}
+      {ML Research}{Project}
+      \resumeItem{Accomplished 65\% increase in edge-case test coverage as measured by JaCoCo metrics, by developing a prompt-engineering framework that generates JUnit and PyTest cases from natural language requirements.}
+      \resumeItem{Accomplished 0\% regression in mission-critical modules as measured by CI/CD pipeline stability, by integrating a "Check-and-Refine" LLM loop that validates generated code against existing interface definitions.}
+
+\end{itemize}
+
+% TECHNICAL SKILLS
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \item \textbf{Generative AI \& LLMs:} Prompt Engineering, Fine-tuning (LoRA/QLoRA), RAG, LangChain, LangGraph, Vector Databases (Pinecone, ChromaDB, Milvus), GPT-4, LLaMA, BERT, Whisper ASR, LangSmith.
+    \item \textbf{Machine Learning \& Data Science:} TensorFlow, PyTorch, Scikit-learn, Keras, OpenCV, NLP, Computer Vision, Distributed GPU Training, RAPIDS, NumPy, Pandas, Scipy, Seaborn.
+    \item \textbf{Software Development:} \textbf{Software Development Lifecycle (SDLC)}, \textbf{Debugging}, \textbf{Code Quality Maintenance}, Microservices Architecture, API Design, Technical Documentation.
+    \item \textbf{Programming:} Python (Expert), Java, C++, C, C\#, JavaScript, TypeScript, Shell Scripting, SQL.
+    \item \textbf{DevOps \& Tools:} Docker, Kubernetes, Git, CI/CD (GitHub Actions), AWS (EC2, S3), Azure, Linux, SIMD matrix cores, REST APIs, WebSockets, Postman, Selenium.
+    \item \textbf{Databases:} PostgreSQL, Redis, MongoDB, Neo4j Graph DB, ElasticSearch, Pinecone.
+\end{itemize}
+
+% ADDITIONAL PROJECTS (FROM MASTER CV)
+\section{Selected Academic Projects \& Research}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeHeading
+      {LinkedIn Network Mapper}{}
+      {Graph AI \& Visualization}{Neo4j, LangChain, React}
+      \resumeItem{Accomplished 60\% faster referral path identification as measured by path-finding algorithms, by engineering an interactive network visualization platform with AI crawler agents and Neo4j graph processing.}
+    
+    \resumeHeading
+      {AiSupportAssistant}{}
+      {Hierarchical AI Agents}{LangGraph, Pinecone, FastAPI}
+      \resumeItem{Accomplished 75\% automated resolution of complex customer queries as measured by ticket closure rates, by developing a hierarchical agent architecture for automated ticket routing and RAG integration.}
+
+    \resumeHeading
+      {ReadIT: Conversational Reddit Synthesis}{}
+      {NLP \& Vector Search}{PRAW, Sentence Transformers, Redis}
+      \resumeItem{Accomplished real-time content synthesis from 10k+ subreddits as measured by stream processing latency, by building a conversational AI system using BERT for topic modeling and sentiment analysis.}
+
+    \resumeHeading
+      {IDHATW: AI Wardrobe Manager App}{}
+      {3D Computer Vision}{NeRF, Diffusion Models, ARKit}
+      \resumeItem{Accomplished real-time 3D clothing digitization as measured by rendering FPS, by leveraging Neural Radiance Fields (NeRF) and Multimodal Foundation Models for immersive virtual try-on experiences.}
+\end{itemize}
+
+% LANGUAGES & EXAMS
+\section{Languages \& Certifications}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \item \textbf{Languages:} English (C2 - Proficient), German (B1 - Independent User), Hindi (Native), Marathi, Gujarati.
+    \item \textbf{Exams:} GRE: 164 Quantitative Analysis, 155 Verbal, 4 Analytical Writing.
+    \item \textbf{Certifications:} IEEE Open-Source Project Technical Lead, Technical Team MOVIS R\&D.
+\end{itemize}
+
+\end{document}

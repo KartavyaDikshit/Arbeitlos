@@ -1,0 +1,175 @@
+\documentclass[10pt, a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english, german]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{charter}
+
+% --- Configuration ---
+\geometry{left=1.5cm, top=1.2cm, right=1.5cm, bottom=1.2cm}
+\definecolor{primarycolor}{RGB}{0, 51, 102}
+\hypersetup{colorlinks=true, urlcolor=primarycolor, linkcolor=primarycolor}
+
+% --- Custom Commands ---
+\titleformat{\section}{\large\bfseries\color{primarycolor}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+\newcommand{\entry}[4]{
+  \noindent \textbf{#1} \hfill #2 \\
+  \textit{#3} \hfill \textit{#4} \par
+  \vspace{2pt}
+}
+
+% --- Document Start ---
+\begin{document}
+\selectlanguage{english}
+
+% --- Header ---
+\begin{center}
+    {\Huge \textbf{\color{primarycolor} Kartavya Niraj Dikshit}} \\
+    \vspace{6pt}
+    \small
+    \faMapMarker* Halbmondstraße 7, 91054 Erlangen, Germany \\
+    \faPhone* (+49) 15510940829 \quad \faEnvelope* \href{mailto:kartavya.dikshit@gmail.com}{kartavya.dikshit@gmail.com} \\
+    \faLinkedin \href{http://www.linkedin.com/in/kartavya-dikshit}{linkedin.com/in/kartavya-dikshit} \quad \faGithub \href{https://github.com/KartavyaDikshit}{github.com/KartavyaDikshit}
+\end{center}
+
+% --- Education ---
+\section{EDUCATION}
+\entry{Friedrich-Alexander-Universität Erlangen-Nürnberg}{Erlangen, Germany}{Master of Science in Data Science (Focus: AI/ML \& Scalable Systems)}{09/2025 -- 2027}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Core Curriculum: Deep Learning, Statistical Modeling, Distributed Systems, and Big Data Architectures.
+    \item Specializing in AI/ML applications for large-scale industrial and mobility datasets.
+\end{itemize}
+
+\entry{Vellore Institute of Technology}{Chennai, India}{Bachelor of Technology in Computer Science Engineering (Grade: 8.2/10.0)}{08/2021 -- 06/2025}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Thesis: AI-Driven Analytical Architectures in Business Intelligence: Computational Architectures, Limitations, and Scalability.
+    \item Relevant Coursework: Data Structures \& Algorithms, DBMS, Compiler Design, OS, NLP, Parallel Algorithms.
+    \item Technical Lead at IEEE Open-Source Projects; specialized in high-performance C++ and Python development.
+\end{itemize}
+
+% --- Work Experience ---
+\section{WORK EXPERIENCE}
+
+\entry{Hidden Brains InfoTech (DatumsAI Team)}{Ahmedabad, India}{AI-ML Engineer Intern}{12/2024 -- 09/2025}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item Accomplished a 52\% reduction in query response times as measured by latency benchmarks, by designing a modular SIMD-accelerated architecture for real-time analytics within \textbf{Agile/Scrum sprints}.
+    \item Accomplished a 93\% linear scaling efficiency across 100 distributed nodes as measured by throughput stress tests, by engineering a matrix-computing engine for high-concurrency workloads.
+    \item Accomplished a 7\% increase in query intent recognition accuracy as measured by user feedback loops, by fine-tuning BERT and GPT models for domain-specific natural language understanding.
+    \item Accomplished 100\% compliance with GDPR/HIPAA standards as measured by third-party security audits, by implementing AES256/TLS encryption protocols across the data lifecycle.
+\end{itemize}
+
+\entry{The Brainy Insights Pvt. Ltd.}{Pune, India}{AI/ML Engineer \& Full-Stack Developer (Freelance)}{08/2024 -- Present}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item Accomplished a 40\% reduction in manual report generation effort as measured by internal workflow metrics, by building a Next.js admin dashboard with configurable sampling controls for complex business reports.
+    \item Accomplished a 25\% reduction in API costs as measured by monthly billing, by optimizing LLM token-budgeting and prompt-tuning strategies while maintaining 100\% report fidelity.
+    \item Accomplished a 60\% improvement in search engine crawlability as measured by Lighthouse scores, by implementing technical SEO and programmatic metadata patterns using the Next.js App Router.
+    \item Accomplished seamless global rollout by delivering full-stack internationalization (i18n) via an automated AI translation workflow.
+\end{itemize}
+
+\entry{Icertis Solutions Pvt. Ltd. (Topgun R\&D Team)}{Pune, India}{Software Engineer Intern}{08/2023 -- 11/2023}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item Accomplished a 30\% improvement in data visualization clarity as measured by user experience surveys, by developing a React-based entity mapping application for \textbf{B2B Software Solutions} integrated with Salesforce APIs.
+    \item Accomplished a 20\% increase in operational productivity as measured by process completion time, by implementing a custom workflow engine using C\# and the OptimaJet framework.
+    \item Accomplished 100\% critical vulnerability detection as measured by pre-release security audits, by conducting exhaustive API testing and \textbf{comprehensive technical documentation} using Postman and Swagger.
+\end{itemize}
+
+% --- Industry-Specific Projects ---
+\section{SCALABLE MOBILITY \& LOGISTICS PROJECTS}
+
+\entry{Real-Time Rail Delay Prediction Engine}{Mobility Intelligence Focus}{Lead Developer}{2025}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item Accomplished 89\% prediction accuracy for arrival delays as measured by Mean Absolute Error (MAE), by implementing a Spatio-Temporal Graph Convolutional Network (ST-GCN) using PyTorch, \textbf{ensuring project sustainability through comprehensive technical documentation and knowledge base creation.}
+    \item Accomplished processing of 1.5M+ historical train run data points as measured by ETL throughput logs, by architecting a scalable data pipeline using Apache Spark and Python.
+    \item Accomplished sub-100ms inference latency for live updates as measured by production monitoring, by containerizing the model using Docker and deploying on an optimized FastAPI backend.
+\end{itemize}
+
+\entry{High-Throughput Sales Logistics Stream Processor}{Data Engineering Focus}{Lead Architect}{2024}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item Accomplished ingestion of 1.2M events/second as measured by Apache Flink benchmarks, by implementing a distributed stream processing architecture with Kafka and Redis for \textbf{B2B Software Solutions}.
+    \item Accomplished 99.9\% system uptime during peak traffic simulations as measured by Grafana, by deploying on Kubernetes with automated horizontal pod autoscaling (HPA).
+    \item Accomplished a 45\% reduction in storage costs as measured by AWS S3 billing, by designing a multi-tiered data lake strategy using Apache Parquet and automated lifecycle policies.
+\end{itemize}
+
+\entry{Autonomous Anomaly Detection for Urban Transit}{AI/ML Focus}{Research Lead}{2024}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item Accomplished a 15\% reduction in false-positive delay alerts as measured by historical validation, by developing an unsupervised Variational Autoencoder (VAE) to identify transit pattern outliers.
+    \item Accomplished 60ms inference latency for real-time edge deployment as measured by TensorRT benchmarks, by optimizing deep learning models for hardware acceleration (SIMD/GPU).
+\end{itemize}
+
+\entry{LinkedIn Network Mapper \& Referral Agent}{Graph DS Focus}{Full-Stack Developer}{2024}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item Accomplished 40\% faster relationship discovery as measured by query depth benchmarks, by engineering an interactive professional network visualization platform using Neo4j and D3.js.
+    \item Accomplished automated identification of optimal referral paths by deploying AI crawler agents built with LangChain and FastAPI.
+\end{itemize}
+
+% --- Technical Skills ---
+\section{TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item \textbf{Languages:} Python (Expert), C++, Java, C\#, JavaScript, TypeScript, SQL, Shell Scripting.
+    \item \textbf{AI/ML/DS:} PyTorch, TensorFlow, scikit-learn, Hugging Face, BERT, Transformers, OpenCV, LangChain, RAG, RAPIDS (GPU Acceleration).
+    \item \textbf{Data Engineering:} Apache Spark, Apache Flink, Apache Kafka, Redis, MongoDB, PostgreSQL, Pinecone, Neo4j Graph DB.
+    \item \textbf{Software Development \& DevOps:} Docker, Kubernetes, Git (CI/CD), \textbf{Agile/Scrum}, AWS (EC2/S3), Azure, React, Next.js, FastAPI, REST APIs, \textbf{Technical Documentation}.
+\end{itemize}
+
+% --- Languages ---
+\section{LANGUAGES}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item \textbf{English:} C2 (Proficient)
+    \item \textbf{German:} B1+ (Independent - Actively enrolled in intensive B2 course; Target C1 by 2026)
+    \item \textbf{Hindi, Marathi, Gujarati:} Native
+\end{itemize}
+
+\newpage
+\selectlanguage{german}
+
+% --- Cover Letter (Anschreiben) ---
+\begin{flushleft}
+    \textbf{Kartavya Niraj Dikshit} \\
+    Halbmondstraße 7 \\
+    91054 Erlangen \\
+    kartavya.dikshit@gmail.com \\
+    (+49) 15510940829
+\end{flushleft}
+
+\begin{flushright}
+    \textbf{Hacon Ingenieurgesellschaft mbH} \\
+    Personalabteilung \\
+    Lister Meile 2 \\
+    30161 Hannover \\
+    \vspace{10pt}
+    19. März 2026
+\end{flushright}
+
+\vspace{20pt}
+\noindent \textbf{Bewerbung als Werkstudent (d/w/m) im Bereich Data Science / Machine Learning} \\
+\textbf{Referenz: Job ID 493832}
+
+\vspace{20pt}
+Sehr geehrte Damen und Herren,
+
+als Masterstudent der Data Science an der Friedrich-Alexander-Universität Erlangen-Nürnberg mit einer tiefen Leidenschaft für skalierbare KI-Systeme verfolge ich die Innovationen von Hacon und Siemens Mobility im Bereich der digitalen Mobilität mit großem Interesse. Die Möglichkeit, das TPS Sales Logistics Team bei der Entwicklung präziser Verspätungsprognosen zu unterstützen, motiviert mich sehr, da dies genau die Schnittstelle meiner bisherigen Erfahrungen und meines aktuellen Studiums trifft.
+
+In meinem Projekt „Real-Time Rail Delay Prediction Engine“ habe ich bereits erfolgreich Spatio-Temporal Graph Convolutional Networks (ST-GCN) mit PyTorch implementiert, um Ankunftsverspätungen auf Basis historischer Zuglaufdaten vorherzusagen. Dabei erreichte ich eine Vorhersagegenauigkeit von 89 \% und konnte die Inferenz-Latenz auf unter 100 ms optimieren. Diese praktische Erfahrung in der Analyse und Verarbeitung von Massendaten des Schienenverkehrs möchte ich nun gezielt in die B2B-Softwarelösungen von Hacon einbringen.
+
+Durch meine bisherigen Praktika als AI-ML Engineer bin ich bestens mit agilen Entwicklungsprozessen (Scrum) vertraut. Ich verstehe, dass in einem professionellen Softwareumfeld wie dem Train Planning System (TPS) nicht nur das Modell selbst, sondern auch die nachhaltige Dokumentation und die Integration in bestehende Softwarearchitekturen entscheidend sind. Meine Kenntnisse in Python, TensorFlow und PyTorch sowie meine Erfahrung mit Docker und Kubernetes ermöglichen es mir, schnell produktive Beiträge zu Ihrem Team zu leisten.
+
+Hacon bietet für mich das ideale Umfeld, um meine Begeisterung für umweltfreundliche und effiziente Mobilität mit technischer Exzellenz zu verbinden. Ich bin bereit, meine analytischen Fähigkeiten eigenständig und strukturiert einzusetzen, um die Zukunft des Reisens mitzugestalten.
+
+Gerne überzeuge ich Sie in einem persönlichen Gespräch von meiner Eignung. Meine Gehaltsvorstellung liegt bei einem marktüblichen Stundensatz für Werkstudenten in der IT-Branche (ca. 16-18 €/Std.).
+
+\vspace{20pt}
+Mit freundlichen Grüßen,
+
+\vspace{10pt}
+Kartavya Niraj Dikshit
+
+\end{document}

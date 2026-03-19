@@ -1,9 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.14)  17 MAR 2026 00:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.14)  19 MAR 2026 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**C:/Users/User/Jobs/data/tailored_outputs/UnknownJob/CV.tex
-(C:/Users/User/Jobs/data/tailored_outputs/UnknownJob/CV.tex
+**C:/Users/User/Jobs/data/tailored_outputs/WorkingStudentDataScientist/Cover_Le
+tter.tex
+
+(C:/Users/User/Jobs/data/tailored_outputs/WorkingStudentDataScientist/Cover_Let
+ter.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -79,25 +82,25 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
-Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box53
-\beforetitleunit=\skip51
-\aftertitleunit=\skip52
-\ttl@plus=\dimen157
-\ttl@minus=\dimen158
-\ttl@toksa=\toks21
-\titlewidth=\dimen159
-\titlewidthlast=\dimen160
-\titlewidthfirst=\dimen161
 ) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip53
-\enit@outerparindent=\dimen162
-\enit@toks=\toks22
-\enit@inbox=\box54
+\labelindent=\skip51
+\enit@outerparindent=\dimen157
+\enit@toks=\toks21
+\enit@inbox=\box53
 \enit@count@id=\count286
 \enitdp@description=\count287
+) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box54
+\beforetitleunit=\skip52
+\aftertitleunit=\skip53
+\ttl@plus=\dimen158
+\ttl@minus=\dimen159
+\ttl@toksa=\toks22
+\titlewidth=\dimen160
+\titlewidthlast=\dimen161
+\titlewidthfirst=\dimen162
 )
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
@@ -228,63 +231,46 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip54
 )
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesome
-5.sty (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2025-12-24 L3 programming layer (loader) 
-
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
-ex.def
-File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count300
-))
-Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
-
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3ke
-ys2e.sty
-Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
-)
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse
-.sty
-Package: xparse 2025-10-09 L3 Experimental document command parser
-)
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesome
-5-generic-helper.sty
-Package: fontawesome5-generic-helper 2022/05/02 v5.15.4 non-uTeX helper for fon
-tawesome5
-
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesome
-5-mapping.def)))
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\charter.sty
 Package: charter 2020/03/25 PSNFSS-v9.3 (P.Dyballa) 
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 22.
-LaTeX Font Info:    Trying to load font information for T1+bch on input line 31
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 16.
+LaTeX Font Info:    Trying to load font information for T1+bch on input line 21
 .
 
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 )
-(C:\Users\User\Jobs\data\tailored_outputs\UnknownJob\CV.aux)
-\openout1 = `CV.aux'.
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
+ex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count300
+)
+(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentDataScientist\Cover_Let
+ter.aux)
+\openout1 = `Cover_Letter.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -294,15 +280,15 @@ LaTeX Font Info:    ... okay on input line 31.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(34.14322pt, 529.22144pt, 34.14322pt)
-* v-part:(T,H,B)=(34.14322pt, 776.7604pt, 34.14322pt)
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=529.22144pt
-* \textheight=776.7604pt
-* \oddsidemargin=-38.12677pt
-* \evensidemargin=-38.12677pt
-* \topmargin=-75.12677pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -336,81 +322,43 @@ i
 \makeMPintoPDFobject=\count306
 \everyMPtoPDFconversion=\toks24
 )
-Package hyperref Info: Link coloring ON on input line 31.
- (C:\Users\User\Jobs\data\tailored_outputs\UnknownJob\CV.out)
-(C:\Users\User\Jobs\data\tailored_outputs\UnknownJob\CV.out)
+Package hyperref Info: Link coloring ON on input line 21.
+
+(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentDataScientist\Cover_Let
+ter.out)
+(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentDataScientist\Cover_Let
+ter.out)
 \@outlinefile=\write3
-\openout3 = `CV.out'.
+\openout3 = `Cover_Letter.out'.
 
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
-nput line 39.
-
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontawesom
-efree1.fd)
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
-nput line 40.
-
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontawesom
-efree2.fd)
-LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on
- input line 40.
-
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontawesom
-ebrands0.fd)
-LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <9> not a
-vailable
-(Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 40.
-LaTeX Font Info:    Trying to load font information for TS1+bch on input line 6
-6.
-
-(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
-File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
-)
-Overfull \hbox (4.03659pt too wide) in paragraph at lines 80--81
-[]\T1/bch/m/n/10 Ensured 100% com-pli-ance with GDPR and HIPAA stan-dards while
- main-tain-ing through-put by im-ple-ment-ing AES256/TLS
- []
-
-[1
+ [1
 
 {C:/Users/User/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/User/
-AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/User/AppDat
-a/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc}{C:/Users/Use
-r/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free2.enc}{C:/U
-sers/User/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5brands0
-.enc}]
-Overfull \hbox (0.95082pt too wide) in paragraph at lines 141--142
-[]\T1/bch/b/n/10 Tools & Com-pli-ance: \T1/bch/m/n/10 Git, Post-man, Se-le-nium
-, GDPR/HIPAA Frame-works, SIMD Hard-ware Ac-cel-er-a-tion, CI/CD Pipelines. 
- []
-
-[2] (C:\Users\User\Jobs\data\tailored_outputs\UnknownJob\CV.aux)
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+(C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentDataScientist\Cover_Let
+ter.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
-Package rerunfilecheck Info: File `CV.out' has not changed.
-(rerunfilecheck)             Checksum: 78BA5003A8753BE200B2C99F96AE1E68;1042.
+Package rerunfilecheck Info: File `Cover_Letter.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13091 strings out of 467871
- 224229 string characters out of 5418860
- 642118 words of memory out of 5000000
- 41838 multiletter control sequences out of 15000+600000
- 651120 words of font info for 59 fonts, out of 8000000 for 9000
+ 9894 strings out of 467871
+ 153547 string characters out of 5418860
+ 585172 words of memory out of 5000000
+ 38689 multiletter control sequences out of 15000+600000
+ 639205 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,79p,576b,551s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/
-FontAwesome5Brands-Regular.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/User/AppData/
-Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/User/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/U
-ser/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb>
-Output written on C:\Users\User\Jobs\data\tailored_outputs\UnknownJob\CV.pdf (2
- pages, 85728 bytes).
+ 75i,5n,79p,1270b,440s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bch
+b8a.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/chart
+er/bchr8a.pfb>
+Output written on C:\Users\User\Jobs\data\tailored_outputs\WorkingStudentDataSc
+ientist\Cover_Letter.pdf (1 page, 39169 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 10 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 PDF objects out of 1000 (max. 8388607)
+ 2 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

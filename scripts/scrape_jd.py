@@ -1,6 +1,7 @@
 import requests
 import sys
 import os
+import re
 
 def scrape_to_markdown(url, filename):
     # Use Jina Reader API to get clean markdown from URL
@@ -20,8 +21,12 @@ def scrape_to_markdown(url, filename):
         safe_filename = "".join(x for x in filename if x.isalnum() or x in "._- ")
         path = f"{output_dir}/{safe_filename}.md"
         
+        # Strip HTML tags just in case Jina leaves any
+        clean_text = re.sub(r'<[a-z]+.*?>', '', response.text, flags=re.IGNORECASE)
+        clean_text = re.sub(r'</[a-z]+>', '', clean_text, flags=re.IGNORECASE)
+        
         with open(path, "w", encoding="utf-8") as f:
-            f.write(response.text)
+            f.write(clean_text)
         
         print(f"Successfully scraped to {path}.")
         return path

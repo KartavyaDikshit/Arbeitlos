@@ -1,51 +1,44 @@
-# Upgrade Plan: Arbeitlos Job Pipeline 2.0
+# Upgrade Plan: Multi-Tier Reinforcement Learning System
 
 ## Objective
-Upgrade the current job search and tailoring pipeline to use the Gemini API/CLI for more robust job discovery, 2-3 page ATS-friendly resume generation, and hiring manager identification.
+Implement a sophisticated "Learning Loop" that allows for mass selection of rejected applications, individual analysis, and a synthesized "Master Lesson" that informs all future tailoring missions.
 
 ## Key Files & Context
-- **Discovery:** `scripts/search_jobs_gemini.py` (New)
-- **Tailoring:** `tailor_prompt.txt` (Update)
-- **Networking:** `scripts/find_contacts_gemini.py` (New)
-- **UI:** `app.py` (Update)
-- **Base Resume:** `master_cv.md` (Source)
+- `app.py`: UI for selecting and triggering analyses.
+- `scripts/analyze_rejection.py`: Core logic for individual role analysis.
+- `scripts/synthesize_master_lesson.py` (New): Logic for cross-role synthesis.
+- `scripts/tailor_resume_lossless.py`: Integration point for applying lessons during tailoring.
+- `docs/solutions/master_rejection_lesson.md` (New): Storage for synthesized patterns.
 
 ## Implementation Steps
 
-### Step 1: Architecture & Scraping Strategy
-- **Search:** Use Gemini 1.5 Pro with **Search Grounding** to discover roles. This is more effective than the Exa API for finding specific career portal links at major German companies.
-- **Scraping:** Integrate `r.jina.ai` as the primary JD scraper to convert portal HTML into high-quality Markdown.
-- **Structure:** Update `app.py` to call these new scripts and handle the 2-3 page PDF generation (via LaTeX or a Python-based Markdown-to-PDF converter).
+### Phase 1: UI Enhancement (`app.py`)
+- [ ] **Multi-Select Interface**: Replace `st.selectbox` with `st.multiselect` in the Post-Mortem Lab.
+- [ ] **Batch Processing Button**: Add "EXECUTE BATCH ANALYSIS" to process all selected roles sequentially.
+- [ ] **Synthesis Trigger**: Add "GENERATE MASTER LESSON" button to trigger the global synthesis script.
+- [ ] **Protocol Tab Update**: Update the "SYSTEM PROTOCOLS" page to show both Master and Individual lessons clearly.
 
-### Step 2: Job Sourcing & Filtering (`scripts/search_jobs_gemini.py`)
-Implement a Python script that:
-1.  Connects to the Gemini API (`google-generativeai`).
-2.  Performs a grounded search for "Werkstudent" roles in Data Science, AI, and ML at **Siemens, BMW, Porsche, Schaeffler, Bosch, SAP, Mercedes-Benz, Allianz, Infineon, and Audi**.
-3.  Filters for active roles in the **Erlangen, Nuremberg, Munich, and Stuttgart** regions.
-4.  Outputs a JSON file (`data/jobs_found_gemini.json`) for the Streamlit UI.
+### Phase 2: Batch Analysis Script (`scripts/batch_analyze_rejections.py`)
+- [ ] **Sequential Execution**: A simple wrapper script that takes a list of role names and calls `analyze_rejection.py` for each.
+- [ ] **Progress Tracking**: Ensure the UI shows which role is currently being analyzed.
 
-### Step 3: Material Generation Pipeline (`tailor_prompt.txt`)
-Update the system prompt to:
-1.  **Expansion:** Instruct the LLM to expand the existing 1.5-page CV into a **2-3 page detailed technical resume**.
-2.  **Portfolio Removal:** Explicitly remove the portfolio link to focus on technical depth and impact.
-3.  **ATS Optimization:** Use high-density keywords from the JD and strict LaTeX/Markdown formatting that ATS scanners favor.
-4.  **Google XYZ Format:** Enforce "Accomplished [X] as measured by [Y], by doing [Z]" for all 15-20+ bullet points.
-5.  **German Cover Letter:** Add a dedicated task for a professional German-style cover letter (`Anschreiben`).
+### Phase 3: Global Synthesis (`scripts/synthesize_master_lesson.py`)
+- [ ] **Lesson Aggregation**: Read all individual lessons from `docs/solutions/rejection_lessons.md`.
+- [ ] **Synthesis Prompt**: Use Gemini to identify high-level, recurring failure patterns (e.g., "The candidate consistently over-promises on German fluency" or "Technical bullets are consistently too abstract for Siemens").
+- [ ] **Master Storage**: Save the output to `docs/solutions/master_rejection_lesson.md`.
 
-### Step 4: Networking & Outreach Pipeline (`scripts/find_contacts_gemini.py`)
-Create a new script that:
-1.  Takes the Job URL and Company name.
-2.  Uses Gemini Search to identify:
-    *   The Hiring Manager's name/title.
-    *   The specific team name (e.g., "AI Manufacturing Strategy").
-    *   A probable contact email or LinkedIn profile.
-3.  Drafts a **Cold Email** and a **200-character LinkedIn invite message**.
+### Phase 4: Two-Tier Contextual Reinforcement (`scripts/tailor_resume_lossless.py`)
+- [ ] **Global Injection**: Always include the `master_rejection_lesson.md` in the system prompt.
+- [ ] **Semantic Retrieval**: 
+    - [ ] Before tailoring, send the new JD and the titles/summaries of all individual lessons to Gemini.
+    - [ ] Ask Gemini: "Which 2-3 individual rejection lessons are most relevant to this new role?"
+    - [ ] Inject the **Master Lesson** + **Relevant Individual Lessons** into the tailoring prompt.
 
-### Step 5: Output & Documentation
-1.  Update `run_pipeline.ps1` to orchestrate the new Gemini-based workflow.
-2.  Replace the contents of `GEMINI.md` with the finalized roadmap and technical instructions.
+### Phase 5: Verification & Testing
+- [ ] **Reproduction**: Run a batch analysis on 2-3 roles.
+- [ ] **Synthesis Check**: Verify the `master_rejection_lesson.md` is generated and contains strategic insights.
+- [ ] **Tailoring Check**: Run a new tailoring mission and verify the prompt includes both tiers of lessons.
 
-## Verification & Testing
-- **Search Test:** Verify `scripts/search_jobs_gemini.py` returns valid URLs from at least 3 target companies.
-- **Tailoring Test:** Verify the generated resume is > 2 pages and contains NO portfolio link.
-- **Networking Test:** Verify the LinkedIn invite is < 200 characters and contains the hiring manager's name.
+## Migration & Rollback Strategies
+- **Separation**: Keep `rejection_lessons.md` as the raw database and `master_rejection_lesson.md` as the high-level summary.
+- **Fallbacks**: If synthesis fails or is empty, the system defaults to using the raw `rejection_lessons.md` as it does currently.

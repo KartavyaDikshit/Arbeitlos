@@ -5,19 +5,19 @@ import subprocess
 import time
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
-def extract_job_title(jd_content):
+def extract_job_title(jd_content, fallback_name):
     """Uses Gemini to extract a clean, descriptive job title from JD content."""
     try:
-        # Re-using the logic from tailor_resume_lossless.py to call gemini cli
+        # Extract filename without extension as the base fallback
+        clean_fallback = "".join(x for x in os.path.splitext(fallback_name)[0] if x.isalnum())
+        
         prompt = (
             f"Extract exactly ONE professional and descriptive Job Title from the following Job Description content. "
-            f"It should be in CamelCase or snake_case for use as a folder name. "
-            f"Example: 'WorkingStudentGenAI' or 'DataEngineerIntern'. "
-            f"DO NOT include any extra text or emojis. "
-            f"JD Content:\n{jd_content[:2000]}" # Use first 2000 chars to save tokens
+            f"It should be in CamelCase (e.g., 'WorkingStudentGenAI' or 'DataEngineerIntern'). "
+            f"RETURN ONLY THE TITLE. No extra text, no markdown, no quotes.\n\n"
+            f"JD Content:\n{jd_content[:3000]}"
         )
         
-        # We need a small helper to run the CLI here
         process = subprocess.Popen(
             ["gemini", "-e", "", "--prompt", "-"],
             stdin=subprocess.PIPE,
@@ -26,27 +26,56 @@ def extract_job_title(jd_content):
             encoding="utf-8",
             shell=True
         )
-        stdout, stderr = process.communicate(input=prompt, timeout=30)
+        stdout, stderr = process.communicate(input=prompt, timeout=45)
         
         if process.returncode == 0 and stdout.strip():
-            # Clean the output to be a valid folder name
+            # Clean the output to be a valid folder name (CamelCase)
             title = "".join(x for x in stdout.strip() if x.isalnum())
-            return title if title else "UnknownJob"
-        return "UnknownJob"
-    except Exception:
-        return "UnknownJob"
+            if title and len(title) > 3:
+                return title
+        
+        if stderr.strip():
+            print(f"Extraction API Warning for {fallback_name}: {stderr.strip()}")
+            
+    except Exception as e:
+        print(f"Exception during title extraction for {fallback_name}: {e}")
+    
+    # Fallback to the filename if AI extraction fails or returns empty
+    return clean_fallback if clean_fallback else "JobApplication"
+
+def get_unique_dir(base_path):
+    """Ensures a directory is unique by appending a counter if it already exists."""
+    if not os.path.exists(base_path):
+        return base_path
+    
+    counter = 1
+    unique_path = f"{base_path}_{counter}"
+    while os.path.exists(unique_path):
+        counter += 1
+        unique_path = f"{base_path}_{counter}"
+    return unique_path
 
 def run_tailor_pipeline(jd_path):
     """Executes the tailor_resume_lossless script for a single JD."""
-    with open(jd_path, "r", encoding="utf-8") as f:
-        jd_content = f.read()
+    filename = os.path.basename(jd_path)
+    try:
+        with open(jd_path, "r", encoding="utf-8") as f:
+            jd_content = f.read()
+    except Exception as e:
+        print(f"[{filename}] Error reading file: {e}")
+        return False, filename
     
-    # Extract the descriptive job title instead of using filename
-    print(f"[{os.path.basename(jd_path)}] Extracting job title...")
-    job_role = extract_job_title(jd_content)
+    # Extract the descriptive job title with fallback to filename
+    print(f"[{filename}] Extracting job title...")
+    job_role = extract_job_title(jd_content, filename)
     
-    output_dir = os.path.join("data", "tailored_outputs", job_role)
+    # Ensure folder uniqueness to prevent overwriting
+    target_path = os.path.join("data", "tailored_outputs", job_role)
+    output_dir = get_unique_dir(target_path)
     os.makedirs(output_dir, exist_ok=True)
+    
+    # Update job_role to reflect the actual folder name used
+    job_role = os.path.basename(output_dir)
     
     output_tex = os.path.join(output_dir, "CV.tex")
     master_cv = os.path.join("data", "master_cv.md")

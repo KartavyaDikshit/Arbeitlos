@@ -33,6 +33,12 @@ The project is organized into three main phases:
 
 The project includes a Streamlit application (`app.py`) that provides a centralized interface for running the entire pipeline. Users can paste a job description, and the system handles metadata extraction, CV tailoring, and contact discovery in a single workflow.
 
+### Phase 4: Rejection Analysis & Reinforcement Loop
+- **Tooling:** `scripts/analyze_rejection.py`
+- **Method:** Uses Gemini CLI to perform a "Hiring Manager Audit" on rejected applications.
+- **Goal:** Identify critical gaps, over-hallucination, or cultural mismatches to avoid repeating mistakes.
+- **Output:** Categorized lessons stored in `docs/solutions/rejection_lessons.md`, which are automatically loaded into the tailoring pipeline for all future roles.
+
 ## Quick Start
 
 ### Installation

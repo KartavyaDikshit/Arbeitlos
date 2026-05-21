@@ -5,37 +5,19 @@ import subprocess
 import json
 import re
 from dotenv import load_dotenv
+from utils import run_gemini_cli, check_dependency
 
 load_dotenv()
 
-def run_gemini_cli(prompt, timeout=300):
-    """Runs the gemini CLI with the given prompt and returns the output."""
-    try:
-        process = subprocess.Popen(
-            ["gemini", "-e", "", "--prompt", "-"],
-            stdin=subprocess.PIPE,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            encoding="utf-8",
-            shell=True
-        )
-        stdout, stderr = process.communicate(input=prompt, timeout=timeout)
-        
-        if process.returncode != 0:
-            print(f"Gemini CLI Error: {stderr}")
-            return None
-        return stdout.strip()
-    except subprocess.TimeoutExpired:
-        print(f"Gemini CLI Timeout after {timeout}s")
-        process.kill()
-        return None
-    except Exception as e:
-        print(f"Error running Gemini CLI: {e}")
-        return None
+# Configuration for models based on task complexity
+STRATEGY_MODEL = 'gemini-3.1-pro-preview'
+GENERATION_MODEL = 'gemini-3.1-pro-preview'
+CRITIQUE_MODEL = 'gemini-3.1-pro-preview'
 
 def scrutinize_resume(jd, latex_code):
     """Ruthlessly scores the resume and provides feedback."""
     print("Scrutinizing tailored resume against JD...")
+    sys.stdout.flush()
     prompt = (
         f"You are a ruthless Senior Technical Recruiter at a top-tier tech company. "
         f"Your job is to find reasons to REJECT this candidate. "
@@ -54,7 +36,7 @@ def scrutinize_resume(jd, latex_code):
         f"TASK: Return ONLY a JSON object with keys: 'score' (float) and 'feedback' (detailed string).\n"
         f"JSON output should be clean without any extra text."
     )
-    raw = run_gemini_cli(prompt)
+    raw = run_gemini_cli(prompt, model=CRITIQUE_MODEL)
     if not raw: return {"score": 0, "feedback": "Failed to get feedback."}
     
     try:
@@ -65,11 +47,13 @@ def scrutinize_resume(jd, latex_code):
         return {"score": 5, "feedback": "Could not parse recruiter feedback."}
     except Exception as e:
         print(f"Scrutinizer Error: {e}")
+        sys.stdout.flush()
         return {"score": 5, "feedback": f"Error parsing feedback: {str(e)}"}
 
 def retailor_resume(master_cv, jd, latex_code, feedback, system_prompt):
     """Applies feedback to the resume to reach the next level."""
     print("Applying feedback for re-tailoring...")
+    sys.stdout.flush()
     prompt = (
         f"{system_prompt}\n\n"
         f"RECRUITER FEEDBACK (ADDRESS ALL POINTS):\n{feedback}\n\n"
@@ -83,7 +67,7 @@ def retailor_resume(master_cv, jd, latex_code, feedback, system_prompt):
         f"4. Ensure the LaTeX remains valid and compilable.\n\n"
         f"RETURN ONLY THE UPDATED LATEX CODE WRAPPED IN ```latex BLOCKS."
     )
-    raw = run_gemini_cli(prompt, timeout=400)
+    raw = run_gemini_cli(prompt, timeout=400, model=GENERATION_MODEL)
     if not raw: return latex_code
     
     if "```latex" in raw:
@@ -93,6 +77,7 @@ def retailor_resume(master_cv, jd, latex_code, feedback, system_prompt):
 def identify_gaps(jd, latex_code):
     """Identifies specific missing keywords or terminology gaps from the JD."""
     print("Analyzing for specific terminology gaps...")
+    sys.stdout.flush()
     prompt = (
         f"Identify specific missing keywords, methodologies, or stakeholder-related terminology from the Job Description "
         f"that are NOT explicitly present in the current tailored resume, but could be added based on the candidate's background.\n\n"
@@ -104,12 +89,13 @@ def identify_gaps(jd, latex_code):
         f"Example: 'Stakeholder requirements terminology is missing. Action: Tweak freelance points to mention translating requirements.'\n\n"
         f"Return ONLY a plain text list of these actions. No emojis."
     )
-    raw = run_gemini_cli(prompt)
+    raw = run_gemini_cli(prompt, model=STRATEGY_MODEL)
     return raw.strip() if raw else ""
 
 def integrate_gaps(master_cv, jd, latex_code, gaps, system_prompt):
     """Final pass to weave in missing terminology while retaining Master CV depth."""
     print("Integrating identified gaps and maximizing info retention...")
+    sys.stdout.flush()
     prompt = (
         f"{system_prompt}\n\n"
         f"SPECIFIC GAPS TO FILL:\n{gaps}\n\n"
@@ -125,7 +111,7 @@ def integrate_gaps(master_cv, jd, latex_code, gaps, system_prompt):
         f"4. The LaTeX must remain valid.\n\n"
         f"RETURN ONLY THE FINAL, PERFECTED LATEX CODE WRAPPED IN ```latex BLOCKS."
     )
-    raw = run_gemini_cli(prompt, timeout=400)
+    raw = run_gemini_cli(prompt, timeout=400, model=GENERATION_MODEL)
     if not raw: return latex_code
     
     if "```latex" in raw:
@@ -134,7 +120,13 @@ def integrate_gaps(master_cv, jd, latex_code, gaps, system_prompt):
 
 def compile_latex(tex_path, job_dir):
     """Compiles a LaTeX file to PDF and handles standard error cases."""
+    if not check_dependency("pdflatex"):
+        print("Error: 'pdflatex' not found. Please install a TeX distribution (TeX Live or MiKTeX).")
+        sys.stdout.flush()
+        return False
+
     print(f"Compiling: {os.path.basename(tex_path)}...")
+    sys.stdout.flush()
     
     # Delete old PDF to avoid false positives on existence check
     old_pdf = tex_path.replace(".tex", ".pdf")
@@ -144,10 +136,46 @@ def compile_latex(tex_path, job_dir):
     compile_cmd = ["pdflatex", "-interaction=nonstopmode", "-output-directory", job_dir, tex_path]
     
     # Run twice for references/formatting stability
-    subprocess.run(compile_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-    subprocess.run(compile_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    subprocess.run(compile_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=(sys.platform == "win32"))
+    subprocess.run(compile_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=(sys.platform == "win32"))
     
     return os.path.exists(old_pdf)
+
+
+def load_master_lesson(master_path="docs/solutions/master_rejection_lesson.md"):
+    """Loads the synthesized global strategy."""
+    if not os.path.exists(master_path):
+        return ""
+    try:
+        with open(master_path, "r", encoding="utf-8") as f:
+            content = f.read().strip()
+            if not content: return ""
+            return f"\n\n### GLOBAL STRATEGIC MANIFESTO (ALWAYS FOLLOW):\n{content}\n"
+    except: return ""
+
+def get_relevant_lessons(jd, lessons_path="docs/solutions/rejection_lessons.md"):
+    """Uses Gemini to pick the top 2-3 most relevant individual lessons for this JD."""
+    if not os.path.exists(lessons_path):
+        return ""
+    try:
+        with open(lessons_path, "r", encoding="utf-8") as f:
+            all_lessons = f.read().strip()
+        if not all_lessons: return ""
+
+        print("Retrieving contextually relevant rejection lessons...")
+        sys.stdout.flush()
+        prompt = (
+            f"You are a Context Retrieval Engine. Given the following Job Description and a list of historical rejection lessons, "
+            f"identify exactly 2-3 individual lessons that are most relevant to this specific role or company.\n\n"
+            f"TARGET JD:\n{jd[:2000]}\n\n"
+            f"REJECTION LOG:\n{all_lessons[:8000]}\n\n"
+            f"TASK: Return ONLY the full text of the 2-3 most relevant lessons. No preamble."
+        )
+        relevant = run_gemini_cli(prompt, timeout=60, model=STRATEGY_MODEL)
+        if relevant:
+            return f"\n\n### CONTEXTUALLY RELEVANT LESSONS (SPECIFIC TO THIS MISSION):\n{relevant}\n"
+        return ""
+    except: return ""
 
 def tailor_lossless(master_cv_path, jd_path, output_tex_path, system_prompt_path):
     """
@@ -162,6 +190,20 @@ def tailor_lossless(master_cv_path, jd_path, output_tex_path, system_prompt_path
     with open(system_prompt_path, "r", encoding="utf-8") as f:
         system_prompt = f.read()
 
+    # TWO-TIER REINFORCEMENT LOOP
+    print("Reinforcement Loop: Loading two-tier intelligence...")
+    sys.stdout.flush()
+    
+    # Tier 1: Master Strategy (Global)
+    master_lesson = load_master_lesson()
+    if master_lesson:
+        system_prompt += master_lesson
+        
+    # Tier 2: Relevant Individual Lessons (Specific)
+    relevant_lessons = get_relevant_lessons(jd)
+    if relevant_lessons:
+        system_prompt += relevant_lessons
+
     # Determine the job-specific directory
     job_dir = os.path.abspath(os.path.dirname(output_tex_path))
     if not os.path.exists(job_dir):
@@ -169,6 +211,7 @@ def tailor_lossless(master_cv_path, jd_path, output_tex_path, system_prompt_path
 
     # Phase 1: Tailored LaTeX Resume
     print(f"Phase 1: Generating Initial Tailored Resume...")
+    sys.stdout.flush()
     resume_prompt = (
         f"{system_prompt}\n\n"
         f"Master CV Content:\n{master_cv}\n\n"
@@ -177,7 +220,7 @@ def tailor_lossless(master_cv_path, jd_path, output_tex_path, system_prompt_path
         f"STRICTLY FOLLOW 'RESUME-SPECIFIC CONSTRAINTS'. Ignore Cover Letter instructions for this task."
     )
     
-    resume_raw = run_gemini_cli(resume_prompt)
+    resume_raw = run_gemini_cli(resume_prompt, model=GENERATION_MODEL)
     if not resume_raw: return False
 
     # Extract LaTeX
@@ -194,39 +237,62 @@ def tailor_lossless(master_cv_path, jd_path, output_tex_path, system_prompt_path
 
     # Phase 1.5: Iterative Feedback & Polishing Loop
     print(f"Phase 1.5: Entering Iterative Scrutiny Loop...")
+    sys.stdout.flush()
     max_iterations = 3
     current_iteration = 0
     target_score = 9.0
     
+    # Track the best version found so far
+    best_latex = latex_code
+    best_score = -1.0
+    
     while current_iteration < max_iterations:
         current_iteration += 1
         print(f"Loop {current_iteration}/{max_iterations}: Evaluating resume...")
+        sys.stdout.flush()
         
         scrutiny_result = scrutinize_resume(jd, latex_code)
         score = scrutiny_result.get("score", 0)
         feedback = scrutiny_result.get("feedback", "No feedback provided.")
         
         print(f"Current Scrutinizer Score: {score}/10")
+        sys.stdout.flush()
         
-        if score > target_score:
-            print(f"Target score reached ({score} > {target_score}). Proceeding to compilation.")
+        # Update best version if this one is better
+        if score > best_score:
+            best_score = score
+            best_latex = latex_code
+            print(f"New best version found (Score: {best_score})")
+            sys.stdout.flush()
+        
+        if score >= target_score:
+            print(f"Target score reached ({score} >= {target_score}). Proceeding to compilation.")
+            sys.stdout.flush()
             break
         
         if current_iteration < max_iterations:
             print(f"Score {score} is below target {target_score}. Re-tailoring based on feedback...")
+            sys.stdout.flush()
             latex_code = retailor_resume(master_cv, jd, latex_code, feedback, system_prompt)
             time.sleep(10) # Prevent rate limiting/give breather
         else:
-            print(f"Reached max iterations ({max_iterations}). Proceeding with current version (Score: {score}).")
+            print(f"Reached max iterations ({max_iterations}). Using best version found (Score: {best_score}).")
+            sys.stdout.flush()
+
+    # Use the best version found for final steps
+    latex_code = best_latex
 
     # Phase 1.6: Final Gap Filling & Information Maximization
     print("Phase 1.6: Final Gap Filling and Maximizing Master CV Retention...")
+    sys.stdout.flush()
     gaps = identify_gaps(jd, latex_code)
     if gaps:
         print(f"Gaps identified:\n{gaps}")
+        sys.stdout.flush()
         latex_code = integrate_gaps(master_cv, jd, latex_code, gaps, system_prompt)
     else:
         print("No significant gaps found. Maximizing retention only.")
+        sys.stdout.flush()
         latex_code = integrate_gaps(master_cv, jd, latex_code, "None. Focus on maximizing technical depth from Master CV.", system_prompt)
 
     # Save Final LaTeX
@@ -243,13 +309,18 @@ def tailor_lossless(master_cv_path, jd_path, output_tex_path, system_prompt_path
                 os.rename(gen_pdf, final_pdf)
             except PermissionError:
                 print(f"Warning: Could not update {os.path.basename(final_pdf)} because it is open in another program.")
+                sys.stdout.flush()
                 print(f"Your latest CV is saved as {os.path.basename(gen_pdf)} instead.")
+                sys.stdout.flush()
         print(f"Success: Tailored Resume created.")
+        sys.stdout.flush()
     else:
         print("Error: Resume LaTeX compilation failed.")
+        sys.stdout.flush()
 
     # Phase 2: Tailored LaTeX Cover Letter (Based on FINAL CV)
     print(f"Phase 2: Generating German Cover Letter based on optimized CV...")
+    sys.stdout.flush()
     time.sleep(10) # Breathe
     
     cl_prompt = (
@@ -262,7 +333,7 @@ def tailor_lossless(master_cv_path, jd_path, output_tex_path, system_prompt_path
         f"The output must be a valid, standalone LaTeX document for a 1-page letter."
     )
     
-    cl_raw = run_gemini_cli(cl_prompt)
+    cl_raw = run_gemini_cli(cl_prompt, model=GENERATION_MODEL)
     if cl_raw:
         cl_latex = ""
         if "```latex" in cl_raw:
@@ -288,11 +359,15 @@ def tailor_lossless(master_cv_path, jd_path, output_tex_path, system_prompt_path
                         os.rename(gen_cl_pdf, final_cl_pdf)
                     except PermissionError:
                         print(f"Warning: Could not update {os.path.basename(final_cl_pdf)} (File in use).")
+                        sys.stdout.flush()
                 print(f"Success: Cover_Letter.pdf created.")
+                sys.stdout.flush()
             else:
                 print("Error: Cover Letter LaTeX compilation failed.")
+                sys.stdout.flush()
         else:
             print("Notice: Cover Letter LaTeX failed or not found in output.")
+            sys.stdout.flush()
 
     return True
 

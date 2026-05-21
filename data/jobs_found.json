@@ -1,83 +1,110 @@
 [
     {
-        "title": "Working Student (f/m/d) Advanced Analytics and Artificial Intelligence",
+        "title": "Werkstudent (w/m/d) Python / KI Entwicklung Assurance Applications",
         "company": "Siemens",
-        "url": "https://jobs.siemens.com/careers?query=497378",
-        "location": "Munich",
-        "snippet": "Focus on Machine Learning algorithms, Python, Snowflake, Azure, and Git. Job ID: 497378.",
+        "url": "https://jobs.siemens.com/careers?query=Python%20%2F%20KI%20Entwicklung%20Assurance%20Applications",
+        "location": "Erlangen / München",
+        "snippet": "Als Werkstudent (w/m/d) begleitest du die Entwicklung innovativer IT-Lösungen für Risk, Audit und Internal Controls. Du unterstützt das Entwicklerteam bei der Weiterentwicklung von IT-Applikationen unter Verwendung von Python, hilfst bei der cloudbasierten Anbindung von Datenquellen (Azure, Snowflake) und wirkst an der Erstellung von KI-basierten Workflows sowie Agentic AI-Lösungen mit. Voraussetzungen: Laufendes Studium der (Wirtschafts-)Informatik, Data Science, KI oder Mathematik. Sehr gute Deutsch- und Englischkenntnisse.",
         "job_id": "careers",
-        "published": "2026-03-16"
+        "published": "2026-05-21"
     },
     {
-        "title": "Working Student (f/m/d) Support Data & Analytics",
+        "title": "Working Student (f/m/d) Leveraging Generative AI along the Software Development Lifecycle (SDLC)",
         "company": "Siemens",
-        "url": "https://jobs.siemens.com/careers?query=496703",
-        "location": "Erlangen / Munich",
-        "snippet": "Involves Power BI, PyTorch, Scikit-learn, SQL, and Azure DevOps. Job ID: 496703.",
+        "url": "https://jobs.siemens.com/careers?query=Leveraging%20Generative%20AI%20along%20the%20Software%20Development%20Lifecycle",
+        "location": "München / Garching",
+        "snippet": "Als Werkstudent / Working Student (f/m/d) unterstützt du das Team beim Design und der Entwicklung generativer KI-Lösungen zur Optimierung des Softwareentwicklungszyklus. Du bist involviert in Datenerfassung, Preprocessing, Analyse und die Implementierung/Optimierung von Machine Learning Modellen. Voraussetzungen: Laufendes Masterstudium in Data Science, Informatik, KI oder Machine Learning; fortgeschrittene Python-Kenntnisse sowie Erfahrung mit ML-Frameworks (TensorFlow, PyTorch). Sprache: Fließend Englisch (C1).",
         "job_id": "careers",
-        "published": "2026-03-16"
+        "published": "2026-05-21"
     },
     {
-        "title": "Working Student (f/m/d) AI Agents & Financial Data Engineering",
+        "title": "Working Student (f/m/d) AI Enablement and Digitalisation Solutions",
         "company": "Siemens",
-        "url": "https://jobs.siemens.com/careers",
-        "location": "Erlangen",
-        "snippet": "Development of AI agents and data engineering solutions for financial applications.",
+        "url": "https://jobs.siemens.com/careers?query=AI%20Enablement%20and%20Digitalisation%20Solutions",
+        "location": "München",
+        "snippet": "Werde als Working Student (Werkstudent) (f/m/d) Teil von Siemens Advanta. Du wirkst bei spannenden Data- und AI-Transformationsprojekten mit, unterstützt Initiativen zur Datenmodellierung und -analyse und entwickelst qualitativ hochwertige GenAI Agents basierend auf dem Siemens Advanta Data Ecosystem. Voraussetzungen: Studium im Bereich Computer/Data Science, Finanzen oder BWL; erste Erfahrungen in der Entwicklung von KI-Agents. Sprache: Fließend Englisch (keine Deutschkenntnisse erforderlich).",
         "job_id": "careers",
-        "published": "2026-03-16"
+        "published": "2026-05-21"
     },
     {
-        "title": "Working Student (f/m/d) Industrial AI Deployment Engineer",
-        "company": "Siemens",
-        "url": "https://jobs.siemens.com/careers",
-        "location": "Erlangen",
-        "snippet": "Supporting the deployment and monitoring of AI models in industrial environments.",
-        "job_id": "careers",
-        "published": "2026-03-16"
+        "title": "Werkstudent Data Science und KI Tool Entwicklung (w/m/x)",
+        "company": "BMW",
+        "url": "https://www.bmwgroup.jobs/de/de/jobs/details.184619.html",
+        "location": "München",
+        "snippet": "Unterstützung bei der Weiterentwicklung eines Tools zur Qualitätsverbesserung auf Basis von pilotierten Versionen sowie Umsetzung neuer Funktionen und Datenanbindungen [1.1.4]. Erste Erfahrungen mit Data Science (Python, SQL) und Cloudsystemen (AWS, Palantir Foundry) von Vorteil. Sprachkenntnisse: Verhandlungssichere Deutsch- oder Englischkenntnisse erforderlich.",
+        "job_id": "details.184619.html",
+        "published": "2026-05-21"
     },
     {
-        "title": "Werkstudent Data Science und Data Engineering (m/w/x)",
-        "company": "BMW Group",
+        "title": "Werkstudent AI Proof of Concept Entwicklung (w/m/x)",
+        "company": "BMW",
+        "url": "https://www.bmwgroup.jobs/de/de/jobs/details.184264.html",
+        "location": "München",
+        "snippet": "Unterstützung bei der Planung, Umsetzung und Evaluierung von KI-Proof-of-Concepts im Versuchsfahrzeugbau. Entwicklung von Prototypen in Python (Modelltraining, Datenaufbereitung, Evaluation). Voraussetzungen: Erste praktische Erfahrung mit KI/ML-Projekten (PyTorch, TensorFlow, Scikit-Learn) sowie gute Deutsch- und Englischkenntnisse.",
+        "job_id": "details.184264.html",
+        "published": "2026-05-21"
+    },
+    {
+        "title": "Werkstudent Datensammlung und ML (w/m/x)",
+        "company": "BMW",
         "url": "https://www.bmwgroup.jobs/de/de/jobs.html",
-        "location": "Munich",
-        "snippet": "Implementation of data pipelines, ML model training, and dashboard creation using Python and Git.",
+        "location": "München",
+        "snippet": "Mitarbeit im Team für Datensammlung aus Kundenfahrzeugen zur Unterstützung zukünftiger Produkte und zur Förderung von Machine Learning-Innovationen. Unterstützung bei der Analyse umfangreicher Datensätze. Voraussetzungen: Studium der Informatik, Data Science o.ä., Kenntnisse in Python/JavaScript und gute Englischkenntnisse (kein Deutsch zwingend erforderlich).",
         "job_id": "jobs.html",
-        "published": "2026-03-16"
+        "published": "2026-05-21"
     },
     {
-        "title": "Working Student - Market and Business Intelligence (f/m/div)",
-        "company": "Infineon",
-        "url": "https://www.infineon.com/cms/en/careers/jobsearch/jobsearch/",
-        "location": "Munich",
-        "snippet": "Applying Data Science and Analytics to business informatics and market intelligence.",
+        "title": "Werkstudent (m/w/d) Data Science & Range Management",
+        "company": "Porsche",
+        "url": "https://jobs.porsche.com/de/jobs/J000020469/Werkstudent-m-w-d-Data-Science-Range-Management",
+        "location": "Weissach (Stuttgart)",
+        "snippet": "Unterstützung bei der Programmierung und Anwendung von Data-Science-Methoden (Datenaufbereitung, -strukturierung, -bereitstellung und -visualisierung) auf Realdaten aus dem Fahrzeug. Kenntnisse in MATLAB/Simulink und Python wünschenswert.",
+        "job_id": "Werkstudent-m-w-d-Data-Science-Range-Management",
+        "published": "2026-05-21"
+    },
+    {
+        "title": "Werkstudent (m/w/d) für Automatisierung / Data Analysis / Machine Learning im Kontext einer techn. Großanlage",
+        "company": "Porsche",
+        "url": "https://jobs.porsche.com/de/jobs/J000016875/Werkstudent-m-w-d-f%C3%BCr-Automatisierung-Data-Analysis-Machine-Learning-im-Kontext-einer-techn-Gro%C3%9Fanlage",
+        "location": "Weissach (Stuttgart)",
+        "snippet": "Unterstützung bei der Aufbereitung von erfassten Betriebsdaten für Analysen und insbesondere das Training mit Machine-Learning-Methoden. Mitarbeit beim Training und der Anpassung bestehender Klassifikatoren und neuronaler Netze (RNN, LSTM).",
+        "job_id": "Werkstudent-m-w-d-f%C3%BCr-Automatisierung-Data-Analysis-Machine-Learning-im-Kontext-einer-techn-Gro%C3%9Fanlage",
+        "published": "2026-05-21"
+    },
+    {
+        "title": "Werkstudent im Bereich Cloud Native, AI & Computer Vision (f/m/d)",
+        "company": "Porsche",
+        "url": "https://jobs.mhp.com/de/jobs",
+        "location": "Ludwigsburg (Stuttgart)",
+        "snippet": "Mitarbeit beim Trainieren und Evaluieren von Computer-Vision-Modellen sowie Arbeiten mit LLMs und Vision-LLMs für fortgeschrittene KI-Anwendungsfälle. Erforderlich sind Python-Kenntnisse sowie sicheres Deutsch und Englisch auf B2-Niveau.",
+        "job_id": "jobs",
+        "published": "2026-05-21"
+    },
+    {
+        "title": "Werkstudent Digitalisierung & KI im Werkzeugbau (d/m/w)",
+        "company": "Schaeffler",
+        "url": "https://jobs.schaeffler.com/",
+        "location": "Kappelrodeck (Raum Stuttgart)",
+        "snippet": "Mitarbeit an Digitalisierungs- und KI-Projekten im Werkzeugbau, insbesondere zu generativen KI-Lösungen (z. B. Large Language Models, Bildmodellierung); Identifikation und Analyse von Use Cases für den praktischen Einsatz generativer KI; Unterstützung bei Entwicklung und Test von Prototypen (Proof-of-Concepts).",
         "job_id": "",
-        "published": "2026-03-16"
+        "published": "2026-05-21"
     },
     {
-        "title": "Werkstudent Data Science & Machine Learning (m/w/d)",
-        "company": "DATEV (Partner of local tech ecosystem)",
-        "url": "https://www.datev.de/web/de/karriere/",
+        "title": "Werkstudent Data Analytics (d/m/w)",
+        "company": "Schaeffler",
+        "url": "https://jobs.schaeffler.com/",
+        "location": "Herzogenaurach (Raum Erlangen/Nürnberg)",
+        "snippet": "Entwicklung, Veröffentlichung und Pflege von Power BI-Berichten und Dashboards. Sammlung und Analyse von Geschäftsanforderungen zur Gestaltung effektiver Datenmodelle. Anbindung an mehrere Datenquellen und Durchführung von Datentransformationen mit Power Query (M-Sprache). Erstellung komplexer DAX-Berechnungen.",
+        "job_id": "",
+        "published": "2026-05-21"
+    },
+    {
+        "title": "Werkstudent Data & Analytics (d/m/w)",
+        "company": "Schaeffler",
+        "url": "https://jobs.schaeffler.com/",
         "location": "Nürnberg",
-        "snippet": "Prototypical AI implementation using Keras, TensorFlow, PyTorch, and scikit-learn.",
+        "snippet": "Gemeinsam mit anderen stärkst du das globale Bewusstsein für Data & Analytics als wichtigen Erfolgsfaktor. Du identifizierst aus fachlicher Sicht Optimierungs- und Effizienzpotenziale und arbeitest in Transformations-Projekten im Kontext von Data & Analytics mit.",
         "job_id": "",
-        "published": "2026-03-16"
-    },
-    {
-        "title": "Werkstudent Data Science & Künstliche Intelligenz (m/w/d)",
-        "company": "Sopra Steria (Partner for requested sectors)",
-        "url": "https://www.soprasteria.de/karriere",
-        "location": "Munich",
-        "snippet": "Analysis of technical requirements, prototype development, and process automation.",
-        "job_id": "karriere",
-        "published": "2026-03-16"
-    },
-    {
-        "title": "Werkstudent AI & Data Engineering",
-        "company": "Deloitte (Consulting for requested firms)",
-        "url": "https://jobs.deloitte.de/",
-        "location": "Stuttgart / Munich / Nürnberg",
-        "snippet": "Data analysis and model development within the Engineering, AI & Data Delivery team.",
-        "job_id": "",
-        "published": "2026-03-16"
+        "published": "2026-05-21"
     }
 ]

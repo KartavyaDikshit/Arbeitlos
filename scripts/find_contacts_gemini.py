@@ -2,7 +2,9 @@ import os
 import json
 import subprocess
 import time
+import sys
 from dotenv import load_dotenv
+from utils import run_gemini_cli
 
 load_dotenv()
 
@@ -14,10 +16,9 @@ def load_company_cache():
             return json.load(f)
     return {}
 
-def find_hiring_manager(job_url, company_name, job_title, job_dir, timeout=30):
+def find_hiring_manager(company_name, job_title, job_url="N/A", timeout=60):
     """
     Uses Gemini CLI to identify the hiring manager. 
-    Saves into the job-specific directory.
     """
     cache = load_company_cache()
     
@@ -34,34 +35,20 @@ def find_hiring_manager(job_url, company_name, job_title, job_dir, timeout=30):
     
     contact_info = None
     
-    try:
-        process = subprocess.Popen(
-            ["gemini", "-e", "", "--prompt", "-"],
-            stdin=subprocess.PIPE,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            encoding="utf-8",
-            shell=True
-        )
-        
+    raw_output = run_gemini_cli(search_query, timeout=timeout, use_grounding=True)
+    if raw_output:
         try:
-            stdout, stderr = process.communicate(input=search_query, timeout=timeout)
-            if process.returncode == 0:
-                text = stdout.strip()
-                if "```json" in text:
-                    text = text.split("```json")[1].split("```")[0]
-                elif "```" in text:
-                    text = text.split("```")[1].split("```")[0]
-                
-                parsed = json.loads(text.strip())
-                if parsed.get('name') and parsed.get('name').lower() != "null":
-                    contact_info = parsed
-        except subprocess.TimeoutExpired:
-            print(f"Discovery timed out. Falling back to general contact for {company_name}.")
-            process.kill()
+            text = raw_output.strip()
+            if "```json" in text:
+                text = text.split("```json")[1].split("```")[0]
+            elif "```" in text:
+                text = text.split("```")[1].split("```")[0]
             
-    except Exception as e:
-        print(f"Discovery failed: {e}. Falling back to general contact.")
+            parsed = json.loads(text.strip())
+            if parsed.get('name') and str(parsed.get('name')).lower() != "null":
+                contact_info = parsed
+        except Exception as e:
+            print(f"Failed to parse contact info: {e}")
 
     if not contact_info:
         print(f"No specific contact found. Using general {company_name} recruitment info.")
@@ -82,19 +69,10 @@ def find_hiring_manager(job_url, company_name, job_title, job_dir, timeout=30):
         f"Gib NUR den JSON-Block zurück."
     )
     
-    try:
-        process2 = subprocess.Popen(
-            ["gemini", "-e", "", "--prompt", "-"],
-            stdin=subprocess.PIPE,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            encoding="utf-8",
-            shell=True
-        )
-        stdout2, stderr2 = process2.communicate(input=outreach_query, timeout=15)
-        
-        if process2.returncode == 0:
-            text2 = stdout2.strip()
+    raw_outreach = run_gemini_cli(outreach_query, timeout=timeout)
+    if raw_outreach:
+        try:
+            text2 = raw_outreach.strip()
             if "```json" in text2:
                 text2 = text2.split("```json")[1].split("```")[0]
             elif "```" in text2:
@@ -102,17 +80,38 @@ def find_hiring_manager(job_url, company_name, job_title, job_dir, timeout=30):
             
             outreach_data = json.loads(text2.strip())
             contact_info.update(outreach_data)
-    except:
+        except Exception as e:
+            print(f"Failed to parse outreach data: {e}")
+            contact_info["cold_email"] = f"Dear {contact_info['name']},\n\nI am following up on my application for {job_title}..."
+            contact_info["linkedin_invite"] = f"Hi {contact_info['name']}, I applied for the {job_title} role at {company_name} and would love to connect."
+    else:
         contact_info["cold_email"] = f"Dear {contact_info['name']},\n\nI am following up on my application for {job_title}..."
         contact_info["linkedin_invite"] = f"Hi {contact_info['name']}, I applied for the {job_title} role at {company_name} and would love to connect."
 
     # Save output to job-specific directory
-    output_path = os.path.join(job_dir, "Outreach.json")
+    safe_title = "".join(x for x in job_title if x.isalnum())
+    job_dir = os.path.join("data", "tailored_outputs", safe_title)
+    if not os.path.exists(job_dir):
+        # Alternative save location if specific job dir not found
+        output_path = os.path.join("data", "tailored_outputs", f"{safe_title}_Outreach.json")
+    else:
+        output_path = os.path.join(job_dir, "Outreach.json")
+        # Also copy to root of tailored_outputs for easier matching in app.py if needed
+        alt_path = os.path.join("data", "tailored_outputs", f"{safe_title}_Outreach.json")
+        with open(alt_path, "w", encoding="utf-8") as f:
+            json.dump({"contacts": [contact_info]}, f, indent=4, ensure_ascii=False)
+
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(contact_info, f, indent=4, ensure_ascii=False)
+        json.dump({"contacts": [contact_info]}, f, indent=4, ensure_ascii=False)
         
     print(f"Saved: {output_path}")
     return contact_info
 
 if __name__ == "__main__":
-    pass
+    if len(sys.argv) < 3:
+        print("Usage: python scripts/find_contacts_gemini.py <company_name> <job_title> [job_url]")
+    else:
+        company = sys.argv[1]
+        title = sys.argv[2]
+        url = sys.argv[3] if len(sys.argv) > 3 else "N/A"
+        find_hiring_manager(company, title, url)

@@ -332,13 +332,18 @@ def page_active_operations():
             status_color = "blue" if task['status'] == "Running" else "green" if task['status'] == "Complete" else "red"
             c1.markdown(f"### {task['role']} @ {task['company']}")
             c1.markdown(f"Status: :{status_color}[{task['status']}] | Started: {task['start_time']}")
-            
             if os.path.exists(task['log_path']):
-                with open(task['log_path'], 'r', encoding='utf-8') as f:
-                    lines = f.readlines()
-                    tail = "".join(lines[-10:])
-                    with c1.expander("View Logs"):
-                        st.code(tail)
+                try:
+                    with open(task['log_path'], 'r', encoding='utf-8', errors='replace') as f:
+                        # Show last 10 lines
+                        lines = f.readlines()
+                        tail = "".join(lines[-10:])
+                        with c1.expander("View Logs"):
+                            st.code(tail)
+                except Exception as e:
+                    with c1.expander("Log Error"):
+                        st.error(f"Could not read log: {e}")
+
             
             if task['status'] == "Complete":
                 if c2.button("Mark Applied", key=f"app_{task_id}", use_container_width=True):

@@ -1,0 +1,14 @@
+.env
+data/logs/
+data/raw_jds/
+data/tailored_outputs/
+**/__pycache__/
+*.pdf
+*.log
+*.aux
+*.out
+*.xlsx
+*.txt
+conductor/
+!README.md
+!GEMINI.md
